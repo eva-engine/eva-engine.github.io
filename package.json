@@ -1,18 +1,25 @@
 {
-  "name": "eva-docs",
+  "name": "eva-engine.github.io",
   "version": "1.0.0",
-  "description": "eva.js docs",
-  "private": true,
+  "description": "EVA JS Website",
+  "private": false,
   "scripts": {
     "start": "docsify serve docs",
-    "build": "node ./scripts/build.js"
+    "deploy": "node ./scripts/deploy.js"
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.alibaba-inc.com:eva/doc.git"
+    "url": "https://github.com/eva-engine/eva-engine.github.io.git"
   },
-  "author": "齐纪<qiji.ldj@alibaba-inc.com>",
+  "author": "李冬杰<lidongjies@gmail.com>",
   "devDependencies": {
-    "docsify": "^4.11.6"
+    "chalk": "^4.1.0",
+    "docsify": "^4.11.6",
+    "enquirer": "^2.3.6",
+    "eslint": "^7.18.0",
+    "execa": "^5.0.0",
+    "minimist": "^1.2.5",
+    "semver": "^7.3.4",
+    "shelljs": "^0.8.4"
   }
 }
