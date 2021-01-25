@@ -5,7 +5,7 @@
   "private": false,
   "scripts": {
     "start": "docsify serve docs",
-    "deploy": "node ./scripts/deploy.js"
+    "api": "node ./scripts/api.js"
   },
   "repository": {
     "type": "git",
@@ -15,11 +15,10 @@
   "devDependencies": {
     "chalk": "^4.1.0",
     "docsify": "^4.11.6",
-    "enquirer": "^2.3.6",
     "eslint": "^7.18.0",
     "execa": "^5.0.0",
     "minimist": "^1.2.5",
-    "semver": "^7.3.4",
+    "replace": "^1.2.0",
     "shelljs": "^0.8.4"
   }
 }
