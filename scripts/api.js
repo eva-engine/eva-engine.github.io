@@ -6,6 +6,10 @@ const chalk = require('chalk')
 
 const WORKSPACE = 'workspace'
 const EVAJS_REPO = process.env.EVAJS_REPO
+if (!EVAJS_REPO) {
+  console.log(chalk.yellow('Please set repo by `export EVAJS_REPO=xxxx`.'))
+  process.exit(0)
+}
 
 // only package lib directory changes will regenerate api docs
 function isPackageChange(file) {
@@ -34,36 +38,40 @@ async function main() {
 
   const evaBranch = args.branch || 'dev1.0'
   shell.exec(`git clone -b ${evaBranch} ${EVAJS_REPO} ${WORKSPACE}`)
-
   shell.cd(WORKSPACE)
-  const { stdout: tagsStr } = await execa('git', ['tag', '--list'])
-  const [prevTag, tag] = tagsStr.split('\n').slice(-2)
-  let changedPackages = []
 
-  // diff tag with prevTag
-  if (prevTag && tag) {
-    const { stdout: diffRes } = await execa('git', ['diff', tag, prevTag, '--stat'])
-    changedPackages = diffRes.split('\n').filter(isPackageChange).map(getPackageName)
-    changedPackages = Array.from(new Set(changedPackages))
+  let packages
+  if (args.force || args.f) {
+    packages = ''
+  } else {
+    const { stdout: tagsStr } = await execa('git', ['tag', '--list'])
+    const [prevTag, tag] = tagsStr.split('\n').slice(-2)
+    let changedPackages = []
+    // diff tag with prevTag
+    if (prevTag && tag) {
+      const { stdout: diffRes } = await execa('git', ['diff', tag, prevTag, '--stat'])
+      changedPackages = diffRes.split('\n').filter(isPackageChange).map(getPackageName)
+      changedPackages = Array.from(new Set(changedPackages))
+    }
+    if (changedPackages.length == 0) {
+      console.log(chalk.green('There is no package need to generate api doc.'))
+      process.exit(0)
+    }
+    console.log(chalk.green('Packages need regenerate api doc as follows: \n'))
+    console.log(changedPackages)
+    packages = changedPackages.join(' ')
   }
-  if (changedPackages.length == 0) {
-    console.log(chalk.green('There is no package need to generate api doc.'))
-    process.exit(0)
-  }
-
-  console.log(chalk.green('Packages need regenerate api doc as follows: \n'))
-  console.log(changedPackages)
 
   // TODO: only generate declartion file
   shell.exec('lerna bootstrap')
   shell.exec('npm i')
-  shell.exec(`npm run build ${changedPackages.join(' ')} -- --release --formats esm`)
+  shell.exec(`npm run build ${packages} -- --release --formats esm`)
   shell.exec('npm run api')
 
   // // replace '(./' to '(api/' for correct hash route
   replace({
     regex: /\(\./g,
-    replacement: '[api',
+    replacement: '(api',
     paths: ['./docs/api'],
     recursive: true,
     silent: true

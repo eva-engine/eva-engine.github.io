@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-register(...renderers: Renderer[]): void;
+register(api..renderers: Renderer[]): void;
 ```
 
 ## Parameters
