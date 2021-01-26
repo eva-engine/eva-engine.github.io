@@ -3,7 +3,7 @@
 > DragonBones是白鹭时代推出的面向设计师的2D游戏动画和富媒体内容创作平台,他提供了2D骨骼动画解决方案和动态漫画解决方案。
 
 ## Demo
-[https://eva.alibaba-inc.com/playground/dragonBone](https://eva.alibaba-inc.com/playground/dragonBone)
+[https://eva.js.org/playground/#/dragonBone](https://eva.js.org/playground/#/dragonBone)
 
 
 ## 介绍

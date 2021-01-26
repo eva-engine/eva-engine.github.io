@@ -1,24 +1,24 @@
 # 文本
 
 ## Demo
-[https://eva.alibaba-inc.com/playground/text](https://eva.alibaba-inc.com/playground/text)
+[https://eva.js.org/playground/#/text](https://eva.js.org/playground/#/text)
 ## 注意
 使用了Text组件后，gameObject的宽度会在下一帧设置文字所占区域的宽度给Transform的宽度。
 ## Member
 ### text: `string` 
 显示的文本
 ### style
-| `align` | string | 'left' | optional作用于多行文本('left', 'center' or 'right'), 单行文本不生效 |
-| --- | --- | --- | --- |
-| `breakWords` | boolean | false | optional是否在词语中间换行 |
-| `dropShadow` | boolean | false | optional设置文字阴影 |
-| `dropShadowAlpha` | number | 1 | optional文字阴影的透明度 |
-| `dropShadowAngle` | number | Math.PI/6 | optional文字阴影角度 |
-| `dropShadowBlur` | number | 0 | optional文字阴影模糊度 |
-| `dropShadowColor` | string &#124; number | 'black' | optional文字阴影颜色 例如 'red', '#00FF00' |
-| `dropShadowDistance` | number | 5 | optional文字阴影距离 |
-| `fill` | string &#124; Array.<string> &#124; number &#124; Array.<number> &#124; CanvasGradient &#124; CanvasPattern | 'black' | optional文字颜色，可以是渐变 e.g 'red', '#00FF00'. Can be an array to create a gradient eg ['#000000','#FFFFFF'] [MDN](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) |
-| `fillGradientType` | number | 'LINEAR_VERTICAL' | optional如果文字颜色为渐变，可以设置水平或者垂直渐变
+| `align`              | string                                                                                                      | 'left'            | optional作用于多行文本('left', 'center' or 'right'), 单行文本不生效                                                                                                                                         |
+| -------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `breakWords`         | boolean                                                                                                     | false             | optional是否在词语中间换行                                                                                                                                                                                  |
+| `dropShadow`         | boolean                                                                                                     | false             | optional设置文字阴影                                                                                                                                                                                        |
+| `dropShadowAlpha`    | number                                                                                                      | 1                 | optional文字阴影的透明度                                                                                                                                                                                    |
+| `dropShadowAngle`    | number                                                                                                      | Math.PI/6         | optional文字阴影角度                                                                                                                                                                                        |
+| `dropShadowBlur`     | number                                                                                                      | 0                 | optional文字阴影模糊度                                                                                                                                                                                      |
+| `dropShadowColor`    | string &#124; number                                                                                        | 'black'           | optional文字阴影颜色 例如 'red', '#00FF00'                                                                                                                                                                  |
+| `dropShadowDistance` | number                                                                                                      | 5                 | optional文字阴影距离                                                                                                                                                                                        |
+| `fill`               | string &#124; Array.<string> &#124; number &#124; Array.<number> &#124; CanvasGradient &#124; CanvasPattern | 'black'           | optional文字颜色，可以是渐变 e.g 'red', '#00FF00'. Can be an array to create a gradient eg ['#000000','#FFFFFF'] [MDN](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) |
+| `fillGradientType`   | number                                                                                                      | 'LINEAR_VERTICAL' | optional如果文字颜色为渐变，可以设置水平或者垂直渐变                                                                                                                                                        |
 水平渐变：LINEAR_VERTICAL
 垂直渐变：LINEAR_HORIZONTAL |
 | `fillGradientStops` | Array.<number> |  | optional如果文字颜色为渐变，可以设置各个颜色的定位点，如果不设置是均分的 |
