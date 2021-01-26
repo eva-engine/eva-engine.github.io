@@ -3,7 +3,7 @@
 * [教程](/tutorials/quickstart)
 * [API文档](/api/index)
 * [使用范例](https://eva.js.org/playground)
-* [博客](https://yuque.antfin-inc.com/eva/blog)
+* [博客](https://yuque.com/eva/blog)
 * [更新日志](/others/changelog)
 * 钉钉群
     * EVA.js内部服务群 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
