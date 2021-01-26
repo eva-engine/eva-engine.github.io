@@ -3,7 +3,7 @@
 > 使用前需要安装渲染器
 
 ## Demo
-[https://eva.alibaba-inc.com/playground/sprite](https://eva.alibaba-inc.com/playground/sprite)
+[https://eva.js.org/playground/#/sprite](https://eva.js.org/playground/#/sprite)
 ## 介绍
 精灵图是将多张图片打包到一张图片中，他可以实现纹理的合并，减少GPU和CPU通讯次数提升性能，也可以减少HTTP请求，提高加载速度。
 

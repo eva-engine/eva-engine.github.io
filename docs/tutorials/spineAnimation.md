@@ -3,7 +3,7 @@
 > Spine是一款专门为软件和游戏开发设计,量身打造的2D动画软件。动画师,原画师和程序共同为您的游戏赋予生命。
 
 ## Demo
-[https://eva.alibaba-inc.com/playground/spine](https://eva.alibaba-inc.com/playground/spine)
+[https://eva.js.org/playground/#/spine](https://eva.js.org/playground/#/spine)
 
 
 ## 介绍

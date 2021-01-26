@@ -27,7 +27,7 @@ gameObject.transform.size.width = 200
 gameObject.transform.size.height = 200
 ```
 
-origin 和 anchor 能够帮我们解决常见的定位问题，比如游戏的操作键，在各种屏幕尺寸下距离右下角一定百分比的距离。可以看一下这个[Demo](https://eva.alibaba-inc.com/playground/anchor)，绿色的点是 origin 和 anchor 的定位点。
+origin 和 anchor 能够帮我们解决常见的定位问题，比如游戏的操作键，在各种屏幕尺寸下距离右下角一定百分比的距离。可以看一下这个[Demo](https://eva.js.org/playground/#/anchor)，绿色的点是 origin 和 anchor 的定位点。
 
 ```javascript
 const outter = new GameObject('out', {

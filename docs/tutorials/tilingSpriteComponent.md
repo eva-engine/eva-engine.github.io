@@ -3,7 +3,7 @@
 > 使用前需要安装渲染器
 
 ## Demo
-[https://eva.alibaba-inc.com/playground/tilingSprite](https://eva.alibaba-inc.com/playground/tilingSprite)
+[https://eva.js.org/playground/#/tilingSprite](https://eva.js.org/playground/#/tilingSprite)
 
 
 ## 介绍

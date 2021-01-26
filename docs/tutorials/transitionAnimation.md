@@ -1,8 +1,8 @@
 # 过渡动画
 
 ## Demo:
-[https://eva.alibaba-inc.com/playground/transition](https://eva.alibaba-inc.com/playground/transition)
-[https://eva.alibaba-inc.com/playground/transition2](https://eva.alibaba-inc.com/playground/transition2)
+[https://eva.js.org/playground/#/transition](https://eva.js.org/playground/#/transition)
+[https://eva.js.org/playground/#/transition2](https://eva.js.org/playground/#/transition2)
 
 
 ## 介绍

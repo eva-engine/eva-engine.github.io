@@ -1,7 +1,7 @@
 # 帧动画
 
 ## Demo
-[https://eva.alibaba-inc.com/playground/spriteAnimation](https://eva.alibaba-inc.com/playground/spriteAnimation)
+[https://eva.js.org/playground/#/spriteAnimation](https://eva.js.org/playground/#/spriteAnimation)
 
 
 ## 介绍

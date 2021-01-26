@@ -3,7 +3,7 @@
 > 使用前需要安装渲染器
 
 ## Demo
-[https://eva.alibaba-inc.com/playground/ninePatch](https://eva.alibaba-inc.com/playground/ninePatch)
+[https://eva.js.org/playground/#/ninePatch](https://eva.js.org/playground/#/ninePatch)
 
 
 ## 介绍

@@ -1,7 +1,7 @@
 # 交互事件
 
 ## Demo
-[https://eva.alibaba-inc.com/playground/event](https://eva.alibaba-inc.com/playground/event)
+[https://eva.js.org/playground/#/event](https://eva.js.org/playground/#/event)
 
 
 ## Member
@@ -12,13 +12,13 @@ hitArea区域的属性值相对于GameObject的矩形区域。
 
 
 
-| 类型 | **Type** | **属性** |
-| --- | --- | --- |
-| 圆形 | HIT_AREA_TYPE.Circle | {style: {x,y,radius}} |
-| 椭圆 | HIT_AREA_TYPE.Ellipse | {style:{x,y,width,height}} |
-| 矩形 | HIT_AREA_TYPE.Rect | {style:{x,y,width,height}} |
+| 类型     | **Type**                  | **属性**                          |
+| -------- | ------------------------- | --------------------------------- |
+| 圆形     | HIT_AREA_TYPE.Circle      | {style: {x,y,radius}}             |
+| 椭圆     | HIT_AREA_TYPE.Ellipse     | {style:{x,y,width,height}}        |
+| 矩形     | HIT_AREA_TYPE.Rect        | {style:{x,y,width,height}}        |
 | 圆角矩形 | HIT_AREA_TYPE.RoundedRect | {style:{x,y,width,height,radius}} |
-| 多边形 | HIT_AREA_TYPE.Polygon | {style: {paths: [x,y,x,y,x,y]}}
+| 多边形   | HIT_AREA_TYPE.Polygon     | {style: {paths: [x,y,x,y,x,y]}}   |
 或
 {style: {paths: [{x,y},{x,y},{x,y}]}} |
 |  |  |  |
@@ -39,13 +39,13 @@ const evt = image.addComponent(new Event({
 ## Method
 Event Component 用来支持 Entity 的事件绑定，事件有
 
-| 事件名称 | 事件类型 |
-| --- | --- |
-| tap | 点击，如果touchstart和touchend都在当前gameObject上会被触发，如果不需要可按照一定条件在touchend上面添加e.stopPropagation() |
-| touchstart |  |
-| touchmove | 不在当前物体上move 也会触发，很奇怪 |
-| touchend |  |
-| touchendoutside | 当touchend的时候，touch已经不在物体上时，会触发 |
+| 事件名称        | 事件类型                                                                                                                  |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| tap             | 点击，如果touchstart和touchend都在当前gameObject上会被触发，如果不需要可按照一定条件在touchend上面添加e.stopPropagation() |
+| touchstart      |                                                                                                                           |
+| touchmove       | 不在当前物体上move 也会触发，很奇怪                                                                                       |
+| touchend        |                                                                                                                           |
+| touchendoutside | 当touchend的时候，touch已经不在物体上时，会触发                                                                           |
 
 
 
