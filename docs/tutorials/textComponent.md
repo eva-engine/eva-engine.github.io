@@ -1,13 +1,15 @@
 # 文本
 
-## Demo
-[https://eva.js.org/playground/#/text](https://eva.js.org/playground/#/text)
+[Demo](https://eva.js.org/playground/#/text)
 ## 注意
-使用了Text组件后，gameObject的宽度会在下一帧设置文字所占区域的宽度给Transform的宽度。
-## Member
+
+使用了 Text 组件后，gameObject 的宽度会在下一帧设置文字所占区域的宽度给 Transform 的宽度。
+## 参数
 ### text: `string` 
+
 显示的文本
 ### style
+
 | `align`              | string                                                                                                      | 'left'            | optional作用于多行文本('left', 'center' or 'right'), 单行文本不生效                                                                                                                                         |
 | -------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `breakWords`         | boolean                                                                                                     | false             | optional是否在词语中间换行                                                                                                                                                                                  |
@@ -46,4 +48,8 @@
 | `wordWrapWidth` | number | 100 | optional超出改宽度换行 |
 
 
-
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>

@@ -1,11 +1,11 @@
 # 图形
 
-## Demo
-[https://eva.js.org/playground/#/graphics](https://eva.js.org/playground/#/graphics)
-## 介绍
-因为EVAJS底层渲染引擎依赖的Graphics，目前直接将PIXI的接口对外开放了，所以，目前的使用方法和属性还是依赖PIXI的。
-## 使用方法
-无需参数，将会返回一个graphics挂载component实例上，调用graphics属性上的方法即可绘制图形
+[Demo](https://eva.js.org/playground/#/graphics)
+
+因为 EVAJS 底层渲染引擎依赖的 Graphics，目前直接将 Pixi 的接口对外开放了，所以目前的使用方法和属性还是依赖 Pixi 的。
+## 使用
+
+无需参数，将会返回一个 graphics 挂载 component 实例上，调用 graphics 属性上的方法即可绘制图形
 
 ```typescript
 const outterGraphics = outter.addComponent(new Graphics());
@@ -15,7 +15,7 @@ outterGraphics.graphics.endFill();
 ```
 ### 绘制方法
 #### beginFill (color, alpha)
-指定一个简单的单色填充，随后调用其他Graphics方法 （例如：`lineTo()`或`drawCircle()`）在绘制时使用。
+指定一个简单的单色填充，随后调用其他 Graphics 方法 （例如：`lineTo()`或`drawCircle()`）在绘制时使用。
 
 | Name    | Type   | Default | Description         |
 | :------ | :----- | :------ | :------------------ |
@@ -23,8 +23,7 @@ outterGraphics.graphics.endFill();
 | `alpha` | number | 1       | optional填充的Alpha |
 
 #### endFill ()
-对自上一次调用beginFill()方法以来添加的线条和形状应用填充。
-
+对自上一次调用 beginFill() 方法以来添加的线条和形状应用填充。
 
 #### lineStyle (options)
 指定用于随后调用Graphics方法的线样式，例如：`lineTo()`方法 或 `drawCircle()`方法
@@ -40,14 +39,8 @@ outterGraphics.graphics.endFill();
 | `alignment` | number  | 0.5                | optional绘制线的对齐方式（0 = 内部，0.5 = 居中，1 = 外部）    |
 | `native`    | boolean | false              | optional如果为true，则将使用LINES来代替TRIANGLE_STRIP绘制线条 |
 
- |
-
-
-
-
-
 #### lineStyle (width, color, alpha, alignment, native)
-指定用于随后调用Graphics方法的线样式，例如：`lineTo()`方法 或 `drawCircle()`方法
+指定用于随后调用 Graphics 方法的线样式，例如：`lineTo()`方法或 `drawCircle()`方法
 
 | Name        | Type    | Default | Description                                                   |
 | :---------- | :------ | :------ | :------------------------------------------------------------ |
@@ -67,8 +60,6 @@ outterGraphics.graphics.endFill();
 | `x`  | number | 要绘制到的X坐标 |
 | `y`  | number | 要绘制到的Y坐标 |
 
-
-
 #### moveTo (x, y)
 将当前图形位置移动到x,y。
 
@@ -76,7 +67,6 @@ outterGraphics.graphics.endFill();
 | :--- | :----- | :-------------- |
 | `x`  | number | 要移动到的X坐标 |
 | `y`  | number | 要移动到的Y坐标 |
-
 
 
 #### quadraticCurveTo (cpX, cpY, toX, toY)
@@ -89,13 +79,12 @@ outterGraphics.graphics.endFill();
 | `toX` | number | 目的点x     |
 | `toY` | number | 目的点y     |
 
-
-
 #### clear ()
-清除绘制到此Graphics对象的图形，并重置填充和线条样式设置。
-##### 
-##### closePath ()
+清除绘制到此 Graphics 对象的图形，并重置填充和线条样式设置。
+
+#### closePath ()
 关闭当前路径。
+
 ### 预设图形
 #### arc (cx, cy, radius, startAngle, endAngle, anticlockwise)
 圆弧方法创建圆弧/曲线（用于创建圆或圆的一部分）。
@@ -109,8 +98,6 @@ outterGraphics.graphics.endFill();
 | `endAngle`      | number  |         | 终止角度，以弧度为单位                                                                  |
 | `anticlockwise` | boolean | false   | optional指定图形是逆时针还是顺时针。 `false` 是默认值，表示顺时针，而`true`表示逆时针。 |
 
-
-
 #### arcTo (x1, y1, x2, y2, radius)
 arcTo()方法在画布上的两个切线之间创建弧/曲线。
 
@@ -122,12 +109,7 @@ arcTo()方法在画布上的两个切线之间创建弧/曲线。
 | `y2`     | number | 圆弧末端的y坐标         |
 | `radius` | number | 圆弧半径                |
 
-
-
-#### 
-
-#### 
-##### bezierCurveTo (cpX, cpY, cpX2, cpY2, toX, toY)
+#### bezierCurveTo (cpX, cpY, cpX2, cpY2, toX, toY)
 计算贝塞尔曲线的点，然后绘制它。
 
 | Name   | Type   | Description |
@@ -138,9 +120,6 @@ arcTo()方法在画布上的两个切线之间创建弧/曲线。
 | `cpY2` | number | 第二控制点y |
 | `toX`  | number | 目的点x     |
 | `toY`  | number | 目的点y     |
-
-##### 
-#### 
 #### drawCircle (x, y, radius)
 绘制一个圆。
 
@@ -150,7 +129,6 @@ arcTo()方法在画布上的两个切线之间创建弧/曲线。
 | `y`      | number | 圆心的Y坐标 |
 | `radius` | number | 圆的半径    |
 
-##### 
 #### drawEllipse (x, y, width, height)
 绘制一个椭圆。
 
@@ -161,16 +139,12 @@ arcTo()方法在画布上的两个切线之间创建弧/曲线。
 | `width`  | number | 椭圆的半宽      |
 | `height` | number | 椭圆的半高      |
 
-
-
-##### drawPolygon (path)
+#### drawPolygon (path)
 使用指定的路径绘制多边形。
 
 | Name   | Type                                | Description                |
 | :----- | :---------------------------------- | :------------------------- |
 | `path` | Array.<number> &#124; Array.<{x,y}> | 用于构造多边形的路径数据。 |
-
-
 
 #### drawRect (x, y, width, height)
 绘制一个矩形。
@@ -181,7 +155,6 @@ arcTo()方法在画布上的两个切线之间创建弧/曲线。
 | `y`      | number | 矩形左上角的Y坐标 |
 | `width`  | number | 矩形的宽度        |
 | `height` | number | 矩形的高度        |
-
 
 
 #### drawRoundedRect (x, y, width, height, radius)
@@ -195,8 +168,6 @@ arcTo()方法在画布上的两个切线之间创建弧/曲线。
 | `height` | number | 矩形的高度        |
 | `radius` | number | 矩形角度的半径    |
 
-
-
 #### drawStar (x, y, points, radius, innerRadius, rotation)
 用任意数量的点画一个星形。
 
@@ -209,6 +180,8 @@ arcTo()方法在画布上的两个切线之间创建弧/曲线。
 | `innerRadius` | number |         | optional点之间的内半径，默认为`radius`的一半 |
 | `rotation`    | number | 0       | optional星星自转的弧度，其中0为垂直          |
 
-##### 
-#### 
-
+<br />
+<br />
+<br />
+<br />
+<br />

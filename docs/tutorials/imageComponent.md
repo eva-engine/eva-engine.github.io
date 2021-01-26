@@ -1,6 +1,6 @@
 # 图片
 
-> 使用前需要安装[渲染器](/tutorials/prepareRender)
+使用前需要安装[渲染器](/tutorials/prepareRender)
 
 [Demo](https://eva.js.org/playground/#/image)
 
@@ -60,9 +60,13 @@ image.addComponent(
 )
 ```
 
-## Member
+## 参数
 ### resource: `String`
 
 资源名，这里的资源名对应的是调用 `resource.addResource` 传入的资源信息中的资源名。
 
-
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
