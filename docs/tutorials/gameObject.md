@@ -55,3 +55,12 @@ gameObject.removeComponent(Img)
 游戏对象默认携带的 [Transform](/tutorials/transform) 组件是用来控制游戏对象的尺寸、位置、缩放、斜切、旋转等属性。
 
 
+### 注意：
+
+Img、Texture、Graphics、DragonBone、SpriteAnimation、NinePatch 有图形渲染功能的组件不要添加到同一个 GameObject 内。
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>

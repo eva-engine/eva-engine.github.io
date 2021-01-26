@@ -4,7 +4,5 @@
 
 # EVA.js <small>1.0.0</small>
 
-[Playground](https://eva.alibaba-inc.com/playground)
-[Blog](https://yuque.antfin-inc.com/eva/blog)
-[GitHub](https://github.com/eva/eva.js)
-[Get Started](/tutorials/index)
+[Blog](https://yuque.com/eva/blog)
+[Get Started](/tutorials/quickstart)

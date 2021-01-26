@@ -2,7 +2,6 @@
 
 * [教程](/tutorials/index)
 * [API文档](/api/index)
-* [实用范例](https://eva.alibaba-inc.com/playground)
 * [博客](https://yuque.antfin-inc.com/eva/blog)
 * [更新日志](/others/changelog)
 * 钉钉群
