@@ -25,7 +25,7 @@ new Game({
 })
 ```
 
-## 系统参数
+## 参数
 
 ### canvas
 渲染所需canvas
@@ -51,8 +51,8 @@ new Game({
 ### backgroundColor
 背景颜色
 
-## 注意：
-
-Img、Texture、Graphics、DragonBone、SpriteAnimation、NinePatch 有图形渲染功能的组件不要添加到同一个 GameObject 内。
-
-
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
