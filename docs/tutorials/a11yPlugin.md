@@ -20,7 +20,7 @@ tnpm install @eva/plugin-a11y
 ## 引入
 
 
-```javascript
+```js
 import { A11ySystem, A11y, A11yActivate } from "@eva/plugin-a11y"
 ```
 
@@ -29,7 +29,7 @@ import { A11ySystem, A11y, A11yActivate } from "@eva/plugin-a11y"
 先引入无障碍系统，然后为相应的游戏对象添加无障碍能力。
 
 
-```javascript
+```js
 // 为游戏场景添加无障碍能力
 game.addSystem(new A11ySystem({
   debug: true, // 上线时关闭debug
@@ -50,7 +50,7 @@ gameObject.addComponent(new A11y({
 插件的工作示意图如下：
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/305130/1597806855045-756a3631-e929-47cd-b78d-a4cff699f7c8.png#align=left&display=inline&height=850&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1700&originWidth=3332&size=2346198&status=done&style=none&width=1666)
 如果游戏对象没有添加至游戏场景中，或者游戏对象被移除出场景，辅助的 DOM 节点也会相应的删除。
-```javascript
+```js
 // 游戏对象被移除，辅助 DOM 也被移除
 gameObject.addComponent(new A11y({hint: 'text'}))
 game.scene.removeChild(gameObject)
@@ -68,32 +68,32 @@ gameObject.removeComponent('A11y')
 
 游戏场景无障碍能力
 
-| 参数 | 类型 | 说明 | 默认值 |
-| --- | --- | --- | --- |
-| debug | boolean | 是否开启调试，开启后会出现红色遮罩 | false |
-| activate | A11yActivate | 是否激活无障碍，默认为根据用户系统设置自动激活 | AUTO |
+| 参数     | 类型         | 说明                                           | 默认值 |
+| -------- | ------------ | ---------------------------------------------- | ------ |
+| debug    | boolean      | 是否开启调试，开启后会出现红色遮罩             | false  |
+| activate | A11yActivate | 是否激活无障碍，默认为根据用户系统设置自动激活 | AUTO   |
 
 
 
 **2、A11y**
 无障碍组件，游戏对象赋予无障碍能力
 
-| 参数 | 类型 | 说明 | 默认值 |
-| --- | --- | --- | --- |
-| hint | string | 需要朗读的内容 | - |
-| role | string | 无障碍角色，例如 role="button" | - |
-| delay | number | 延迟渲染的时间，单位毫秒 | 0 |
-| aria-* | string | 无障碍属性 |  |
+| 参数   | 类型   | 说明                           | 默认值 |
+| ------ | ------ | ------------------------------ | ------ |
+| hint   | string | 需要朗读的内容                 | -      |
+| role   | string | 无障碍角色，例如 role="button" | -      |
+| delay  | number | 延迟渲染的时间，单位毫秒       | 0      |
+| aria-* | string | 无障碍属性                     |        |
 
 
 
 **3、A11yActivate**
 
-| 参数 | 说明 |
-| --- | --- |
-| AUTO | 根据系统设置自动开启无障碍 |
-| ENABLE | 开启插件无障碍能力 |
-| DISABLE | 关闭插件无障碍能力 |
+| 参数    | 说明                       |
+| ------- | -------------------------- |
+| AUTO    | 根据系统设置自动开启无障碍 |
+| ENABLE  | 开启插件无障碍能力         |
+| DISABLE | 关闭插件无障碍能力         |
 
 
 

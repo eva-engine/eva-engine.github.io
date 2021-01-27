@@ -4,10 +4,12 @@
 
 ## 安装
 
-`npm i @eva/plugin-renderer -S`
+```bash 
+npm i @eva/plugin-renderer 
+```
 
 ## 使用系统
-```typescript
+```js
 import { Game, GameObject } from '@eva/eva.js';
 import { RendererSystem, RENDERER_TYPE } from '@eva/plugin-renderer';
 

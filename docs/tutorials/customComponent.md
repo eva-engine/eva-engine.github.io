@@ -11,7 +11,7 @@ Step4: 提供收取作物经验的自定义事件出来，当用户点击植物�
 ![image.png](https://intranetproxy.alipay.com/skylark/lark/0/2020/png/65745/1604851827956-6ecbe85b-0c8e-47da-9136-9b196ca79761.png#align=left&display=inline&height=246&margin=%5Bobject%20Object%5D&name=image.png&originHeight=492&originWidth=452&size=544940&status=done&style=none&width=226)![image.png](https://intranetproxy.alipay.com/skylark/lark/0/2020/png/65745/1604851813448-88ce03dc-a537-44c7-986b-4445dd7efb23.png#align=left&display=inline&height=256&margin=%5Bobject%20Object%5D&name=image.png&originHeight=512&originWidth=1164&size=324084&status=done&style=none&width=582)
 ## 初始化
 通过继承 Component 的方式创建脚本组件
-```typescript
+```js
 import { Component } from '@eva/eva.js';
 class Move extends Component {
     static componentName = 'Move'; // 设置组件的名字
@@ -19,7 +19,7 @@ class Move extends Component {
 ```
 ## 属性
 给组件设置属性，在整个组件里面可以使用/修改。
-```typescript
+```js
 class Move extends Component {
   static componentName = 'Move';
   speed = { // 设置属性
@@ -38,7 +38,7 @@ class Move extends Component {
 实例化组件的时候传入的参数，会在组件被添加到游戏对象的时候传入到init方法中。
 一般来讲，我们传入的参数对应到组件上面的属性。
 该方法将会在 `addComponent` 的时候执行，即便事先实例化了当前组件。
-```typescript
+```js
 interface MoveParams {
   speed: {
     x: number;
@@ -59,7 +59,7 @@ class Move extends Component {
 游戏对象被安装到游戏对象后执行。
 如果游戏场景以及所有游戏对象已经准备好了，可以拿到已经在游戏对象树上面的节点了。
 正常编码开发我们不会这么做，但是在编辑器开发中就可以派上用场了。
-```typescript
+```js
 class Move extends Component {
   // ...
 	awake() {
@@ -72,7 +72,7 @@ class Move extends Component {
 我们可以在Start回调函数里面去获取对象上绑定其他组件。
 
 
-```typescript
+```js
 class Move extends Component {
   // ...
   private img: Img = null
@@ -91,7 +91,7 @@ class Move extends Component {
 ### 游戏循环
 #### Update
 每一帧执行
-```typescript
+```js
 class Move extends Commponent {
   // ...
 	update(e) { // 让物体按照一定速度移动 位移 = 速度 * 事件
@@ -110,7 +110,7 @@ class Move extends Commponent {
 
 ## 自定义事件
 可以在组件上自定义事件进行一些操作，比如以下例子，添加了加速方法和减速方法。
-```typescript
+```js
 class Move extends Component {
 	//...
   speedUp(value = 20) {

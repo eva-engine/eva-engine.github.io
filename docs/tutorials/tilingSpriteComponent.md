@@ -6,7 +6,9 @@
 
 ## 安装
 
-`npm i @eva/plugin-renderer @eva/plugin-renderer-tiling-sprite -S`
+```bash 
+npm i @eva/plugin-renderer @eva/plugin-renderer-tiling-sprite 
+```
 ## 使用
 
 ```js

@@ -1,9 +1,11 @@
+# 资源管理
+
 游戏中所用到的所有资源都会放在资源管理器中进行管理，在使用资源之前需要将资源添加到资源管理器中，并为资源设置一个资源名，在需要时直接使用资源名。这样做的好处：
 
 - 统一资源入口管理，在 EVA 生态中有 EVA Store / EVA Workstation 等可直接输入指定资源列表，实现链路统一。
 - 在 EVAJS 加载资源时，资源管理器可以对资源进行预处理，减少运行时处理资源产生卡顿等问题
 
-### 添加资源
+## 添加资源
 
 ```js
 import { RESOURCE_TYPE, resource } from '@eva/eva.js'
@@ -73,7 +75,7 @@ import { RESOURCE_TYPE, resource } from '@eva/eva.js'
 
 实际项目中可能需要一次性添加很多资源，可以通过 addResource 实现这一目的
 
-```ts
+```js
 import { RESOURCE_TYPE, resource } from '@eva/eva.js'
 
 resource.addResource([
@@ -91,12 +93,12 @@ resource.addResource([
 ]);
 ```
 
-### 资源预加载
+## 资源预加载
 
 使用 `preload()` 方法将资源列表中 `preload` 为 true 的资源进行加载，可以通过监听 resource 上的事件来获取当前加载进度，适合在游戏初始化展示 loading，切换场景时请求资源时使用。
 
 
-```javascript
+```js
 resource.on(LOAD_EVENT.START, ()=>{})// 开始loader
 resource.on(LOAD_EVENT.PROGRESS, ()=>{}) // 加载进度更新
 resource.on(LOAD_EVENT.LOADED, ()=>{}) // 某文件加载成功
@@ -105,9 +107,9 @@ resource.on(LOAD_EVENT.ERROR, ()=>{}) // 某文件加载失败
 resource.preload()
 ```
 
-### 获取资源
+## 获取资源
 
-#### getResource(resourceName)
+### getResource(resourceName)
 
 使用 getResource 方法获取资源，该方法返回的是一个 promise。资源将会存在于 data 属性中，如果资源是 JSON 文件，则 data 的值是一个 js 对象；如果资源是图片，则 data 的值将会是 Image 实例。
 
@@ -141,7 +143,7 @@ resource.loadSingle({
 
 通过为某种类型的资源注册方法，可以在资源请求回来时对资源进行处理，在使用时可以直接获取到资源实例。
 
-```javascript
+```js
 resource.registerInstance(RESOURCE_TYPE.SPRITE, async ({name, data}) => {
 	const instance = await instanceSth(data)
   return instance
@@ -152,13 +154,13 @@ resource.registerInstance(RESOURCE_TYPE.SPRITE, async ({name, data}) => {
 
 资源可以主动销毁，需要要注意的是，在销毁资源前要确保游戏中没有使用该资源。
 
-```javascript
+```js
 resource.destory('img1')
 ```
 
 如果为该类型资源注册了销毁方法，则会调用该方法销毁资源。
 
-```javascript
+```js
 resource.registerDestroy(RESOURCE_TYPE.SPRITE, async ({instance}) => {
 	await instance.destory()
 })
@@ -166,9 +168,10 @@ resource.registerDestroy(RESOURCE_TYPE.SPRITE, async ({instance}) => {
 
 ### 加载超时事件设置
 
-```javascript
+```js
 resource.timeout = 30000
 ```
+
 <br/>
 <br/>
 <br/>

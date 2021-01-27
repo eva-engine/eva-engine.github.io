@@ -6,7 +6,9 @@ Graphics 组件为 GameObject 提供了绘制图形的能力。
 
 ## 安装
 
-`npm i @eva/plugin-renderer @eva/plugin-renderer-graphics -S`
+```bash 
+npm i @eva/plugin-renderer @eva/plugin-renderer-graphics 
+```
 
 ## 使用
 

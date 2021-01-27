@@ -48,6 +48,6 @@ iteration 循环次数，默认不循环
 动画结束触发
 
 
-```javascript
+```js
 transform.on('finish', animName => {})
 ```

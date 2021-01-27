@@ -23,7 +23,7 @@ hitArea区域的属性值相对于GameObject的矩形区域。
 {style: {paths: [{x,y},{x,y},{x,y}]}} |
 |  |  |  |
 
-```typescript
+```js
 import {Event, HIT_AREA_TYPE} from '@eva/plugin-render'
 const evt = image.addComponent(new Event({
     hitArea: {
@@ -85,7 +85,7 @@ Event Component 用来支持 Entity 的事件绑定，事件有
 listener 函数的参数
 
 
-```javascript
+```js
 {
     data:{
     	position: {x, y}
@@ -99,6 +99,6 @@ listener 函数的参数
 阻止事件冒泡
 
 
-```javascript
+```js
 event.stopPropagation()
 ```

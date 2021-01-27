@@ -6,7 +6,9 @@ Mask 组件可以将 GameObject 的展示范围进行裁剪，使用前需要安
 
 ## 安装
 
-`npm i @eva/plugin-renderer @eva/plugin-renderer-mask -S`
+```bash 
+npm i @eva/plugin-renderer @eva/plugin-renderer-mask 
+```
 ## 使用
 
 ```js

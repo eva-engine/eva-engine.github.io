@@ -8,7 +8,7 @@
 ## 使用
 
 
-```javascript
+```js
 import {StatsSystem} from '@eva/plugin-stats'
 
 // 创建游戏，传入store
