@@ -1,15 +1,65 @@
-# 精灵图（雪碧图）
+# 精灵图 Sprite
 
-> 使用前需要安装渲染器
- 
-精灵图是将多张图片打包的一张图片，可以减少 HTTP 请求次数，节省内存空间。
+精灵图是将多张图片打包的一张图片，可以减少 HTTP 请求次数，节省内存空间，使用前需要安装渲染器。
 
 [Demo](https://eva.js.org/playground/#/sprite)
 
+## 安装
+
+`npm i @eva/plugin-renderer-sprite -S`
 ## 使用
 
 ```js
+import { Game, GameObject, resource, RESOURCE_TYPE } from '@eva/eva.js';
+import { RendererSystem } from '@eva/plugin-renderer';
+import { Sprite, SpriteSystem } from '@eva/plugin-renderer-sprite';
 
+resource.addResource([
+  {
+    name: 'spriteName',
+    type: RESOURCE_TYPE.SPRITE,
+    src: {
+      image: {
+        type: 'png',
+        url:
+          'https://gw.alicdn.com/tfs/TB1ONLxOAL0gK0jSZFAXXcA9pXa-900-730.png',
+      },
+      json: {
+        type: 'json',
+        url:
+          'https://pages.tmall.com/wow/eva/ad317f6aea149d9a8b34a517e5df2caf.json',
+      },
+    },
+    preload: true,
+  },
+]);
+
+const game = new Game({
+  systems: [
+    new RendererSystem({
+      canvas: document.querySelector('#canvas'),
+      width: 750,
+      height: 1000,
+      backgroundColor: 0x101010,
+    }),
+    new SpriteSystem(),
+  ],
+});
+
+const gameObj1 = new GameObject('gameObject1', {
+  size: { width: 200, height: 244 },
+  position: {
+    x: 0,
+    y: 0,
+  },
+});
+
+const spriteCom1 = new Sprite({
+  resource: 'spriteName',
+  spriteName: 'symbol_1',
+});
+
+gameObj1.addComponent(spriteCom1);
 ```
 
 ## 参数

@@ -1,17 +1,74 @@
-# 图形
+# 图形 Graphics
+
+Graphics 组件为 GameObject 提供了绘制图形的能力。
 
 [Demo](https://eva.js.org/playground/#/graphics)
 
-因为 EVAJS 底层渲染引擎依赖的 Graphics，目前直接将 Pixi 的接口对外开放了，所以目前的使用方法和属性还是依赖 Pixi 的。
+## 安装
+
+`npm i @eva/plugin-renderer @eva/plugin-renderer-graphics -S`
+
 ## 使用
 
 无需参数，将会返回一个 graphics 挂载 component 实例上，调用 graphics 属性上的方法即可绘制图形
 
-```typescript
+```js
+import { Game, GameObject } from '@eva/eva.js';
+import { RendererSystem } from '@eva/plugin-renderer';
+import { Graphics, GraphicsSystem } from '@eva/plugin-renderer-graphics';
+
+const game = new Game({
+  systems: [
+    new RendererSystem({
+      canvas: document.querySelector('#canvas'),
+      width: 750,
+      height: 1000,
+    }),
+    new GraphicsSystem()
+  ],
+});
+
+const outter = new GameObject('container', {
+  position: {
+      x: 200,
+      y: 500,
+  },
+  size: {
+    width: 300,
+    height: 24,
+  },
+});
+const progress = new GameObject('container', {
+  position: {
+    x: 3,
+    y: 3,
+  },
+});
+
 const outterGraphics = outter.addComponent(new Graphics());
 outterGraphics.graphics.beginFill(0xde3249, 1);
 outterGraphics.graphics.drawRoundedRect(0, 0, 300, 24, 12);
 outterGraphics.graphics.endFill();
+
+const progressGraphics = progress.addComponent(new Graphics());
+
+let i = 0;
+setInterval(() => {
+  setProgress(i++);
+}, 100);
+
+outter.addChild(progress);
+
+game.scene.addChild(outter);
+
+function setProgress(progress) {
+  if (progress > 100) return;
+  const width = Math.max(12, (296 * progress) / 100);
+  progressGraphics.graphics.clear();
+  progressGraphics.graphics.beginFill(0x000000, 1);
+  progressGraphics.graphics.drawRoundedRect(0, 0, width, 18, 9);
+  progressGraphics.graphics.endFill();
+}
 ```
 ### 绘制方法
 #### beginFill (color, alpha)

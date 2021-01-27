@@ -1,9 +1,12 @@
-# 图片
+# 图片 Image
 
-使用前需要安装[渲染器](/tutorials/prepareRender)
+Image 组件为 GameObject 提供了使用过图片的能力，可以将 resource 加载的图片添加到 GameObject 上展示出来。使用前需要安装[渲染器](/tutorials/prepareRender)
 
 [Demo](https://eva.js.org/playground/#/image)
 
+## 安装
+
+`npm i @eva/plugin-renderer @eva/plugin-renderer-imagen -S`
 ## 使用
 
 ```js

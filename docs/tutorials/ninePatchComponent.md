@@ -1,21 +1,97 @@
-# 九宫格
+# 九宫格 NinePatch
 
-> 使用前需要安装渲染器
-
-## Demo
-[https://eva.js.org/playground/#/ninePatch](https://eva.js.org/playground/#/ninePatch)
-
-
-## 介绍
-在互动游戏开发中，我们经常会遇到一些尺寸不固定，但是周围或四遍样式不允许缩放变形的图片。
-例如消息气泡，如果直接设置宽高会将整个气泡图片拉变形。
-下图中，第二个是通过九宫格创建的气泡，最后一个是直接把图片拉伸创建的，前两个明显符合预期。
-
+我们经常会遇到一些尺寸不固定，但是周围或四遍样式不变形的图片，也就是 .9 图，例如消息气泡，如果直接设置宽高会将整个气泡图片拉变形。
+下图中，第二个是通过九宫格创建的气泡，最后一个是直接把图片拉伸创建的，前两个明显符合预期。[Demo](https://eva.js.org/playground/#/ninePatch)
 
 ![image.png](https://intranetproxy.alipay.com/skylark/lark/0/2020/png/65745/1604844479065-65a38e22-ec4d-47e1-9cf8-26f424fd161f.png#align=left&display=inline&height=597&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1194&originWidth=894&size=48023&status=done&style=none&width=447)
 
+## 安装
 
-## Member
+`npm i @eva/plugin-renderer @eva/plugin-renderer-ninepatch -S`
+
+## 使用
+
+```js
+import { Game, GameObject, resource, RESOURCE_TYPE } from '@eva/eva.js';
+import { RendererSystem } from '@eva/plugin-renderer';
+import { NinePatch, NinePatchSystem } from '@eva/plugin-renderer-nine-patch';
+
+resource.addResource([
+  {
+    name: 'nine',
+    type: RESOURCE_TYPE.IMAGE,
+    src: {
+      image: {
+        type: 'png',
+        url: 'https://img.alicdn.com/tfs/TB17uSKkQ9l0K4jSZFKXXXFjpXa-363-144.png',
+      }
+    },
+    preload: false,
+  },
+]);
+
+const game = new Game({
+  systems: [
+    new RendererSystem({
+      canvas: document.querySelector('#canvas'),
+      width: 750,
+      height: 1000,
+      backgroundColor: 0xffffff,
+    }),
+    new NinePatchSystem()
+  ],
+});
+
+const patch = new GameObject('patch', {
+  size: { width: 360, height: 145 },
+  origin: { x: 0, y: 0 },
+  position: {
+    x: 10,
+    y: 10,
+  },
+  anchor: {
+    x: 0,
+    y: 0,
+  },
+});
+const ninePatch = patch.addComponent(
+  new NinePatch({
+    resource: 'nine',
+    leftWidth: 100,
+    topHeight: 40,
+    rightWidth: 40,
+    bottomHeight: 40
+  }),
+);
+
+const patch1 = new GameObject('patch1', {
+  size: { width: 660, height: 345 },
+  origin: { x: 0, y: 0 },
+  position: {
+    x: 10,
+    y: 300,
+  },
+  anchor: {
+    x: 0,
+    y: 0,
+  },
+});
+
+const ninePatch1 = patch1.addComponent(
+  new NinePatch({
+    resource: 'nine',
+    leftWidth: 100,
+    topHeight: 40,
+    rightWidth: 40,
+    bottomHeight: 40
+  }),
+);
+
+game.scene.addChild(patch);
+game.scene.addChild(patch1);
+```
+
+## 参数
 ### resource `string` 
 资源名称
 ### spriteName
