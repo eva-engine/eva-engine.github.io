@@ -1,9 +1,75 @@
-# 文本
+# 文本 Text
+
+Text 组件为 gameObject 提供了展示文字的能力，使用了 Text 组件后，gameObject 的宽度会在下一帧设置文字所占区域的宽度给 Transform。
 
 [Demo](https://eva.js.org/playground/#/text)
-## 注意
 
-使用了 Text 组件后，gameObject 的宽度会在下一帧设置文字所占区域的宽度给 Transform 的宽度。
+## 安装
+
+`npm i @eva/plugin-renderer-text -S`
+## 使用
+
+```js
+import { Game, GameObject } from '@eva/eva.js';
+import { RendererSystem } from '@eva/plugin-renderer';
+import { Text, TextSystem } from '@eva/plugin-renderer-text';
+
+const game = new Game({
+  systems: [
+    new RendererSystem({
+      canvas: document.querySelector('#canvas'),
+      width: 750,
+      height: 1000,
+    }),
+    new TextSystem()
+  ],
+});
+
+// 此处还在考虑如何设置默认场景的宽高
+game.scene.transform.size = {
+    width: 750,
+    height: 1000
+}
+
+const text = new GameObject("text", {
+  position: {
+    x: 0,
+    y: 0
+  },
+  origin: {
+    x: 0.5,
+    y: 0.5
+  },
+  anchor: {
+    x: 0.5,
+    y: 0.5
+  }
+});
+
+text.addComponent(new Text({
+  text: "欢迎使用EVA互动游戏开发体系！",
+  style: {
+    fontFamily: "Arial",
+    fontSize: 36,
+    fontStyle: "italic",
+    fontWeight: "bold",
+    fill: ["#b35d9e", "#84c35f", "#ebe44f"], // gradient
+    fillGradientType: 1,
+    fillGradientStops: [0.1, 0.4],
+    stroke: "#4a1850",
+    strokeThickness: 5,
+    dropShadow: true,
+    dropShadowColor: "#000000",
+    dropShadowBlur: 4,
+    dropShadowAngle: Math.PI / 6,
+    dropShadowDistance: 6,
+    wordWrap: true,
+    wordWrapWidth: 400,
+    breakWords: true
+  }
+}));
+```
+
 ## 参数
 ### text: `string` 
 
