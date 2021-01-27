@@ -29,7 +29,7 @@ times: 播放次数，默认无限次
 对应龙骨官方事件：[http://developer.egret.com/cn/apidoc/index/name/dragonBones.EventObject](http://developer.egret.com/cn/apidoc/index/name/dragonBones.EventObject)
 
 
-```typescript
+```js
 // 以下事件对应龙骨官方事件
 'start'
 'loopComplete'

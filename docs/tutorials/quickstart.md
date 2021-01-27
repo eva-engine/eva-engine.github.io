@@ -1,12 +1,11 @@
-### 安装
+# 快速开始 
+## 安装
 
-目前仅支持 npm 安装
-
-```sh
+```bash
 npm install @eva/eva.js
 ```
 
-### 创建画布
+## 创建画布
 
 EVAJS 依赖于 HTML 中的 canvas 进行绘制。如果设计稿中的宽高是固定的（例如 750px*1000px）又占满全屏，我们可以设置 canvas 的 css 宽度为 100%，高度为auto。
 
@@ -20,7 +19,7 @@ EVAJS 依赖于 HTML 中的 canvas 进行绘制。如果设计稿中的宽高是
 <canvas id="canvas"></canvas>
 ```
 
-### 添加资源
+## 添加资源
 
 在创建游戏之前，我们需要添加资源文件到资源管理器中，这里我们添加两个图片资源。当然还可以添加龙骨动画、spine 动画资源，更多请看[资源管理](./resourceManagement)。
 
@@ -55,11 +54,11 @@ resource.addResource([
 ])
 ```
 
-### 创建游戏
+## 创建游戏
 
 EVAJS 内核是一个非常轻量级的运行时，其他功能都是通过插件的方式实现的，如果想实现游戏最基础的渲染能力，需要安装渲染插件 `@eva/plugin-renderer`。
 
-```sh
+```bash
 npm i @eva/plugin-renderer
 ```
 
@@ -89,15 +88,15 @@ const game = new Game({
 当然这样只让 EVAJS 有了基础的渲染能力，但是 canvas 上还没有展示任何元素，接下来我们将添加 gameObject，它将会展现在画布上。
 
 
-### 添加游戏对象
+## 添加游戏对象
 
 创建完游戏后，我们需要在游戏里面添加一个[游戏对象](./gameObject)，并且给游戏对象添加[组件](./customComponent)。游戏对象是游戏中最基本的可操作单位，而组件则赋予了游戏对象各种能力，比如 Img 组件让一个 gameObject 展示一张图片。
 
-```sh
+```bash
 npm i @eva/plugin-renderer-img
 ```
 
-```javascript
+```js
 import { Img, ImgSystem } from '@eva/plugin-renderer-img' // 引入渲染图片所需要的组件和系统
 
 game.addSystem(new ImgSystem()) // 给游戏添加渲染图片的能力
@@ -116,9 +115,9 @@ gameObject.addComponent(new Img({
 game.scene.addChild(gameObject) // 把游戏对象放入场景，这样画布上就可以显示这张图片了
 ```
 
-### 组件管理
+## 组件管理
 
-#### 获取组件
+### 获取组件
 
 方式1：创建时保留组件
 
@@ -133,19 +132,19 @@ gameObject.addComponent(img)
 
 方式2：创建后从游戏对象上获取
 
-```javascript
+```js
 const img = gameObject.getComponent(Img)
 // or
 const img = gameObject.getComponent('Img')
 ```
 
-#### 修改组件属性
+### 修改组件属性
 
 ```js
 img.resource = 'image2' // 切换资源名称，要确保资源已经被添加到资源管理器
 ```
 
-### 准备好了吗？
+## 准备好了吗？
 
 刚刚介绍了 EVAJS 最简单的 demo，接下来我们看一些 2D 互动游戏[常用能力](./resourceManagement)。
 

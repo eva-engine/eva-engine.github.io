@@ -13,7 +13,7 @@ EVA JS 开发游戏不是强依赖EVAX的，可以按照需要使用。
 所有数据需要事先定义好，如果没有定义好，将不会被监听
 
 
-```javascript
+```js
 // 创建 Store
 const store = {
   user: {
@@ -33,7 +33,7 @@ const store = {
 ## 初始化EVAX
 
 
-```javascript
+```js
 // 引入 evax 插件
 import {EvaXSystem, EvaX} from '@eva/plugin-evax'
 
@@ -63,7 +63,7 @@ game.scene.addChild(evaxMangager)
 ## 监听数据变化
 
 
-```javascript
+```js
 // 添加evax组件
 go.addComponent(new EvaX({
   events: {
@@ -97,7 +97,7 @@ go.addComponent(new EvaX({
 直接修改对象上面的值，如果值与之前相同也会触发监听此值改变的事件
 
 
-```javascript
+```js
 store.user.name = 'Cailun'
 // 或者
 evaxSystem.store.user.name = 'Cailun'
@@ -115,7 +115,7 @@ evaxSystem.store.user.name = 'Cailun'
 全覆盖模式更新，对比内容变化，变化的内容才会触发更新，
 
 
-```javascript
+```js
 const newStore = {
   user: {
     name: 'Cailun',
@@ -134,7 +134,7 @@ evaxSystem.emit('evax.updateStore', newStore)
 全覆盖模式更新，所有值都会被更新一次，触发所有属性的监听事件
 
 
-```javascript
+```js
 const newStore = {
   user: {
     name: 'Cailun',
@@ -154,13 +154,13 @@ evaxSystem.emit('evax.forceUpdateStore', newStore)
 使用 emit 方法触发约定事件，事件 **不要** 使用 evax. 开头
 
 
-```javascript
+```js
 evaxSystem.emit('popUp', arg1, arg2, //...) // 事件约定，事件**不要**使用 evax. 开头
 ```
 
 
 监听方法：
-```javascript
+```js
 // 添加evax组件
 go.addComponent(new EvaX({
   events: {
@@ -176,7 +176,7 @@ go.addComponent(new EvaX({
 这个案例介绍，如果Store上面的文字发生变化，我们修改对应组件上面文字的内容
 
 
-```javascript
+```js
 // 创建对象，文字组件使用store里面的名字
 const go = new GameObject('go')
 const txt = go.addComponent(new Text({text: ''}))
@@ -187,7 +187,7 @@ const txt = go.addComponent(new Text({text: ''}))
 2、将一些需要修改的组件，比如 Text 挂在到脚本组件的属性上，以便后续操作。
 
 
-```javascript
+```js
 // 创建一个自定义组件，将方法放到自定义组件中
 class AScriptComponent extends Component{
   static componentName: 'AScriptComponent',
@@ -217,7 +217,7 @@ const aScript = go.addComponent(new AScriptComponent)
 创建 evax 组件，将需要绑定的事件写入，并且调用自定义组件上的事件
 
 
-```javascript
+```js
 // 添加evax组件
 go.addComponent(new EvaX({
   events: {

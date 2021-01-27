@@ -7,7 +7,9 @@
 
 ## 安装
 
-`npm i @eva/plugin-renderer @eva/plugin-renderer-render -S`
+```bash 
+npm i @eva/plugin-renderer @eva/plugin-renderer-render 
+```
 
 ## 使用
 

@@ -32,11 +32,11 @@ eva create-plugin
 ├── test
 └── tsconfig.json
 ```
-工程内置了一个 EVA 的简单 demo，使用 `npm run start` 命令启动项目。
+工程内置了一个 EVA 的简单 demo，使用 ```bash run start` 命令启动项目。
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/305130/1597300860187-9152e1e4-8f09-40f2-8ad3-f905d9a5b674.png#align=left&display=inline&height=174&margin=%5Bobject%20Object%5D&name=image.png&originHeight=174&originWidth=258&size=5331&status=done&style=none&width=258)
 ## 插件开发
 在 `demo/index.ts` 中，代码初始化了一个游戏场景，并在游戏场景中添加了一个 Text 组件。 另外根据开发者输入插件名，自动引入了初始化的插件。
-```javascript
+```js
 // ...
 // 引入插件
 import { Demo, DemoSystem } from '../lib'
@@ -59,7 +59,7 @@ System 被安装时，会调用插件的 `init` 方法。运行项目后，可�
 在 EVA 中，游戏的能力都是由 Component 和 System 提供的， Component 主要用来给 gameObject 标注一些能力和能力的属性。System 给 Component 的 gameObject 赋能，插件可以给引擎提供多个 System 和 Component。
 ### 参数配置
 System 的构造函数可以传递参数，在 `init` 方法中可以获得这些参数并进行相关的配置
-```javascript
+```js
 // demo/index.ts
 const game = new Game({
   systems: [
@@ -80,13 +80,13 @@ const game = new Game({
 
 ### 监听更新
 通过装饰器对 System 进行监听，如果 Component 被添加或者属性被修改，则会触发监听。
-```javascript
+```js
 @decorators.componentObserver({
   Demo: []
 })
 ```
 在 `update()` 方法中，调用 `componentObserver.clear()` 方法，可以获取到更新的内容。
-```javascript
+```js
 // ...
 update() {
 	const changed = this.componentObserver.clear()  
@@ -109,7 +109,7 @@ tnpm publish
 
 
 首先设计 Component，既需要赋予游戏对象的能力。
-```javascript
+```js
 
 export default class Accessibility extends Component {
   static componentName: string = 'Accessibility'
@@ -134,7 +134,7 @@ export default class Accessibility extends Component {
 }
 ```
 这里为组件定义了一个 hint 属性，用于传入需要朗读的内容。游戏对象可以通过 `addComponent()` 方法添加组件，赋予插件能力。
-```javascript
+```js
 text.addComponent(new Accessibility({hint: '需要朗读的内容'}))
 ```
 
@@ -142,7 +142,7 @@ text.addComponent(new Accessibility({hint: '需要朗读的内容'}))
 当游戏对象调用上面的代码时， System 通过监听，可以获取到 Component 的属性值。
 
 
-```javascript
+```js
 // ...
 /**
    * 监听插件更新
@@ -172,7 +172,7 @@ add(changed: ComponentChanged) {
 
 
 如果需要用到位置等相关信息，可以通过 gameObject 中的 `transform` 属性来获取。
-```javascript
+```js
 
   /**
    * 监听组件增加

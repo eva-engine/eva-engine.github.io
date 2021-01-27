@@ -1,4 +1,8 @@
-### 创建游戏
+# Game
+
+Game 是游戏对象，通过 Game 实例上的方法，控制游戏暂停、继续。通过将 System 添加到 Game 上让游戏能够支持不同的能力，这些能力都是通过组件添加到 GameObject 上展现出来的。
+
+## 创建游戏
 
 ```html
 <style>
@@ -10,7 +14,7 @@
 <canvas id="canvas"></canvas>
 ```
 
-```javascript
+```js
 import { Game } from '@eva/eva.js'
 import { RendererSystem } from '@eva/plugin-renderer'
 
@@ -33,11 +37,11 @@ const game = new Game({
 })
 ```
 
-### 添加系统
+## 添加系统
 
 有两种方式添加系统，一种是在 Game 实例化的时候，传入构造函数的 `systems` 参数中，比如 `renderSystem` 渲染能力是必备的，可以通过这种方式添加。另外一种是在创建游戏后调用游戏实例上面的 `addSystem` 方法添加。EVAJS 提供了很多系统，这些系统都是作为插件单独在一个 package 中，比如，如果我们想检测帧率，可以使用 `@eva/plugin-stats` 插件。
 
-```javascript
+```js
 import { StatsSystem } from '@eva/plugin-stats'
 
 const statsSystem = new StatsSystem({
@@ -53,7 +57,7 @@ const statsSystem = new StatsSystem({
 game.addSystem(statsSystem);
 ```
 
-### 获取系统
+## 获取系统
 
 ```ts
 import { StatsSystem } from '@eva/plugin-stats'
@@ -65,7 +69,7 @@ const stats = game.getSystem('StatsSystem') // 通过系统名获取系统
 
 ## 开始游戏
 
-```javascript
+```js
 game.start()
 ```
 
@@ -77,9 +81,9 @@ game.start()
 game.pause()
 ```
 
-### 多场景管理
+## 多场景管理
 
-#### 切换场景
+### 切换场景
 
 ```js
 import {Scene} from '@eva/eva.js'
@@ -93,7 +97,7 @@ game.loadScene({
 
 ```
 
-#### 渲染到多个 canvas
+### 渲染到多个 canvas
 
 在项目中，游戏默认会渲染到一个默认 canvas 上，当我们会有渲染到多个 canvas 上的需求，可以将该场景渲染到另一个 canvas 上。
 
