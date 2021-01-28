@@ -35,12 +35,31 @@
 </head>
 
 <body>
+  <nav class="app-nav" id="app-nav">
+    <ul>
+      <li><a href="/#/tutorials/quickstart" title="教程">教程</a></li>
+      <li><a href="/#/api/index" title="API文档">API文档</a></li>
+      <li><a href="/playground" title="playground">使用范例</a></li>
+      <li><a href="https://yuque.com/eva/blog" target="_blank" title="博客">博客</a></li>
+      <li><a href="/#/others/changelog" title="更新日志">更新日志</a></li>
+      <li>钉钉群
+        <ul>
+          <li>
+            &nbsp;EVA JS&nbsp;
+            内部服务群&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </li>
+          <li><img src="https://gw.alicdn.com/imgextra/i1/O1CN012ZZKa9213zNxY4Dko_!!6000000006930-2-tps-1886-1886.png"
+              data-origin="https://gw.alicdn.com/imgextra/i1/O1CN012ZZKa9213zNxY4Dko_!!6000000006930-2-tps-1886-1886.png"
+              name="钉钉群" alt="eva钉钉群" style="width:200px;"></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
   <div id="app"></div>
   <script>
     window.$docsify = {
-      // repo: 'https://github.com/eva/eva.js',
       loadSidebar: true,
-      loadNavbar: './_navbar.md',
+      loadNavbar: true,
       coverpage: true,
       onlyCover: true,
       auto2top: true,
@@ -58,6 +77,17 @@
         title: 'Table of Contents',
       },
     }
+
+    var nav = document.querySelector('#app-nav');
+    var navItem;
+    nav.addEventListener('click', function (e) {
+      var item = e.target;
+      if (item && item.tagName === 'A' && !item.getAttribute('target')) {
+        if (navItem) navItem.classList.remove('active');
+        item.classList.add('active');
+        navItem = item;
+      }
+    });
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
