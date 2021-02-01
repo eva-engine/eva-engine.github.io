@@ -3,7 +3,7 @@
 我们经常会遇到一些尺寸不固定，但是周围或四遍样式不变形的图片，也就是 .9 图，例如消息气泡，如果直接设置宽高会将整个气泡图片拉变形。
 下图中，第二个是通过九宫格创建的气泡，最后一个是直接把图片拉伸创建的，前两个明显符合预期。[Demo](https://eva.js.org/playground/#/ninePatch)
 
-![image.png](https://intranetproxy.alipay.com/skylark/lark/0/2020/png/65745/1604844479065-65a38e22-ec4d-47e1-9cf8-26f424fd161f.png#align=left&display=inline&height=597&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1194&originWidth=894&size=48023&status=done&style=none&width=447)
+![image.png](https://img.alicdn.com/imgextra/i1/O1CN01lDIcS31chVAZjBu7q_!!6000000003632-2-tps-894-1194.png)
 
 ## 安装
 
