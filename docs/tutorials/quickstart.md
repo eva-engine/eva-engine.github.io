@@ -24,7 +24,7 @@ EVAJS 依赖于 HTML 中的 canvas 进行绘制。如果设计稿中的宽高是
 在创建游戏之前，我们需要添加资源文件到资源管理器中，这里我们添加两个图片资源。当然还可以添加龙骨动画、spine 动画资源，更多请看[资源管理](./resourceManagement)。
 
 ```js
-import { resource } from '@eva/eva.js'
+import { resource, RESOURCE_TYPE } from '@eva/eva.js'
 
 resource.addResource([
   {
