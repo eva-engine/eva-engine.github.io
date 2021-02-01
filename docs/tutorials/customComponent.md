@@ -3,12 +3,17 @@
 ## 介绍
 在日常业务开发中，我们需要自定义一些业务逻辑，每个游戏对象可能需要单独的逻辑或者“数据驱动器”，我们通过脚本组件的形式进行业务开发。
 ### 举例说明：
+
 芭芭农场的植物中作物生产的经验会实时变化，
+
 Step1: 我们创建一个生产组件
 Step2: 在组件上设置描述经验生产的速度，当前经验的属性
 Step3: 通过生命周期方法，实时根据生产速度对经验值进行修改，然后修改文字组件上面的文字来展示经验值
 Step4: 提供收取作物经验的自定义事件出来，当用户点击植物时调用
-![image.png](https://intranetproxy.alipay.com/skylark/lark/0/2020/png/65745/1604851827956-6ecbe85b-0c8e-47da-9136-9b196ca79761.png#align=left&display=inline&height=246&margin=%5Bobject%20Object%5D&name=image.png&originHeight=492&originWidth=452&size=544940&status=done&style=none&width=226)![image.png](https://intranetproxy.alipay.com/skylark/lark/0/2020/png/65745/1604851813448-88ce03dc-a537-44c7-986b-4445dd7efb23.png#align=left&display=inline&height=256&margin=%5Bobject%20Object%5D&name=image.png&originHeight=512&originWidth=1164&size=324084&status=done&style=none&width=582)
+
+![image.png](https://img.alicdn.com/imgextra/i1/O1CN01wuCCfA1cXsquhQJ06_!!6000000003611-2-tps-452-492.png)
+
+![image.png](https://img.alicdn.com/imgextra/i4/O1CN01HjkghN1ztAQ93DPan_!!6000000006771-2-tps-1164-512.png)
 ## 初始化
 通过继承 Component 的方式创建脚本组件
 ```js
@@ -30,7 +35,8 @@ class Move extends Component {
 }
 ```
 ## 生命周期
-![image.png](https://intranetproxy.alipay.com/skylark/lark/0/2020/png/65745/1607319319268-abf71909-9f2a-4c15-b3dc-9739a20ecd12.png#align=left&display=inline&height=906&margin=%5Bobject%20Object%5D&name=image.png&originHeight=906&originWidth=1448&size=297563&status=done&style=none&width=1448)
+
+![image.png](https://img.alicdn.com/imgextra/i2/O1CN01gEgYOz1T8qevGDloU_!!6000000002338-2-tps-1448-906.png)
 
 ### 初始化
 #### Init
