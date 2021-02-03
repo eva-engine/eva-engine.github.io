@@ -88,6 +88,7 @@ listener 函数的参数
 ```js
 {
     data:{
+        pointerId: number,
     	position: {x, y}
     },
     stopPropagation: ()=>{},
