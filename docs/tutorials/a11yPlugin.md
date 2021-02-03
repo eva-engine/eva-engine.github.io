@@ -1,14 +1,14 @@
 # A11y 无障碍插件
 
-# eva-plugin-a11y
-gitlab: [http://gitlab.alibaba-inc.com/eva/eva-plugin-a11y](http://gitlab.alibaba-inc.com/eva/eva-plugin-a11y)
-tnpm: [https://npm.alibaba-inc.com/package/@eva/plugin-a11y](https://npm.alibaba-inc.com/package/@eva/plugin-a11y)
 
+
+## Demo
+//TODO
 
 ## 介绍
 
-
 EVA JS 无障碍插件，用于为游戏对象添加无障碍的能力。插件通过定位游戏对象的位置，自动化地添加辅助 DOM，使得游戏对象能被聚焦，游戏拥有无障碍能力。
+
 ## 安装
 
 
@@ -33,7 +33,14 @@ import { A11ySystem, A11y, A11yActivate } from "@eva/plugin-a11y"
 // 为游戏场景添加无障碍能力
 game.addSystem(new A11ySystem({
   debug: true, // 上线时关闭debug
-  activate: A11yActivate.AUTO // 目前淘宝和支付宝可以自动判断
+  activate: A11yActivate.CHECK // 目前淘宝和支付宝可以自动判断
+  checkA11yOpen: () => {
+    // 根据不通客户端提供的接口判断是否打开了无障碍
+    return new Promise(resolve => {
+      resolve(true) // 打开
+      resolve(false) //未打开
+    })
+  }
 }))
 // 为游戏对象添加无障碍能力
 gameObject.addComponent(new A11y({
@@ -46,10 +53,11 @@ gameObject.addComponent(new A11y({
 
 
 上面的代码会自动在相应的游戏对象区域上方添加一个如下图所示的辅助 DOM：
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/305130/1596713708115-eeea0f19-176f-4f8c-8a3b-847949e70e34.png#align=left&display=inline&height=367&margin=%5Bobject%20Object%5D&name=image.png&originHeight=734&originWidth=2098&size=1649126&status=done&style=none&width=1049)
+![image.png](https://gw.alicdn.com/imgextra/i4/O1CN01I2uBms1Lvq6GBg6Bo_!!6000000001362-2-tps-2098-734.png)
 插件的工作示意图如下：
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/305130/1597806855045-756a3631-e929-47cd-b78d-a4cff699f7c8.png#align=left&display=inline&height=850&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1700&originWidth=3332&size=2346198&status=done&style=none&width=1666)
+![image.png](https://gw.alicdn.com/imgextra/i2/O1CN01gGe3CS1i5Ntv1ztfE_!!6000000004361-2-tps-3332-1700.png)
 如果游戏对象没有添加至游戏场景中，或者游戏对象被移除出场景，辅助的 DOM 节点也会相应的删除。
+
 ```js
 // 游戏对象被移除，辅助 DOM 也被移除
 gameObject.addComponent(new A11y({hint: 'text'}))
@@ -91,7 +99,7 @@ gameObject.removeComponent('A11y')
 
 | 参数    | 说明                       |
 | ------- | -------------------------- |
-| AUTO    | 根据系统设置自动开启无障碍 |
+| CHECK    | 根据传入的方法检查开启无障碍 |
 | ENABLE  | 开启插件无障碍能力         |
 | DISABLE | 关闭插件无障碍能力         |
 
@@ -102,15 +110,41 @@ gameObject.removeComponent('A11y')
 
 - 一些可拖动的游戏玩法需根据业务进行优化
 - 龙骨动画的辅助 DOM 节点为 1px
-- 插件对过渡动画（Transition）的处理，查看相关文章：[eva-plugin-a11y 动画处理](https://yuque.antfin-inc.com/docs/share/2b93b28e-2b15-4f9b-affa-a9a49ee8acb1)
 - 点击事件将自动触发Event组件上面的touchstart/touchend/tip事件
 
 
+## EVA 无障碍插件动画
+普通的 Transition
 
-## Demo
-点击[链接](https://pre-wormhole.tmall.com/wow/z/hdwk/hdsolution2/a11y-test?wh_biz=tm&wh_showError=true)或者扫描二维码打开（预发环境）：
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/305130/1597644781557-04fea778-5983-460d-990e-5429af637e97.png#align=left&display=inline&height=347&margin=%5Bobject%20Object%5D&name=image.png&originHeight=347&originWidth=346&size=46105&status=done&style=none&width=346)
-demo 仓库：[http://gitlab.alibaba-inc.com/alimod/accessibility-test/tree/daily/0.0.1](http://gitlab.alibaba-inc.com/alimod/accessibility-test/tree/daily/0.0.1)
+对于普通的过渡动画，无障碍的 DOM 
 
-- 
+层需要等到动画结束后才能知道游戏对象的位置。
 
+eva-plugin-a11y 选择这样对过渡动画进行处理。
+
+### Option1
+
+监听动画的 finish 事件，在动画完成后再为游戏对象添加无障碍能力。
+```
+animation.on('finish', name => {
+  image.addComponent(new A11y({ hint: '填入需要朗读的内容' }))
+});
+```
+如果有多个动画，只需要监听最后一个动画的 finish 事件
+```
+// move 动画
+// idle 动画
+animation.on('finish', name => {
+  name === 'idle' && image.addComponent(new A11y({ hint: '填入需要朗读的内容' }))
+});
+```
+不推荐在 Infinity 的移动动画中使用无障碍能力，例如这样的动画。
+
+这类的动画无障碍用户根本无法使用，建议从业务层面进行优化。
+
+### Option2
+eva-plugin-a11y 无障碍组件的构造还提供一个 delay 的参数，开发者可以选择在任意时刻将游戏对象的无障碍 DOM 渲染出来。
+
+```
+image.addComponent(new A11y({ hint: '填入需要朗读的内容', delay: 1000})
+```

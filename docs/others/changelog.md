@@ -1,4 +1,10 @@
 ### 1.0.0-alpha.8
+
+**新功能**
+ - 发布了A11y无障碍话插件 [@eva/plugin-a11y](https://eva.js.org/#/tutorials/a11yPlugin)
+
+
+### 1.0.0-alpha.8
 **修复了**
  - System的name无法设置问题
 
