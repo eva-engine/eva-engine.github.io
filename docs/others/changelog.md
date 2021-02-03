@@ -3,7 +3,7 @@
  - System的name无法设置问题
 
 **新功能**
- - 给事件增加pointerId
+ - 给事件增加[pointerId](https://eva.js.org/#/tutorials/interactionEvent?id=instance-event39s-arguments)
 
 ### 1.0.0-alpha.7
 **修复了**
