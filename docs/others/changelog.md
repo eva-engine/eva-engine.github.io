@@ -1,6 +1,7 @@
 ### 1.0.0-alpha.8
 **修复了**
  - System的name无法设置问题
+
 **新功能**
  - 给事件增加pointerId
 
