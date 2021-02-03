@@ -79,7 +79,7 @@ gameObject.removeComponent('A11y')
 | 参数     | 类型         | 说明                                           | 默认值 |
 | -------- | ------------ | ---------------------------------------------- | ------ |
 | debug    | boolean      | 是否开启调试，开启后会出现红色遮罩             | false  |
-| activate | A11yActivate | 是否激活无障碍，默认为根据用户系统设置自动激活 | AUTO   |
+| activate | A11yActivate | 是否激活无障碍，默认为根据用户系统设置自动激活 | CHECK   |
 
 
 
