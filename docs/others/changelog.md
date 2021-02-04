@@ -1,7 +1,12 @@
-### 1.0.0-alpha.8
+### 1.0.0-alpha.10
+
+**修复了**
+ - 无障碍插件npm发布问题
+
+### 1.0.0-alpha.9
 
 **新功能**
- - 发布了A11y无障碍话插件 [@eva/plugin-a11y](https://eva.js.org/#/tutorials/a11yPlugin)
+ - 发布了A11y无障碍化插件 [@eva/plugin-a11y](https://eva.js.org/#/tutorials/a11yPlugin)
 
 
 ### 1.0.0-alpha.8
