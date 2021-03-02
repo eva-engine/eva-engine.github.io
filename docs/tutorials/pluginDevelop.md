@@ -39,7 +39,7 @@ eva create-plugin
 ```js
 // ...
 // 引入插件
-import { Demo, DemoSystem } from '../lib'
+import { Demo, DemoSystem } from './tutorials/lib'
 const game = new Game({
   systems: [
     // ...

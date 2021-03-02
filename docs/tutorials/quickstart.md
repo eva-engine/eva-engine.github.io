@@ -25,7 +25,7 @@ EVAJS 依赖于 HTML 中的 canvas 进行绘制。如果设计稿中的宽高是
 
 ## 添加资源
 
-在创建游戏之前，我们需要添加资源文件到资源管理器中，这里我们添加两个图片资源。当然还可以添加龙骨动画、spine 动画资源，更多请看[资源管理](./resourceManagement)。
+在创建游戏之前，我们需要添加资源文件到资源管理器中，这里我们添加两个图片资源。当然还可以添加龙骨动画、spine 动画资源，更多请看[资源管理](/tutorials/resourceManagement)。
 
 ```js
 import { resource, RESOURCE_TYPE } from '@eva/eva.js'
@@ -94,7 +94,7 @@ const game = new Game({
 
 ## 添加游戏对象
 
-创建完游戏后，我们需要在游戏里面添加一个[游戏对象](./gameObject)，并且给游戏对象添加[组件](./customComponent)。游戏对象是游戏中最基本的可操作单位，而组件则赋予了游戏对象各种能力，比如 Img 组件让一个 gameObject 展示一张图片。
+创建完游戏后，我们需要在游戏里面添加一个[游戏对象](/tutorials/gameObject)，并且给游戏对象添加[组件](/tutorials/customComponent)。游戏对象是游戏中最基本的可操作单位，而组件则赋予了游戏对象各种能力，比如 Img 组件让一个 gameObject 展示一张图片。
 
 ```bash
 npm i @eva/plugin-renderer-img
@@ -150,7 +150,7 @@ img.resource = 'image2' // 切换资源名称，要确保资源已经被添加�
 
 ## 准备好了吗？
 
-刚刚介绍了 EVAJS 最简单的 demo，接下来我们看一些 2D 互动游戏[常用能力](./resourceManagement)。
+刚刚介绍了 EVAJS 最简单的 demo，接下来我们看一些 2D 互动游戏[常用能力](/tutorials/resourceManagement)。
 
 <br/>
 <br/>
