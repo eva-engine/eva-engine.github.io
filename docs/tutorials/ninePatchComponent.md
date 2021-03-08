@@ -7,16 +7,16 @@
 
 ## 安装
 
-```bash 
-npm i @eva/plugin-renderer @eva/plugin-renderer-ninepatch 
+```bash
+npm i @eva/plugin-renderer @eva/plugin-renderer-ninepatch
 ```
 
 ## 使用
 
 ```js
-import { Game, GameObject, resource, RESOURCE_TYPE } from '@eva/eva.js';
-import { RendererSystem } from '@eva/plugin-renderer';
-import { NinePatch, NinePatchSystem } from '@eva/plugin-renderer-nine-patch';
+import { Game, GameObject, resource, RESOURCE_TYPE } from '@eva/eva.js'
+import { RendererSystem } from '@eva/plugin-renderer'
+import { NinePatch, NinePatchSystem } from '@eva/plugin-renderer-nine-patch'
 
 resource.addResource([
   {
@@ -25,12 +25,12 @@ resource.addResource([
     src: {
       image: {
         type: 'png',
-        url: 'https://img.alicdn.com/tfs/TB17uSKkQ9l0K4jSZFKXXXFjpXa-363-144.png',
+        url: 'https://img.alicdn.com/tfs/TB17uSKkQ9l0K4jSZFKXXXFjpXa-363-144.png'
       }
     },
-    preload: false,
-  },
-]);
+    preload: false
+  }
+])
 
 const game = new Game({
   systems: [
@@ -38,24 +38,24 @@ const game = new Game({
       canvas: document.querySelector('#canvas'),
       width: 750,
       height: 1000,
-      backgroundColor: 0xffffff,
+      backgroundColor: 0xffffff
     }),
     new NinePatchSystem()
-  ],
-});
+  ]
+})
 
 const patch = new GameObject('patch', {
   size: { width: 360, height: 145 },
   origin: { x: 0, y: 0 },
   position: {
     x: 10,
-    y: 10,
+    y: 10
   },
   anchor: {
     x: 0,
-    y: 0,
-  },
-});
+    y: 0
+  }
+})
 const ninePatch = patch.addComponent(
   new NinePatch({
     resource: 'nine',
@@ -63,21 +63,21 @@ const ninePatch = patch.addComponent(
     topHeight: 40,
     rightWidth: 40,
     bottomHeight: 40
-  }),
-);
+  })
+)
 
 const patch1 = new GameObject('patch1', {
   size: { width: 660, height: 345 },
   origin: { x: 0, y: 0 },
   position: {
     x: 10,
-    y: 300,
+    y: 300
   },
   anchor: {
     x: 0,
-    y: 0,
-  },
-});
+    y: 0
+  }
+})
 
 const ninePatch1 = patch1.addComponent(
   new NinePatch({
@@ -86,28 +86,43 @@ const ninePatch1 = patch1.addComponent(
     topHeight: 40,
     rightWidth: 40,
     bottomHeight: 40
-  }),
-);
+  })
+)
 
-game.scene.addChild(patch);
-game.scene.addChild(patch1);
+game.scene.addChild(patch)
+game.scene.addChild(patch1)
 ```
 
 ## 参数
+
 ### resource `string` 
+
 资源名称
+
 ### spriteName
-如果资源类型是Sprite可设置此属性
+
+如果资源类型是 Sprite 可设置此属性
+
 ### leftWidth
-对应下图A
+
+对应下图 A
+
 ### topHeight
-对应下图C
+
+对应下图 C
+
 ### rightWidth
-对应下图B
+
+对应下图 B
+
 ### bottomHeight
-对应下图D
 
+对应下图 D
 
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/107226/1585590941584-0ddb09bf-2e75-4fac-ab05-ae7311733ca7.png#align=left&display=inline&height=306&margin=%5Bobject%20Object%5D&name=image.png&originHeight=612&originWidth=932&size=91970&status=done&style=none&width=466)
+![image.png](https://gw.alicdn.com/imgextra/i1/O1CN01IXEUZN1yYGjgwuahU_!!6000000006590-2-tps-932-612.png)
 
-
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>

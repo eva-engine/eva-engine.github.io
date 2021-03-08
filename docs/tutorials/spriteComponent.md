@@ -6,15 +6,16 @@
 
 ## 安装
 
-```bash 
+```bash
 npm i @eva/plugin-renderer @eva/plugin-renderer-sprite
 ```
+
 ## 使用
 
 ```js
-import { Game, GameObject, resource, RESOURCE_TYPE } from '@eva/eva.js';
-import { RendererSystem } from '@eva/plugin-renderer';
-import { Sprite, SpriteSystem } from '@eva/plugin-renderer-sprite';
+import { Game, GameObject, resource, RESOURCE_TYPE } from '@eva/eva.js'
+import { RendererSystem } from '@eva/plugin-renderer'
+import { Sprite, SpriteSystem } from '@eva/plugin-renderer-sprite'
 
 resource.addResource([
   {
@@ -23,18 +24,16 @@ resource.addResource([
     src: {
       image: {
         type: 'png',
-        url:
-          'https://gw.alicdn.com/tfs/TB1ONLxOAL0gK0jSZFAXXcA9pXa-900-730.png',
+        url: 'https://gw.alicdn.com/tfs/TB1ONLxOAL0gK0jSZFAXXcA9pXa-900-730.png'
       },
       json: {
         type: 'json',
-        url:
-          'https://pages.tmall.com/wow/eva/ad317f6aea149d9a8b34a517e5df2caf.json',
-      },
+        url: 'https://pages.tmall.com/wow/eva/ad317f6aea149d9a8b34a517e5df2caf.json'
+      }
     },
-    preload: true,
-  },
-]);
+    preload: true
+  }
+])
 
 const game = new Game({
   systems: [
@@ -42,32 +41,36 @@ const game = new Game({
       canvas: document.querySelector('#canvas'),
       width: 750,
       height: 1000,
-      backgroundColor: 0x101010,
+      backgroundColor: 0x101010
     }),
-    new SpriteSystem(),
-  ],
-});
+    new SpriteSystem()
+  ]
+})
 
 const gameObj1 = new GameObject('gameObject1', {
   size: { width: 200, height: 244 },
   position: {
     x: 0,
-    y: 0,
-  },
-});
+    y: 0
+  }
+})
 
 const spriteCom1 = new Sprite({
   resource: 'spriteName',
-  spriteName: 'symbol_1',
-});
+  spriteName: 'symbol_1'
+})
 
-gameObj1.addComponent(spriteCom1);
+gameObj1.addComponent(spriteCom1)
 ```
 
 ## 参数
+
 ### resource: `String`
+
 资源名称
+
 ### spriteName： `String` 
+
 精灵图 id
 
 <br/>
