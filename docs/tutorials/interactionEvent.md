@@ -18,10 +18,8 @@ hitArea区域的属性值相对于GameObject的矩形区域。
 | 椭圆     | HIT_AREA_TYPE.Ellipse     | {style:{x,y,width,height}}        |
 | 矩形     | HIT_AREA_TYPE.Rect        | {style:{x,y,width,height}}        |
 | 圆角矩形 | HIT_AREA_TYPE.RoundedRect | {style:{x,y,width,height,radius}} |
-| 多边形   | HIT_AREA_TYPE.Polygon     | {style: {paths: [x,y,x,y,x,y]}}   |
-或
-{style: {paths: [{x,y},{x,y},{x,y}]}} |
-|  |  |  |
+| 多边形   | HIT_AREA_TYPE.Polygon     | {style: {paths: [x,y,x,y,x,y]}} 或 {style: {paths: [{x,y},{x,y},{x,y}]}}  |
+
 
 ```js
 import {Event, HIT_AREA_TYPE} from '@eva/plugin-render'
