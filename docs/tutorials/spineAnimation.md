@@ -29,8 +29,12 @@ Spine 是收费软件，请购买后使用，Spine 官网：[http://zh.esoterics
 name 动作名
 loop 是否循环播放
 
-###
-
 ### stop()
 
 停止播放
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>

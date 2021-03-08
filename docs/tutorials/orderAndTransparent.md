@@ -115,3 +115,9 @@ game.scene.addChild(image)
 ### alpha: `number` 
 
 透明度
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>

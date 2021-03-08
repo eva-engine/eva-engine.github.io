@@ -70,3 +70,9 @@ game.scene.addChild(tilingSprite)
 ### tilePosition：`{x: number, y: number}`
 
 位移
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
