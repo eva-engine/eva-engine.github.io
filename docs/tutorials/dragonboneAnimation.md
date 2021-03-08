@@ -63,6 +63,12 @@ db.on('complete', ()=>{})
 多个骨骼动画 armatureName 不能相同
 导出时 项目名称 project name 使用英文
 
-![image.png](https://cdn.nlark.com/yuque/0/2019/png/107226/1576564162150-0b6eb9f0-e880-4c0e-b6ef-b10b988f7422.png#align=left&display=inline&height=202&margin=%5Bobject%20Object%5D&name=image.png&originHeight=404&originWidth=764&size=228304&status=done&style=none&width=382)
+![image.png](https://gw.alicdn.com/imgextra/i1/O1CN01MwG7Zi1xPHLbANb8E_!!6000000006435-2-tps-764-404.png)
 
-![image.png](https://cdn.nlark.com/yuque/0/2019/png/107226/1576564198005-f0e4edcd-4027-4590-b68c-6579a892e977.png#align=left&display=inline&height=740&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1480&originWidth=2080&size=1360006&status=done&style=none&width=1040)
+![image.png](https://gw.alicdn.com/imgextra/i3/O1CN019co6ry1JQ7RaVAZFa_!!6000000001022-2-tps-2080-1480.png)
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>

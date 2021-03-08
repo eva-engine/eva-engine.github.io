@@ -140,3 +140,9 @@ LottieComponent.on('complete', () => {
 ```
 
 [https://unpkg.alipay.com/@eva/lottie-pixi-docs@0.0.12/docs/index.html#/lottie-animation](https://unpkg.alipay.com/@eva/lottie-pixi-docs@0.0.12/docs/index.html#/lottie-animation)
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>

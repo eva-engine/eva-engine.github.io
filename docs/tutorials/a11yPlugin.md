@@ -139,3 +139,9 @@ eva-plugin-a11y 无障碍组件的构造还提供一个 delay 的参数，开发
 ```
 image.addComponent(new A11y({ hint: '填入需要朗读的内容', delay: 1000})
 ```
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>

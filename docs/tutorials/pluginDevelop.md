@@ -22,7 +22,7 @@ tnpm install -g @eva/tools
 eva create-plugin
 ```
 
-## ![2020-07-21 15-39-23.2020-07-21 15_41_27.gif](https://cdn.nlark.com/yuque/0/2020/gif/305130/1597300860198-11bc0e61-3de4-40e9-9ec8-882f7a8f92fd.gif#align=left&display=inline&height=569&margin=%5Bobject%20Object%5D&name=2020-07-21%2015-39-23.2020-07-21%2015_41_27.gif&originHeight=569&originWidth=850&size=1037349&status=done&style=shadow&width=850)
+## ![2020-07-21 15-39-23.2020-07-21 15_41_27.gif](https://gw.alicdn.com/imgextra/i2/O1CN01nbppFP1suoXXl1h8e_!!6000000005827-1-tps-850-569.gif)
 
 通过 `create-plugin` 命令，自动生成一个工程，目录如下：
 
@@ -42,7 +42,7 @@ eva create-plugin
 ```
 
 工程内置了一个 EVA 的简单 demo，使用 ```bash run start` 命令启动项目。
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/305130/1597300860187-9152e1e4-8f09-40f2-8ad3-f905d9a5b674.png#align=left&display=inline&height=174&margin=%5Bobject%20Object%5D&name=image.png&originHeight=174&originWidth=258&size=5331&status=done&style=none&width=258)
+![image.png](https://gw.alicdn.com/imgextra/i2/O1CN01mJdMcT1CBjh6s5V5E_!!6000000000043-2-tps-258-174.png)
 
 ## 插件开发
 
@@ -66,7 +66,7 @@ game.scene.addChild(text)
 ```
 
 System 被安装时，会调用插件的 `init` 方法。运行项目后，可以看到在控制台输出了初始化成功的信息。
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/305130/1597300860257-e5e29af8-6bd3-4173-8df3-dea3dfc44845.png#align=left&display=inline&height=144&margin=%5Bobject%20Object%5D&name=image.png&originHeight=144&originWidth=775&size=60728&status=done&style=none&width=775)
+![image.png](https://gw.alicdn.com/imgextra/i2/O1CN01qeHAYZ1mtXkL7yIxK_!!6000000005012-2-tps-775-144.png)
 
 在 EVA 中，游戏的能力都是由 Component 和 System 提供的， Component 主要用来给 gameObject 标注一些能力和能力的属性。System 给 Component 的 gameObject 赋能，插件可以给引擎提供多个 System 和 Component。
 
@@ -91,7 +91,7 @@ const game = new Game({
 }
 ```
 
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/305130/1597300860200-d432d552-7d4c-43b6-bc3d-5b2cd68be3af.png#align=left&display=inline&height=94&margin=%5Bobject%20Object%5D&name=image.png&originHeight=94&originWidth=774&size=41764&status=done&style=none&width=774)
+![image.png](https://gw.alicdn.com/imgextra/i3/O1CN01qG8Waf22tZchhRiLc_!!6000000007178-2-tps-774-94.png)
 
 ### 监听更新
 
@@ -219,3 +219,9 @@ add(changed: ComponentChanged) {
 ## Refrences
 
 - [eva-tools](https://npm.alibaba-inc.com/package/@eva/tools)
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>

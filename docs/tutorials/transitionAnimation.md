@@ -55,3 +55,9 @@ iteration 循环次数，默认不循环
 ```js
 transform.on('finish', animName => {})
 ```
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
