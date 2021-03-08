@@ -6,16 +6,17 @@ Mask 组件可以将 GameObject 的展示范围进行裁剪，使用前需要安
 
 ## 安装
 
-```bash 
-npm i @eva/plugin-renderer @eva/plugin-renderer-mask 
+```bash
+npm i @eva/plugin-renderer @eva/plugin-renderer-mask
 ```
+
 ## 使用
 
 ```js
-import { Game, GameObject, resource, RESOURCE_TYPE } from '@eva/eva.js';
-import { RendererSystem } from '@eva/plugin-renderer';
-import { Img, ImgSystem } from '@eva/plugin-renderer-img';
-import { Mask, MaskSystem, MASK_TYPE } from '@eva/plugin-renderer-mask';
+import { Game, GameObject, resource, RESOURCE_TYPE } from '@eva/eva.js'
+import { RendererSystem } from '@eva/plugin-renderer'
+import { Img, ImgSystem } from '@eva/plugin-renderer-img'
+import { Mask, MaskSystem, MASK_TYPE } from '@eva/plugin-renderer-mask'
 
 resource.addResource([
   {
@@ -24,11 +25,10 @@ resource.addResource([
     src: {
       image: {
         type: 'png',
-        url:
-          '//gw.alicdn.com/bao/uploaded/TB1lVHuaET1gK0jSZFhXXaAtVXa-200-200.png',
-      },
+        url: '//gw.alicdn.com/bao/uploaded/TB1lVHuaET1gK0jSZFhXXaAtVXa-200-200.png'
+      }
     },
-    preload: false,
+    preload: false
   },
   {
     name: 'tag',
@@ -36,63 +36,63 @@ resource.addResource([
     src: {
       image: {
         type: 'png',
-        url: '//gw.alicdn.com/mt/TB1KcVte4n1gK0jSZKPXXXvUXXa-150-50.png',
+        url: '//gw.alicdn.com/mt/TB1KcVte4n1gK0jSZKPXXXvUXXa-150-50.png'
       },
       json: {
         type: 'json',
-        url: '//gw.alicdn.com/mt/TB1d4lse4D1gK0jSZFsXXbldVXa.json',
-      },
+        url: '//gw.alicdn.com/mt/TB1d4lse4D1gK0jSZFsXXbldVXa.json'
+      }
     },
-    preload: true,
-  },
-]);
+    preload: true
+  }
+])
 
 const game = new Game({
   systems: [
     new RendererSystem({
       canvas: document.querySelector('#canvas'),
       width: 750,
-      height: 1000,
+      height: 1000
     }),
     new ImgSystem(),
-    new MaskSystem(),
-  ],
-});
+    new MaskSystem()
+  ]
+})
 
 game.scene.transform.size = {
   width: 750,
-  height: 1000,
-};
+  height: 1000
+}
 
 const image = new GameObject('image', {
-  size: { width: 200, height: 200 },
-});
+  size: { width: 200, height: 200 }
+})
 image.addComponent(
   new Img({
-    resource: 'heart',
-  }),
-);
-game.scene.addChild(image);
+    resource: 'heart'
+  })
+)
+game.scene.addChild(image)
 image.addComponent(
   new Mask({
     type: MASK_TYPE.Circle,
     style: {
       x: 100,
       y: 100,
-      radius: 70,
-    },
-  }),
-);
+      radius: 70
+    }
+  })
+)
 
 const image1 = new GameObject('image', {
   size: { width: 200, height: 200 },
-  position: { x: 400, y: 300 },
-});
+  position: { x: 400, y: 300 }
+})
 image1.addComponent(
   new Img({
-    resource: 'heart',
-  }),
-);
+    resource: 'heart'
+  })
+)
 
 image1.addComponent(
   new Mask({
@@ -101,22 +101,22 @@ image1.addComponent(
       width: 100,
       height: 100,
       x: 20,
-      y: 20,
+      y: 20
     },
-    resource: 'heart',
-  }),
-);
-game.scene.addChild(image1);
+    resource: 'heart'
+  })
+)
+game.scene.addChild(image1)
 
 const image2 = new GameObject('image', {
   size: { width: 200, height: 200 },
-  position: { x: 100, y: 400 },
-});
+  position: { x: 100, y: 400 }
+})
 image2.addComponent(
   new Img({
-    resource: 'heart',
-  }),
-);
+    resource: 'heart'
+  })
+)
 
 image2.addComponent(
   new Mask({
@@ -125,20 +125,20 @@ image2.addComponent(
       width: 100,
       height: 100,
       x: 20,
-      y: 20,
+      y: 20
     },
     resource: 'tag',
-    spriteName: 'task.png',
-  }),
-);
-game.scene.addChild(image2);
+    spriteName: 'task.png'
+  })
+)
+game.scene.addChild(image2)
 ```
+
 ## 参数
 
 ### type: `MARK_TYPE` 
 
 ### style: `object` 
-
 
 | 类型     | **Type**              | **属性**                                                                   |
 | -------- | --------------------- | -------------------------------------------------------------------------- |
@@ -149,7 +149,6 @@ game.scene.addChild(image2);
 | 多边形   | MASK_TYPE.Polygon     | {style: {paths: [x,y,x,y,x,y]}} 或者 {style: {paths: [{x,y},{x,y},{x,y}]}} |
 | 图片     | MASK_TYPE.Img         | {resource,style:{x,y,width,height}}                                        |
 | 精灵图   | MASK_TYPE.Sprite      | {resource,spriteName,style:{x,y,width,height}}                             |
-
 
 <br/>
 <br/>

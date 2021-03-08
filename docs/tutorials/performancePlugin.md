@@ -1,12 +1,13 @@
 # 性能监控
 
 ## 介绍
-本插件使用了 [stat.js](https://github.com/mrdoob/stats.js/) 实现，会在制定位置显示性能信息
-![image.png](https://cdn.nlark.com/yuque/0/2019/png/107226/1577548935329-5be71d61-eb4c-45e3-9397-9ff08722dd6a.png#align=left&display=inline&height=262&margin=%5Bobject%20Object%5D&name=image.png&originHeight=524&originWidth=424&size=355404&status=done&style=none&width=212)![image.png](https://cdn.nlark.com/yuque/0/2019/png/107226/1577548961565-38cea6de-b8c8-4216-a0ae-1779928db566.png#align=left&display=inline&height=211&margin=%5Bobject%20Object%5D&name=image.png&originHeight=422&originWidth=476&size=324266&status=done&style=none&width=238)![image.png](https://cdn.nlark.com/yuque/0/2019/png/107226/1577548985390-504463fd-a95d-4e36-92a3-e70e25486d86.png#align=left&display=inline&height=201&margin=%5Bobject%20Object%5D&name=image.png&originHeight=402&originWidth=470&size=307592&status=done&style=none&width=235)
 
+本插件使用了 [stat.js](https://github.com/mrdoob/stats.js/) 实现，会在制定位置显示性能信息
+![image.png](https://gw.alicdn.com/imgextra/i4/O1CN01soAQoz1Q9MG2HLeZL_!!6000000001933-2-tps-424-524.png)
+![image.png](https://gw.alicdn.com/imgextra/i4/O1CN01AHtNyp1Zi0lkTonZg_!!6000000003227-2-tps-476-422.png)
+![image.png](https://gw.alicdn.com/imgextra/i3/O1CN01bgazxT1FteWFFpp72_!!6000000000545-2-tps-470-402.png)
 
 ## 使用
-
 
 ```js
 import {StatsSystem} from '@eva/plugin-stats'
@@ -26,9 +27,10 @@ game.addSystem(new StatsSystem({
     height: 12;
   }
 }))
-
-
-
 ```
 
-
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>

@@ -1,7 +1,8 @@
-# 快速开始 
+# 快速开始
 
 ## Demo 项目
-基于webpack创建的demo项目：[https://github.com/eva-engine/start-demo](https://github.com/eva-engine/start-demo)
+
+基于 webpack 创建的 demo 项目：[https://github.com/eva-engine/start-demo](https://github.com/eva-engine/start-demo)
 
 ## 安装
 
@@ -11,7 +12,7 @@ npm install @eva/eva.js
 
 ## 创建画布
 
-EVAJS 依赖于 HTML 中的 canvas 进行绘制。如果设计稿中的宽高是固定的（例如 750px*1000px）又占满全屏，我们可以设置 canvas 的 css 宽度为 100%，高度为auto。
+EVAJS 依赖于 HTML 中的 canvas 进行绘制。如果设计稿中的宽高是固定的（例如 750px\*1000px）又占满全屏，我们可以设置 canvas 的 css 宽度为 100%，高度为 auto。
 
 ```html
 <style>
@@ -37,23 +38,21 @@ resource.addResource([
     src: {
       image: {
         type: 'png',
-        url:
-        'https://gw.alicdn.com/tfs/TB1DNzoOvb2gK0jSZK9XXaEgFXa-658-1152.webp',
-      },
+        url: 'https://gw.alicdn.com/tfs/TB1DNzoOvb2gK0jSZK9XXaEgFXa-658-1152.webp'
+      }
     },
-    preload: true,
-  }, 
+    preload: true
+  },
   {
     name: 'image2',
     type: RESOURCE_TYPE.IMAGE,
     src: {
       image: {
         type: 'png',
-        url:
-        'https://gw.alicdn.com/tfs/TB15Upxqk9l0K4jSZFKXXXFjpXa-750-1624.jpg',
-      },
+        url: 'https://gw.alicdn.com/tfs/TB15Upxqk9l0K4jSZFKXXXFjpXa-750-1624.jpg'
+      }
     },
-    preload: true,
+    preload: true
   }
 ])
 ```
@@ -72,7 +71,7 @@ import { RendererSystem } from '@eva/plugin-renderer'
 
 // 创建渲染系统
 const renderSystem = new RendererSystem({
-  canvas: document.querySelector('#canvas'), // 可选，自动生成 canvas 挂在 game.canvas 上 
+  canvas: document.querySelector('#canvas'), // 可选，自动生成 canvas 挂在 game.canvas 上
   width: 750,
   height: 1000,
   transparent: false,
@@ -91,7 +90,6 @@ const game = new Game({
 
 当然这样只让 EVAJS 有了基础的渲染能力，但是 canvas 上还没有展示任何元素，接下来我们将添加 gameObject，它将会展现在画布上。
 
-
 ## 添加游戏对象
 
 创建完游戏后，我们需要在游戏里面添加一个[游戏对象](/tutorials/gameObject)，并且给游戏对象添加[组件](/tutorials/customComponent)。游戏对象是游戏中最基本的可操作单位，而组件则赋予了游戏对象各种能力，比如 Img 组件让一个 gameObject 展示一张图片。
@@ -106,15 +104,17 @@ import { Img, ImgSystem } from '@eva/plugin-renderer-img' // 引入渲染图片�
 game.addSystem(new ImgSystem()) // 给游戏添加渲染图片的能力
 
 const gameObject = new GameObject('gameObj1', {
-	size: {
-  	width: 658,
+  size: {
+    width: 658,
     height: 1152
   }
 })
 
-gameObject.addComponent(new Img({
-	resource: 'image1'
-}))
+gameObject.addComponent(
+  new Img({
+    resource: 'image1'
+  })
+)
 
 game.scene.addChild(gameObject) // 把游戏对象放入场景，这样画布上就可以显示这张图片了
 ```
@@ -123,18 +123,20 @@ game.scene.addChild(gameObject) // 把游戏对象放入场景，这样画布上
 
 ### 获取组件
 
-方式1：创建时保留组件
+方式 1：创建时保留组件
 
 ```js
-const img = gameObject.addComponent(new Img({
-	resource: 'image1'
-}))
+const img = gameObject.addComponent(
+  new Img({
+    resource: 'image1'
+  })
+)
 // or
 const img = new Img({ resource: 'image1' })
 gameObject.addComponent(img)
 ```
 
-方式2：创建后从游戏对象上获取
+方式 2：创建后从游戏对象上获取
 
 ```js
 const img = gameObject.getComponent(Img)
