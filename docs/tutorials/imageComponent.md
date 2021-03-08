@@ -6,9 +6,10 @@ Image 组件为 GameObject 提供了使用过图片的能力，可以将 resourc
 
 ## 安装
 
-```bash 
+```bash
 npm i @eva/plugin-renderer @eva/plugin-renderer-image
 ```
+
 ## 使用
 
 ```js
@@ -66,9 +67,10 @@ image.addComponent(
 ```
 
 ## 参数
+
 ### resource: `String`
 
-资源名，这里的资源名对应的是调用 `resource.addResource` 传入的资源信息中的资源名。
+资源名，这里的资源名对应的是调用 `resource.addResource`  传入的资源信息中的资源名。
 
 <br/>
 <br/>

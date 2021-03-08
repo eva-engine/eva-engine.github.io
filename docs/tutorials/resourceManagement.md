@@ -33,11 +33,11 @@ import { RESOURCE_TYPE, resource } from '@eva/eva.js'
 ```js
 {
   name: "dragonBone",
-  type: RESOURCE_TYPE.DRAGONBONE, 
-  src: { 
+  type: RESOURCE_TYPE.DRAGONBONE,
+  src: {
     ske: {
-      type: "json", 
-      url: "//gw.alicdn.com/bao/uploaded/TB1SFUHVAzoK1RjSZFlXXai4VXa.json", 
+      type: "json",
+      url: "//gw.alicdn.com/bao/uploaded/TB1SFUHVAzoK1RjSZFlXXai4VXa.json",
     },
     tex: {
       type: "json",
@@ -51,7 +51,8 @@ import { RESOURCE_TYPE, resource } from '@eva/eva.js'
 }
 ```
 
-**spine动画**
+**spine 动画**
+
 ```js
 {
   name: "spineAnimation",
@@ -73,37 +74,36 @@ import { RESOURCE_TYPE, resource } from '@eva/eva.js'
 }
 ```
 
-实际项目中可能需要一次性添加很多资源，可以通过 addResource 实现这一目的
+实际项目中可能需要一次性添加很多资源，可以通过 addResource  实现这一目的
 
 ```js
 import { RESOURCE_TYPE, resource } from '@eva/eva.js'
 
 resource.addResource([
   {
-    name: "img1",
+    name: 'img1',
     type: RESOURCE_TYPE.IMAGE,
     src: {
       image: {
-        type: "png",
-        url: "//gw.alicdn.com/bao/uploaded/TB1lVHuaET1gK0jSZFhXXaAtVXa-200-200.png"
+        type: 'png',
+        url: '//gw.alicdn.com/bao/uploaded/TB1lVHuaET1gK0jSZFhXXaAtVXa-200-200.png'
       }
-    },
-  },
+    }
+  }
   // other resources
-]);
+])
 ```
 
 ## 资源预加载
 
 使用 `preload()` 方法将资源列表中 `preload` 为 true 的资源进行加载，可以通过监听 resource 上的事件来获取当前加载进度，适合在游戏初始化展示 loading，切换场景时请求资源时使用。
 
-
 ```js
-resource.on(LOAD_EVENT.START, ()=>{})// 开始loader
-resource.on(LOAD_EVENT.PROGRESS, ()=>{}) // 加载进度更新
-resource.on(LOAD_EVENT.LOADED, ()=>{}) // 某文件加载成功
-resource.on(LOAD_EVENT.COMPLETE, ()=>{}) // 加载完成
-resource.on(LOAD_EVENT.ERROR, ()=>{}) // 某文件加载失败
+resource.on(LOAD_EVENT.START, () => {}) // 开始loader
+resource.on(LOAD_EVENT.PROGRESS, () => {}) // 加载进度更新
+resource.on(LOAD_EVENT.LOADED, () => {}) // 某文件加载成功
+resource.on(LOAD_EVENT.COMPLETE, () => {}) // 加载完成
+resource.on(LOAD_EVENT.ERROR, () => {}) // 某文件加载失败
 resource.preload()
 ```
 
@@ -126,17 +126,19 @@ resource.getResource('img1').then(res => {
 使用 loadSingle 来加载单个资源，不需要将资源添加到 addResource 里面，该方法返回的是 promise。
 
 ```js
-resource.loadSingle({
-  name: "img1",
-  type: RESOURCE_TYPE.IMAGE,
-  src: {
-    image: {
-      type: "png",
-      url: "//gw.alicdn.com/bao/uploaded/TB1lVHuaET1gK0jSZFhXXaAtVXa-200-200.png"
-    }
-  },
-  preload: true
-}).then(res => {})
+resource
+  .loadSingle({
+    name: 'img1',
+    type: RESOURCE_TYPE.IMAGE,
+    src: {
+      image: {
+        type: 'png',
+        url: '//gw.alicdn.com/bao/uploaded/TB1lVHuaET1gK0jSZFhXXaAtVXa-200-200.png'
+      }
+    },
+    preload: true
+  })
+  .then(res => {})
 ```
 
 ### 资源处理
@@ -144,8 +146,8 @@ resource.loadSingle({
 通过为某种类型的资源注册方法，可以在资源请求回来时对资源进行处理，在使用时可以直接获取到资源实例。
 
 ```js
-resource.registerInstance(RESOURCE_TYPE.SPRITE, async ({name, data}) => {
-	const instance = await instanceSth(data)
+resource.registerInstance(RESOURCE_TYPE.SPRITE, async ({ name, data }) => {
+  const instance = await instanceSth(data)
   return instance
 })
 ```
@@ -161,8 +163,8 @@ resource.destory('img1')
 如果为该类型资源注册了销毁方法，则会调用该方法销毁资源。
 
 ```js
-resource.registerDestroy(RESOURCE_TYPE.SPRITE, async ({instance}) => {
-	await instance.destory()
+resource.registerDestroy(RESOURCE_TYPE.SPRITE, async ({ instance }) => {
+  await instance.destory()
 })
 ```
 

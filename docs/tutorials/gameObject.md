@@ -4,9 +4,7 @@
 
 ## 创建游戏对象
 
-
-创建游戏对象， `new GameObject(name, transfrom)` ，第一个参数为对象的名称，第二个参数为对象的Transform组件的属性。
-
+创建游戏对象， `new GameObject(name, transfrom)` ，第一个参数为对象的名称，第二个参数为对象的 Transform 组件的属性。
 
 ```js
 import { GameObject } from '@eva/eva.js'
@@ -31,16 +29,17 @@ gameObject.removeChild(childGameObject)
 
 ### 添加组件
 
-方法1:
+方法 1:
+
 ```js
 import { Img } from '@eva/plugn-render'
 // 方法2：直接传入实例
-const img = new Img({ // 这里可以设置默认参数
-	resource: 'heart'
+const img = new Img({
+  // 这里可以设置默认参数
+  resource: 'heart'
 })
 
 gameObject.addComponent(img)
-
 ```
 
 ### 移除组件
@@ -53,7 +52,6 @@ gameObject.removeComponent(Img)
 ### 继续
 
 游戏对象默认携带的 [Transform](/tutorials/transform) 组件是用来控制游戏对象的尺寸、位置、缩放、斜切、旋转等属性。
-
 
 ### 注意：
 
