@@ -1,7 +1,7 @@
 {
   "name": "eva-engine.github.io",
   "version": "1.0.0",
-  "description": "EVA JS Website",
+  "description": "Eva.js Website",
   "private": false,
   "scripts": {
     "start": "docsify serve docs",
