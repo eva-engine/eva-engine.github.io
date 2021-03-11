@@ -22,7 +22,7 @@ tnpm install -g @eva/tools
 eva create-plugin
 ```
 
-## ![2020-07-21 15-39-23.2020-07-21 15_41_27.gif](https://gw.alicdn.com/imgextra/i2/O1CN01nbppFP1suoXXl1h8e_!!6000000005827-1-tps-850-569.gif)
+![2020-07-21 15-39-23.2020-07-21 15_41_27.gif](https://gw.alicdn.com/imgextra/i2/O1CN01nbppFP1suoXXl1h8e_!!6000000005827-1-tps-850-569.gif)
 
 通过 `create-plugin` 命令，自动生成一个工程，目录如下：
 
