@@ -35,7 +35,7 @@ game.scene.addChild(go)
 
 当系统被添加到游戏实例上后，系统在它所需关心的组件在添加、移除、属性变化时，做一系列对应的操作，即可实现一些功能。
 
-例如在 Img 插件中，当 Img 被添加到游戏对象上时，System 内会创建一个 Pixi 的 Sprite 对象，挂在到 GameObject 对应的 Pixi Container上，当 Img 组件的 resource 发生变化时，System 会去修改对应 Sprite 上面的 texture。
+例如在 Img 插件中，当 Img 被添加到游戏对象上时，System 内会创建一个 Pixi 的 Sprite 对象，挂载到 GameObject 对应的 Pixi Container上，当 Img 组件的 resource 发生变化时，System 会去修改对应 Sprite 上面的 texture。
 
 接下来，我会讲解如何设计一个组件，以及 System 是如何监听组件变化的。
 
@@ -119,7 +119,7 @@ class A11ySystem extends System {
   A11y: [] // 监听 A11y 组件的 hint 属性变化
 })
 ```
-如果监听的属性不是直接挂在到组件对象上的，还有一级嵌套
+如果监听的属性不是直接挂载到组件对象上的，还有一级嵌套
 
 例如监听组件 A 的 style 属性下的 size 属性
 
@@ -132,7 +132,7 @@ class A11ySystem extends System {
 })
 ```
 
-如果想要想要深度监听 style 属性，可以这样写
+如果想要深度监听 style 属性，可以这样写
 
 ```js
 @decorators.componentObserver({
@@ -143,7 +143,7 @@ class A11ySystem extends System {
 })
 ```
 
-如果像监听多个组件变化，可以这样写
+如果想监听多个组件变化，可以这样写
 
 
 ```js
@@ -256,7 +256,7 @@ export interface ComponentChanged {
 
 现在我们把DOM创建好，并且放到了 body 上面，按照能力来讲，我们已经完成了具体的功能，因为屏幕阅读器已经可以阅读游戏中的元素了，但是看起来目前欠缺一些内容，例如：无法通过触发 DOM 点击事件来触发游戏里面的点击，DOM 的没有宽高和定位。
 
-如果像实现这些功能，就要去在当前组件下拿到别的组件去实现功能了，例如如果像触发点击事件，需要判断 [Event 组件](/tutorials/interactionEvent)是否安装，如果安装的话，可以根据 Event 上绑定的事件，触发对应的事件。如果想获取宽高位置的话，可以获取游戏对象的 [Transform 组件](/tutorials/transformComponent)
+如果想实现这些功能，就要去在当前组件下拿到别的组件去实现功能了，例如如果想触发点击事件，需要判断 [Event 组件](/tutorials/interactionEvent)是否安装，如果安装的话，可以根据 Event 上绑定的事件，触发对应的事件。如果想获取宽高位置的话，可以获取游戏对象的 [Transform 组件](/tutorials/transformComponent)
 
 
 增加 Event 组件的监听，在上述 add remove 等方法里做对应操作即可。
