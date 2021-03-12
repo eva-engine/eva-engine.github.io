@@ -1,5 +1,6 @@
 <!-- tutorials/_sidebar.md -->
 
+- [介绍](/tutorials/intro)
 - [快速开始](/tutorials/quickstart)
 - 基本能力
   - [资源管理](/tutorials/resourceManagement)
