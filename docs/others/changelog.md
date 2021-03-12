@@ -1,3 +1,8 @@
+### 1.0.0
+- 增加 MatterJS 物理引擎
+- 增加 Lottie 支持
+- 重构 Resource 模块
+
 ### 1.0.0-alpha.10
 
 **修复了**
