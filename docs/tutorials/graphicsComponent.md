@@ -88,20 +88,17 @@ function setProgress(progress) {
 
 对自上一次调用 beginFill() 方法以来添加的线条和形状应用填充。
 
-#### lineStyle (options)
+#### lineStyle ({ width, color, alpha, alignment, native })
 
 指定用于随后调用 Graphics 方法的线样式，例如：`lineTo()`方法 或 `drawCircle()`方法
 
-| Name        | Type    | Description         |
-| :---------- | :------ | :------------------ | ------------------------------------------------------------------- |
-| `options`   | object  | optional 线样式选项 |
-| Name        | Type    | Default             | Description                                                         |
-| :---        | :---    | :---                | :---                                                                |
-| `width`     | number  | 0                   | optional 画线的宽度，将更新对象存储的样式                           |
-| `color`     | number  | 0x0                 | optional 绘制线条的颜色，将更新对象存储的样式                       |
-| `alpha`     | number  | 1                   | optional 绘制线条的 Alpha，将更新对象存储的样式                     |
-| `alignment` | number  | 0.5                 | optional 绘制线的对齐方式（0 = 内部，0.5 = 居中，1 = 外部）         |
-| `native`    | boolean | false               | optional 如果为 true，则将使用 LINES 来代替 TRIANGLE_STRIP 绘制线条 |
+| Name        | Type    | Default | Description                                                         |
+| :---------- | :------ | :------ | :------------------------------------------------------------------ |
+| `width`     | number  | 0       | optional 画线的宽度，将更新对象存储的样式                           |
+| `color`     | number  | 0x0     | optional 绘制线条的颜色，将更新对象存储的样式                       |
+| `alpha`     | number  | 1       | optional 绘制线条的 Alpha，将更新对象存储的样式                     |
+| `alignment` | number  | 0.5     | optional 绘制线的对齐方式（0 = 内部，0.5 = 居中，1 = 外部）         |
+| `native`    | boolean | false   | optional 如果为 true，则将使用 LINES 来代替 TRIANGLE_STRIP 绘制线条 |
 
 #### lineStyle (width, color, alpha, alignment, native)
 

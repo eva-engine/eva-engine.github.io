@@ -124,8 +124,6 @@ LottieComponent.on('complete', () => {
 })
 ```
 
-[1]()
-
 <br/>
 <br/>
 <br/>
