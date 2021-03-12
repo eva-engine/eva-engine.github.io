@@ -1,66 +1,21 @@
 # 插件开发
 
-## 介绍
+一般通过脚本组件的方式就可以实现大部分逻辑，涉及引擎级别或者业务级别的通用能力，可以使用插件的形式进行开发，插件主要是由 Component 和 System 组成。
 
-正常来说，我们通过脚本组件的方式就可以实现大多数的业务逻辑。
-如果我们设计一些引擎级别或者业务级别的通用能力，可以使用插件的形式进行开发，插件主要是由 Component 和 System 组成。
+## 基础
 
-## 环境
+### 开发
 
-- node
-- tnpm
-- typescript
-
-## 初始化
-
-开发者可以使用 [eva-tools](https://npm.alibaba-inc.com/package/@eva/tools) 命令行工具，初始化一个 EVA Plugin 项目。
-
-```bash
-# 全局安装 eva-tools
-tnpm install -g @eva/tools
-# 初始化插件
-eva create-plugin
-```
-
-![2020-07-21 15-39-23.2020-07-21 15_41_27.gif](https://gw.alicdn.com/imgextra/i2/O1CN01nbppFP1suoXXl1h8e_!!6000000005827-1-tps-850-569.gif)
-
-通过 `create-plugin` 命令，自动生成一个工程，目录如下：
-
-```bash
-├── CHANGELOG.md
-├── README.md
-├── api-extractor.json
-├── config
-├── demo
-├── jest.config.js
-├── lib
-├── node_modules
-├── package.json
-├── rollup.config.js
-├── test
-└── tsconfig.json
-```
-
-工程内置了一个 EVA 的简单 demo，使用 ```bash run start` 命令启动项目。
-![image.png](https://gw.alicdn.com/imgextra/i2/O1CN01mJdMcT1CBjh6s5V5E_!!6000000000043-2-tps-258-174.png)
-
-## 插件开发
+需要依赖渲染相关的插件继承于 `@eva/plugin-renderer`  的 Render 类
+参考 Dragonbones 骨骼动画插件的实现 demo
 
 在 `demo/index.ts` 中，代码初始化了一个游戏场景，并在游戏场景中添加了一个 Text 组件。 另外根据开发者输入插件名，自动引入了初始化的插件。
 
 ```js
-// ...
-// 引入插件
 import { Demo, DemoSystem } from './tutorials/lib'
 const game = new Game({
-  systems: [
-    // ...
-    // 为游戏场景添加
-    new DemoSystem()
-  ]
+  systems: [new DemoSystem()]
 })
-// ...
-// 为组件添加插件能力
 text.addComponent(new Demo())
 game.scene.addChild(text)
 ```
@@ -70,61 +25,9 @@ System 被安装时，会调用插件的 `init` 方法。运行项目后，可�
 
 在 EVA 中，游戏的能力都是由 Component 和 System 提供的， Component 主要用来给 gameObject 标注一些能力和能力的属性。System 给 Component 的 gameObject 赋能，插件可以给引擎提供多个 System 和 Component。
 
-### 参数配置
+### 插件运行逻辑
 
-System 的构造函数可以传递参数，在 `init` 方法中可以获得这些参数并进行相关的配置
-
-```js
-// demo/index.ts
-const game = new Game({
-  systems: [
-    // ...
-    // 为游戏场景添加
-    new DemoSystem({debug: true, name: 'demo'})
-  ],
-});
-
-// lib/DemoSystem.ts
- init(param?: any) {
-   console.log(`Demo插件初始化成功`)
-   console.log(param)
-}
-```
-
-![image.png](https://gw.alicdn.com/imgextra/i3/O1CN01qG8Waf22tZchhRiLc_!!6000000007178-2-tps-774-94.png)
-
-### 监听更新
-
-通过装饰器对 System 进行监听，如果 Component 被添加或者属性被修改，则会触发监听。
-
-```js
-@decorators.componentObserver({
-  Demo: []
-})
-```
-
-在 `update()` 方法中，调用 `componentObserver.clear()` 方法，可以获取到更新的内容。
-
-```js
-// ...
-update() {
-	const changed = this.componentObserver.clear()
-}
-// ...
-```
-
-## 插件打包
-
-```bash
-npm run build
-```
-
-## 插件发布
-
-```bash
-tnpm login
-tnpm publish
-```
+### 构建与发布规范
 
 ## 开发实践
 
@@ -166,10 +69,6 @@ text.addComponent(new Accessibility({ hint: '需要朗读的内容' }))
 当游戏对象调用上面的代码时， System 通过监听，可以获取到 Component 的属性值。
 
 ```js
-// ...
-/**
-   * 监听插件更新
-   */
 update() {
   const changes = this.componentObserver.clear()
   for (const changed of changes) {
@@ -181,10 +80,6 @@ update() {
   }
 }
 
-/**
- * 监听组件增加
- * @param changed 改变的组件
- */
 add(changed: ComponentChanged) {
   const component = changed.component as Accessibility
   const { hint } = component
@@ -197,11 +92,6 @@ add(changed: ComponentChanged) {
 如果需要用到位置等相关信息，可以通过 gameObject 中的 `transform` 属性来获取。
 
 ```js
-
-  /**
-   * 监听组件增加
-   * @param changed 改变的组件
-   */
   add(changed: ComponentChanged) {
     const component = changed.component as Accessibility
     const { hint, gameObject } = component
@@ -209,16 +99,24 @@ add(changed: ComponentChanged) {
   }
 ```
 
-插件代码：[http://gitlab.alibaba-inc.com/eva/eva-plugin-a11y](http://gitlab.alibaba-inc.com/eva/eva-plugin-a11y)
 
-## 需要依赖渲染的插件
+### 观察 component 变化
 
-需要依赖渲染相关的插件继承于 `@eva/plugin-renderer`  的 Render 类
-参考 Dragonbones 骨骼动画插件的实现 demo
+通过装饰器对 System 进行监听，如果 Component 被添加或者属性被修改，则会触发监听。
 
-## Refrences
+```js
+@decorators.componentObserver({
+  Demo: []
+})
+```
 
-- [eva-tools](https://npm.alibaba-inc.com/package/@eva/tools)
+在 `update()` 方法中，调用 `componentObserver.clear()` 方法，可以获取到更新的内容。
+
+```js
+update() {
+	const changed = this.componentObserver.clear()
+}
+```
 
 <br/>
 <br/>
