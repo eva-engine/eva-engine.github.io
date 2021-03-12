@@ -256,7 +256,7 @@ export interface ComponentChanged {
 
 现在我们把DOM创建好，并且放到了 body 上面，按照能力来讲，我们已经完成了具体的功能，因为屏幕阅读器已经可以阅读游戏中的元素了，但是看起来目前欠缺一些内容，例如：无法通过触发 DOM 点击事件来触发游戏里面的点击，DOM 的没有宽高和定位。
 
-如果想实现这些功能，就要去在当前组件下拿到别的组件去实现功能了，例如如果想触发点击事件，需要判断 [Event 组件](/tutorials/interactionEvent)是否安装，如果安装的话，可以根据 Event 上绑定的事件，触发对应的事件。如果想获取宽高位置的话，可以获取游戏对象的 [Transform 组件](/tutorials/transformComponent)
+如果想实现这些功能，就要去在当前组件下拿到别的组件去实现功能了，如果想触发点击事件，需要判断 [Event 组件](/tutorials/interactionEvent)是否安装，如果安装的话，可以根据 Event 上绑定的事件，触发对应的事件。如果想获取宽高位置的话，可以获取游戏对象的 [Transform 组件](/tutorials/transformComponent)
 
 
 增加 Event 组件的监听，在上述 add remove 等方法里做对应操作即可。
