@@ -12,7 +12,7 @@ npm install @eva/eva.js
 
 ## 创建画布
 
-EVAJS 依赖于 HTML 中的 canvas 进行绘制。如果设计稿中的宽高是固定的（例如 750px\*1000px）又占满全屏，我们可以设置 canvas 的 css 宽度为 100%，高度为 auto。
+Eva.js 依赖于 HTML 中的 canvas 进行绘制。如果设计稿中的宽高是固定的（例如 750px\*1000px）又占满全屏，我们可以设置 canvas 的 css 宽度为 100%，高度为 auto。
 
 ```html
 <style>
@@ -59,7 +59,7 @@ resource.addResource([
 
 ## 创建游戏
 
-EVAJS 内核是一个非常轻量级的运行时，其他功能都是通过插件的方式实现的，如果想实现游戏最基础的渲染能力，需要安装渲染插件 `@eva/plugin-renderer`。
+Eva.js 内核是一个非常轻量级的运行时，其他功能都是通过插件的方式实现的，如果想实现游戏最基础的渲染能力，需要安装渲染插件 `@eva/plugin-renderer`。
 
 ```bash
 npm i @eva/plugin-renderer
@@ -88,7 +88,7 @@ const game = new Game({
 })
 ```
 
-当然这样只让 EVAJS 有了基础的渲染能力，但是 canvas 上还没有展示任何元素，接下来我们将添加 gameObject，它将会展现在画布上。
+当然这样只让 Eva.js 有了基础的渲染能力，但是 canvas 上还没有展示任何元素，接下来我们将添加 gameObject，它将会展现在画布上。
 
 ## 添加游戏对象
 
@@ -152,7 +152,7 @@ img.resource = 'image2' // 切换资源名称，要确保资源已经被添加�
 
 ## 准备好了吗？
 
-刚刚介绍了 EVAJS 最简单的 demo，接下来我们看一些 2D 互动游戏[常用能力](/tutorials/resourceManagement)。
+刚刚介绍了 Eva.js 最简单的 demo，接下来我们看一些 2D 互动游戏[常用能力](/tutorials/resourceManagement)。
 
 <br/>
 <br/>

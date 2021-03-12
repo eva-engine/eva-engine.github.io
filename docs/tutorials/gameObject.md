@@ -51,7 +51,7 @@ gameObject.removeComponent(Img)
 
 ### 继续
 
-游戏对象默认携带的 [Transform](/tutorials/transform) 组件是用来控制游戏对象的尺寸、位置、缩放、斜切、旋转等属性。
+游戏对象默认携带的 [Transform](/tutorials/transformComponent) 组件是用来控制游戏对象的尺寸、位置、缩放、斜切、旋转等属性。
 
 ### 注意：
 

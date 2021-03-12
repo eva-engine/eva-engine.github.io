@@ -1,9 +1,14 @@
 # Lottie 动画
 
-支持 Lottie 作为 GameObject 快速接入 Eva，同时支持 Lottie 的插槽的扩展能力。
-Lottie 插槽：[https://unpkg.alipay.com/@eva/lottie-pixi-docs@0.0.12/docs/index.html#/introduce](https://unpkg.alipay.com/@eva/lottie-pixi-docs@0.0.12/docs/index.html#/introduce)
+支持 Lottie 作为 `GameObject` 快速接入 Eva.js，同时支持 [Lottie 插槽](https://unpkg.alipay.com/@eva/lottie-pixi-docs@0.0.12/docs/index.html#/introduce) 的扩展能力。
 
-## 快速使用
+## 安装
+
+```bash
+npm i @eva/plugin-renderer-lottie
+```
+
+## 使用
 
 ```js
 import { Game, GameObject, resource } from '@eva/eva.js'
@@ -16,7 +21,6 @@ const game = new Game({
       width: 750,
       height: 1624
     }),
-    // init your Lottie system
     new LottieSystem()
   ],
   autoStart: true,
@@ -43,23 +47,18 @@ LottieGameObject.addComponent(LottieComponent)
 game.scene.addChild(LottieGameObject)
 ```
 
-##
+## 参数
 
-## API
+- resource 资源名称
 
-| **参数** | **说明**         | **类型** | **默认值** |
-| -------- | ---------------- | -------- | ---------- |
-| resource | 已加载的资源名称 | string   |            |
+## 方法
 
-## Method
+### LottieComponent.play
 
-### `LottieComponent.play`：
-
-播放 Lottie 动画的方法
+播放动画
 
 ```js
 LottieComponent.play([], { repeats: Infinity })
-
 LottieComponent.play([0, 10])
 ```
 
@@ -68,53 +67,39 @@ LottieComponent.play([0, 10])
 | **说明**                                       | **类型**              | **默认值**   |
 | ---------------------------------------------- | --------------------- | ------------ |
 | 播放动画帧率区间，默认从第一帧播放至最后一帧。 | Array<number, number> | [start, end] |
-| repeate: 播放次数，Infinity 循环播放。         |
+| repeate: 播放次数，Infinity 循环播放。         | number                | Infinity     |
 
 slot:
-
 - name: 插槽的名字。
 - type: 插槽的类型，区分文字及图片。
 - value: 插槽要填入的值，图片则为 CDN 链接。
 - style：插槽的样式设置。
-  | {
-    repeats?: number
-    slot?: Array<{
-      name: string;
-      type: 'TEXT' | 'IMAGE';
-      value: string;
-      style: IStyle;
-    }>
-  } | {
-    repeats: 0,
-    slot: []
-  } |
+
+```typescript
+interface options {
+  repeats?: number
+  slot?: Array<{
+    name: string;
+    type: 'TEXT' | 'IMAGE';
+    value: string;
+    style: IStyle;
+  }>
+}
+```
 
 #### IStyle
 
-| **参数** | **说明**                                                                                                                                   | **类型** | **默认值** |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------ | -------- | ---------- |
-| x        | position.x                                                                                                                                 | number   |            |
-| y        | position.y                                                                                                                                 | number   |            |
-| width    | bounds.width                                                                                                                               | number   |            |
-| height   | bounds.height                                                                                                                              | number   |            |
-| anchor   | [http://pixijs.download/release/docs/PIXI.AnimatedSprite.html#anchor](http://pixijs.download/release/docs/PIXI.AnimatedSprite.html#anchor) | {        |
+| **参数**  | **说明**                                                                    | **类型**                | **默认值**   |
+| --------- | --------------------------------------------------------------------------- | ----------------------- | ------------ |
+| x         | position.x                                                                  | number                  |              |
+| y         | position.y                                                                  | number                  |              |
+| width     | bounds.width                                                                | number                  |              |
+| height    | bounds.height                                                               | number                  |              |
+| anchor    | [文档](http://pixijs.download/release/docs/PIXI.AnimatedSprite.html#anchor) | {x: number, y: number } | {x: 0, y: 0} |
+| pivot     | [文档](http://pixijs.download/release/docs/PIXI.AnimatedSprite.html#pivot)  | {x: number, y: number } | {x: 0, y: 0} |
+| TextStyle | [文档](https://pixijs.io/examples-v4/#/text/text.js)                        | PIXI.TextStyle          |              |
 
-x: number;
-  y: number;
-} | {
-  x: 0,
-  y: 0
-} |
-| pivot | [http://pixijs.download/release/docs/PIXI.AnimatedSprite.html#pivot](http://pixijs.download/release/docs/PIXI.AnimatedSprite.html#pivot) | {
-  x: number;
-  y: number;
-} | {
-  x: 0,
-  y: 0
-} |
-| TextStyle | [https://pixijs.io/examples-v4/#/text/text.js](https://pixijs.io/examples-v4/#/text/text.js) | PIXI.TextStyle | |
-
-### `LottieComponent.onTap`：
+### LottieComponent.onTap
 
 为 Lottie 中的插槽元素绑定 `Tap` 事件
 
@@ -131,15 +116,13 @@ LottieComponent.onTap('#btn', () => {
 | 插槽名称         | string     |            |
 | 点击后的事件回调 | () => void |            |
 
-## 事件和时机
+## 事件
 
 ```js
 LottieComponent.on('complete', () => {
   console.log('LottieComponent play complete !')
 })
 ```
-
-[https://unpkg.alipay.com/@eva/lottie-pixi-docs@0.0.12/docs/index.html#/lottie-animation](https://unpkg.alipay.com/@eva/lottie-pixi-docs@0.0.12/docs/index.html#/lottie-animation)
 
 <br/>
 <br/>
