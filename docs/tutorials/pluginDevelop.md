@@ -33,7 +33,7 @@ game.scene.addChild(go)
 组件（Component）可以赋予游戏对象能力，我们将一些配置和属性记录在组件上。
 系统（System）用来读取组件上面的数据，实现组件对应的能力。
 
-当系统被添加到游戏对象上后，系统在它所需关心的组件在添加、移除、属性变化时，做一系列对应的操作，即可实现一些功能。
+当系统被添加到游戏实例上后，系统在它所需关心的组件在添加、移除、属性变化时，做一系列对应的操作，即可实现一些功能。
 
 例如在 Img 插件中，当 Img 被添加到游戏对象上时，System 内会创建一个 Pixi 的 Sprite 对象，挂在到 GameObject 对应的 Pixi Container上，当 Img 组件的 resource 发生变化时，System 会去修改对应 Sprite 上面的 texture。
 
@@ -363,6 +363,8 @@ add(changed) {
   }
 
 ```
+## 生命周期
+![image.png](https://img.alicdn.com/imgextra/i2/O1CN01gEgYOz1T8qevGDloU_!!6000000002338-2-tps-1448-906.png)
 
 ## 总结
 
