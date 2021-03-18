@@ -1,3 +1,6 @@
+### 1.0.1
+- 将 lodash 更换成 lodash-es 解决编译报错问题
+
 ### 1.0.0
 - 增加 MatterJS 物理引擎
 - 增加 Lottie 支持
