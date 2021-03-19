@@ -1,6 +1,6 @@
 <!-- _navbar.md -->
 
-- [教程](/tutorials/quickstart)
+- [教程](/tutorials/intro)
 - [API 文档](/api/index)
 - [使用范例](https://eva.js.org/playground)
 - [博客](https://yuque.com/eva/blog)
