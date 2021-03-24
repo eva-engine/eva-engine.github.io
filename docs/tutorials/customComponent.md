@@ -121,7 +121,7 @@ class Move extends Component {
 class Move extends Commponent {
   // ...
   update(e) {
-    // 让物体按照一定速度移动 位移 = 速度 * 事件
+    // 让物体按照一定速度移动 位移 = 速度 * 时间
     const position = this.gameObject.transform.position
     this.gameObject.transform.position.x += this.speed.x * (e.deltaTime / 1000)
     this.gameObject.transform.position.y += this.speed.y * (e.deltaTime / 1000)

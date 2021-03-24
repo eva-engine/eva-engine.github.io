@@ -7,7 +7,7 @@ Image 组件为 GameObject 提供了使用过图片的能力，可以将 resourc
 ## 安装
 
 ```bash
-npm i @eva/plugin-renderer @eva/plugin-renderer-image
+npm i @eva/plugin-renderer @eva/plugin-renderer-img
 ```
 
 ## 使用
