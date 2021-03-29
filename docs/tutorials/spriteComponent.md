@@ -1,34 +1,34 @@
-# 精灵图 Sprite
+# Sprite
 
-精灵图是将多张图片打包的一张图片，可以减少 HTTP 请求次数，节省内存空间，使用前需要安装渲染器。
+A sprite is a picture that packs multiple pictures, which can reduce the number of HTTP requests and save memory space. A renderer needs to be installed before use.
 
 [Demo](https://eva.js.org/playground/#/sprite)
 
-## 安装
+## Install
 
 ```bash
 npm i @eva/plugin-renderer @eva/plugin-renderer-sprite
 ```
 
-## 使用
+## Usage
 
 ```js
-import { Game, GameObject, resource, RESOURCE_TYPE } from '@eva/eva.js'
-import { RendererSystem } from '@eva/plugin-renderer'
-import { Sprite, SpriteSystem } from '@eva/plugin-renderer-sprite'
+import {Game, GameObject, resource, RESOURCE_TYPE} from'@eva/eva.js'
+import {RendererSystem} from'@eva/plugin-renderer'
+import {Sprite, SpriteSystem} from'@eva/plugin-renderer-sprite'
 
 resource.addResource([
   {
-    name: 'spriteName',
+    name:'spriteName',
     type: RESOURCE_TYPE.SPRITE,
     src: {
       image: {
-        type: 'png',
-        url: 'https://gw.alicdn.com/tfs/TB1ONLxOAL0gK0jSZFAXXcA9pXa-900-730.png'
+        type:'png',
+        url:'https://gw.alicdn.com/tfs/TB1ONLxOAL0gK0jSZFAXXcA9pXa-900-730.png'
       },
       json: {
-        type: 'json',
-        url: 'https://pages.tmall.com/wow/eva/ad317f6aea149d9a8b34a517e5df2caf.json'
+        type:'json',
+        url:'https://pages.tmall.com/wow/eva/ad317f6aea149d9a8b34a517e5df2caf.json'
       }
     },
     preload: true
@@ -48,7 +48,7 @@ const game = new Game({
 })
 
 const gameObj1 = new GameObject('gameObject1', {
-  size: { width: 200, height: 244 },
+  size: {width: 200, height: 244 },
   position: {
     x: 0,
     y: 0
@@ -56,22 +56,22 @@ const gameObj1 = new GameObject('gameObject1', {
 })
 
 const spriteCom1 = new Sprite({
-  resource: 'spriteName',
-  spriteName: 'symbol_1'
+  resource:'spriteName',
+  spriteName:'symbol_1'
 })
 
 gameObj1.addComponent(spriteCom1)
 ```
 
-## 参数
+## Options
 
 ### resource: `String`
 
-资源名称
+Resource Name
 
-### spriteName： `String` 
+### spriteName: `String`
 
-精灵图 id
+Sprite id
 
 <br/>
 <br/>

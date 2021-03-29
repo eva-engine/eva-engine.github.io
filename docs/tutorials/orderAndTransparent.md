@@ -5,13 +5,13 @@
 - [透明度 Demo](https://eva.js.org/playground/#/render/alpha)
 - [排序 Demo](https://eva.js.org/playground/#/render/sort)
 
-## 安装
+## Install
 
 ```bash
 npm i @eva/plugin-renderer @eva/plugin-renderer-render
 ```
 
-## 使用
+## Usage
 
 ```js
 import { Game, GameObject, resource, RESOURCE_TYPE } from '@eva/eva.js'
@@ -102,7 +102,7 @@ animation.play('idle', Infinity)
 game.scene.addChild(image)
 ```
 
-## 参数
+## Options
 
 ### sortableChildren: `boolean` 
 

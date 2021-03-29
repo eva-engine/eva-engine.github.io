@@ -1,46 +1,46 @@
-# 遮罩 Mask
+# Mask
 
-Mask 组件可以将 GameObject 的展示范围进行裁剪，使用前需要安装渲染器。
+The Mask component can cut the display range of the GameObject, and a renderer needs to be installed before use.
 
 [Demo](https://eva.js.org/playground/#/mask)
 
-## 安装
+## Install
 
 ```bash
 npm i @eva/plugin-renderer @eva/plugin-renderer-mask
 ```
 
-## 使用
+## Usage
 
 ```js
-import { Game, GameObject, resource, RESOURCE_TYPE } from '@eva/eva.js'
-import { RendererSystem } from '@eva/plugin-renderer'
-import { Img, ImgSystem } from '@eva/plugin-renderer-img'
-import { Mask, MaskSystem, MASK_TYPE } from '@eva/plugin-renderer-mask'
+import {Game, GameObject, resource, RESOURCE_TYPE} from'@eva/eva.js'
+import {RendererSystem} from'@eva/plugin-renderer'
+import {Img, ImgSystem} from'@eva/plugin-renderer-img'
+import {Mask, MaskSystem, MASK_TYPE} from'@eva/plugin-renderer-mask'
 
 resource.addResource([
   {
-    name: 'heart',
+    name:'heart',
     type: RESOURCE_TYPE.IMAGE,
     src: {
       image: {
-        type: 'png',
-        url: '//gw.alicdn.com/bao/uploaded/TB1lVHuaET1gK0jSZFhXXaAtVXa-200-200.png'
+        type:'png',
+        url:'//gw.alicdn.com/bao/uploaded/TB1lVHuaET1gK0jSZFhXXaAtVXa-200-200.png'
       }
     },
     preload: false
   },
   {
-    name: 'tag',
+    name:'tag',
     type: RESOURCE_TYPE.SPRITE,
     src: {
       image: {
-        type: 'png',
-        url: '//gw.alicdn.com/mt/TB1KcVte4n1gK0jSZKPXXXvUXXa-150-50.png'
+        type:'png',
+        url:'//gw.alicdn.com/mt/TB1KcVte4n1gK0jSZKPXXXvUXXa-150-50.png'
       },
       json: {
-        type: 'json',
-        url: '//gw.alicdn.com/mt/TB1d4lse4D1gK0jSZFsXXbldVXa.json'
+        type:'json',
+        url:'//gw.alicdn.com/mt/TB1d4lse4D1gK0jSZFsXXbldVXa.json'
       }
     },
     preload: true
@@ -65,11 +65,11 @@ game.scene.transform.size = {
 }
 
 const image = new GameObject('image', {
-  size: { width: 200, height: 200 }
+  size: {width: 200, height: 200}
 })
 image.addComponent(
   new Img({
-    resource: 'heart'
+    resource:'heart'
   })
 )
 game.scene.addChild(image)
@@ -85,12 +85,12 @@ image.addComponent(
 )
 
 const image1 = new GameObject('image', {
-  size: { width: 200, height: 200 },
-  position: { x: 400, y: 300 }
+  size: {width: 200, height: 200 },
+  position: {x: 400, y: 300}
 })
 image1.addComponent(
   new Img({
-    resource: 'heart'
+    resource:'heart'
   })
 )
 
@@ -103,18 +103,18 @@ image1.addComponent(
       x: 20,
       y: 20
     },
-    resource: 'heart'
+    resource:'heart'
   })
 )
 game.scene.addChild(image1)
 
 const image2 = new GameObject('image', {
-  size: { width: 200, height: 200 },
-  position: { x: 100, y: 400 }
+  size: {width: 200, height: 200 },
+  position: {x: 100, y: 400}
 })
 image2.addComponent(
   new Img({
-    resource: 'heart'
+    resource:'heart'
   })
 )
 
@@ -127,28 +127,28 @@ image2.addComponent(
       x: 20,
       y: 20
     },
-    resource: 'tag',
-    spriteName: 'task.png'
+    resource:'tag',
+    spriteName:'task.png'
   })
 )
 game.scene.addChild(image2)
 ```
 
-## 参数
+## Options
 
-### type: `MARK_TYPE` 
+### type: `MARK_TYPE`
 
-### style: `object` 
+### style: `object`
 
-| 类型     | **Type**              | **属性**                                                                   |
-| -------- | --------------------- | -------------------------------------------------------------------------- |
-| 圆形     | MASK_TYPE.Circle      | {style: {x,y,radius}}                                                      |
-| 椭圆     | MASK_TYPE.Ellipse     | {style:{x,y,width,height}}                                                 |
-| 矩形     | MASK_TYPE.Rect        | {style:{x,y,width,height}}                                                 |
-| 圆角矩形 | MASK_TYPE.RoundedRect | {style:{x,y,width,height,radius}}                                          |
-| 多边形   | MASK_TYPE.Polygon     | {style: {paths: [x,y,x,y,x,y]}} 或者 {style: {paths: [{x,y},{x,y},{x,y}]}} |
-| 图片     | MASK_TYPE.Img         | {resource,style:{x,y,width,height}}                                        |
-| 精灵图   | MASK_TYPE.Sprite      | {resource,spriteName,style:{x,y,width,height}}                             |
+| Type | **Type** | **Attribute** |
+| -------- | --------------------- | ------------------- |
+| Circle | MASK_TYPE.Circle | {style: {x,y,radius}} |
+| Ellipse | MASK_TYPE.Ellipse | {style:{x,y,width,height}} |
+| Rectangle | MASK_TYPE.Rect | {style:{x,y,width,height}} |
+| Rounded rectangle | MASK_TYPE.RoundedRect | {style:{x,y,width,height,radius}} |
+| Polygon | MASK_TYPE.Polygon | {style: {paths: [x,y,x,y,x,y]}} or {style: {paths: [{x,y},{x,y},{x ,y}]}} |
+| Picture | MASK_TYPE.Img | {resource,style:{x,y,width,height}} |
+| Sprite image | MASK_TYPE.Sprite | {resource,spriteName,style:{x,y,width,height}} |
 
 <br/>
 <br/>

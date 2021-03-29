@@ -1,61 +1,61 @@
-# 游戏对象 GameObject
+# GameObject
 
-游戏对象是游戏的**基本元素**，代表人物、物体、风景等，它本身没有任何能力，每一个游戏对象都默认包含一个 Transform 组件，这个组件用来定义游戏对象的位置、尺寸等信息，该组件无法被移除。
+GameObject are the **basic elements** of the game, representing characters, objects, landscapes, etc. It does not have any capabilities. Each game object contains a Transform component by default, which is used to define the position and size of the game object. , The component cannot be removed.
 
-## 创建游戏对象
+## Create GameObject
 
-创建游戏对象， `new GameObject(name, transfrom)` ，第一个参数为对象的名称，第二个参数为对象的 Transform 组件的属性。
+Create a game object, `new GameObject(name, transfrom)`, the first parameter is the name of the object, and the second parameter is the properties of the object's Transform component.
 
 ```js
-import { GameObject } from '@eva/eva.js'
+import {GameObject} from'@eva/eva.js'
 const gameObject = new GameObject('name', {
-  size: { width: 100, height: 100 },
-  position: { x: 50, y: 50 }
+  size: {width: 100, height: 100 },
+  position: {x: 50, y: 50}
 })
 ```
 
-### 添加子对象
+### Add child objects
 
 ```js
 const childGameObject = new GameObject('b', {})
 gameObject.addChild(childGameObject)
 ```
 
-### 移除子对象
+### Remove child objects
 
 ```js
 gameObject.removeChild(childGameObject)
 ```
 
-### 添加组件
+### Add component
 
-方法 1:
+method 1:
 
 ```js
-import { Img } from '@eva/plugn-render'
-// 方法2：直接传入实例
+import {Img} from'@eva/plugn-render'
+// Method 2: Pass in the instance directly
 const img = new Img({
-  // 这里可以设置默认参数
-  resource: 'heart'
+  // Here you can set the default parameters
+  resource:'heart'
 })
 
 gameObject.addComponent(img)
 ```
 
-### 移除组件
+### Remove components
 
 ```js
-import { Img } from '@eva/plugn-render'
+import {Img} from'@eva/plugn-render'
 gameObject.removeComponent(Img)
 ```
 
-### 继续
+### carry on
 
-游戏对象默认携带的 [Transform](/tutorials/transformComponent) 组件是用来控制游戏对象的尺寸、位置、缩放、斜切、旋转等属性。
+The [Transform](/tutorials/transformComponent) component that the game object carries by default is used to control the size, position, scaling, bevel, rotation and other properties of the game object.
 
-### 注意：
+### Note:
 
-Img、Texture、Graphics、DragonBone、SpriteAnimation、NinePatch 有图形渲染功能的组件不要添加到同一个 GameObject 内。
+Img, Texture, Graphics, DragonBone, SpriteAnimation, NinePatch components with graphics rendering function should not be added to the same GameObject.
 
 <br/>
 <br/>

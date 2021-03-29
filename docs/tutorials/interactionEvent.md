@@ -1,4 +1,4 @@
-# 交互事件
+# Interactive event
 
 ## Demo
 
@@ -6,22 +6,22 @@
 
 ## Member
 
-### hitArea `object` `可选` 
+### hitArea `object` `optional`
 
-点击热区，带有透明度的图片的响应区域是整个 GameObject 的矩形区域，所以，可以通过 hitArea 属性设置响应区域。
-hitArea 区域的属性值相对于 GameObject 的矩形区域。
-正常来说无需设置 hitArea。
+Click the hot zone, the response area of ​​the picture with transparency is the rectangular area of ​​the entire GameObject, so the response area can be set through the hitArea property.
+The attribute value of the hitArea area is relative to the rectangular area of ​​the GameObject.
+Normally, there is no need to set hitArea.
 
-| 类型     | **Type**                  | **属性**                          |
-| -------- | ------------------------- | --------------------------------- |
-| 圆形     | HIT_AREA_TYPE.Circle      | {style: {x,y,radius}}             |
-| 椭圆     | HIT_AREA_TYPE.Ellipse     | {style:{x,y,width,height}}        |
-| 矩形     | HIT_AREA_TYPE.Rect        | {style:{x,y,width,height}}        |
-| 圆角矩形 | HIT_AREA_TYPE.RoundedRect | {style:{x,y,width,height,radius}} |
-| 多边形   | HIT_AREA_TYPE.Polygon     | {style: {paths: [x,y,x,y,x,y]}} 或 {style: {paths: [{x,y},{x,y},{x,y}]}} |
+| Type | **Type** | **Attribute** |
+| -------- | ------------------------- | ----------------------------- |
+| Circle | HIT_AREA_TYPE.Circle | {style: {x,y,radius}} |
+| Ellipse | HIT_AREA_TYPE.Ellipse | {style:{x,y,width,height}} |
+| Rectangle | HIT_AREA_TYPE.Rect | {style:{x,y,width,height}} |
+| Rounded rectangle | HIT_AREA_TYPE.RoundedRect | {style:{x,y,width,height,radius}} |
+| Polygon | HIT_AREA_TYPE.Polygon | {style: {paths: [x,y,x,y,x,y]}} or {style: {paths: [{x,y},{x,y},{x ,y}]}} |
 
 ```js
-import { Event, HIT_AREA_TYPE } from '@eva/plugin-render'
+import {Event, HIT_AREA_TYPE} from'@eva/plugin-render'
 const evt = image.addComponent(
   new Event({
     hitArea: {
@@ -36,48 +36,48 @@ const evt = image.addComponent(
 
 ## Method
 
-Event Component 用来支持 Entity 的事件绑定，事件有
+Event Component is used to support the event binding of Entity, the events are
 
-| 事件名称        | 事件类型                                                                                                                           |
-| --------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| tap             | 点击，如果 touchstart 和 touchend 都在当前 gameObject 上会被触发，如果不需要可按照一定条件在 touchend 上面添加 e.stopPropagation() |
-| touchstart      |                                                                                                                                    |
-| touchmove       | 不在当前物体上 move 也会触发，很奇怪                                                                                               |
-| touchend        |                                                                                                                                    |
-| touchendoutside | 当 touchend 的时候，touch 已经不在物体上时，会触发                                                                                 |
+| Event name | Event type |
+| --------------- | -------------------------- |
+| tap | Click, if touchstart and touchend are both on the current gameObject, it will be triggered, if you don’t need it, you can add e.stopPropagation() to touchend according to certain conditions |
+| touchstart | |
+| touchmove | Move will also trigger if it is not on the current object, very strange |
+| touchend | |
+| touchendoutside | When touchend, when touch is no longer on the object, it will trigger |
 
 ### on (eventName, listener)
 
-监听事件
+Listen for events
 
 ### off (eventName, listener)
 
-移除监听
+Remove monitor
 
 ### emit (eventName, ...args)
 
-触发事件
+trigger event
 
 ### once (eventName, listener)
 
-监听一次性事件
+Listen for one-time events
 
 ## Instance Event's Arguments
 
-listener 函数的参数
+Parameters of the listener function
 
 ```js
 {
-    data:{
-        pointerId: number,
-    	position: {x, y}
-    },
-    stopPropagation: ()=>{},
-	gameObject: gameObject
+  data:{
+    pointerId: number,
+    position: {x, y}
+  },
+  stopPropagation: ()=>{},
+  gameObject: gameObject
 }
 ```
 
-阻止事件冒泡
+Prevent events from bubbling up
 
 ```js
 event.stopPropagation()

@@ -1,21 +1,21 @@
-# 文本 Text
+# Text
 
-Text 组件为 gameObject 提供了展示文字的能力，使用了 Text 组件后，gameObject 的宽度会在下一帧设置文字所占区域的宽度给 Transform。
+The Text component provides the gameObject with the ability to display text. After using the Text component, the width of the gameObject will set the width of the text area to the Transform in the next frame.
 
 [Demo](https://eva.js.org/playground/#/text)
 
-## 安装
+## Install
 
 ```bash
 npm i @eva/plugin-renderer-text
 ```
 
-## 使用
+## Usage
 
 ```js
-import { Game, GameObject } from '@eva/eva.js'
-import { RendererSystem } from '@eva/plugin-renderer'
-import { Text, TextSystem } from '@eva/plugin-renderer-text'
+import {Game, GameObject} from'@eva/eva.js'
+import {RendererSystem} from'@eva/plugin-renderer'
+import {Text, TextSystem} from'@eva/plugin-renderer-text'
 
 const game = new Game({
   systems: [
@@ -28,7 +28,7 @@ const game = new Game({
   ]
 })
 
-// 此处还在考虑如何设置默认场景的宽高
+// Here is still considering how to set the width and height of the default scene
 game.scene.transform.size = {
   width: 750,
   height: 1000
@@ -51,21 +51,21 @@ const text = new GameObject('text', {
 
 text.addComponent(
   new Text({
-    text: '欢迎使用EVA互动游戏开发体系！',
+    text:'Welcome to use EVA interactive game development system! ',
     style: {
-      fontFamily: 'Arial',
+      fontFamily:'Arial',
       fontSize: 36,
-      fontStyle: 'italic',
-      fontWeight: 'bold',
-      fill: ['#b35d9e', '#84c35f', '#ebe44f'], // gradient
+      fontStyle:'italic',
+      fontWeight:'bold',
+      fill: ['#b35d9e','#84c35f','#ebe44f'], // gradient
       fillGradientType: 1,
       fillGradientStops: [0.1, 0.4],
-      stroke: '#4a1850',
+      stroke:'#4a1850',
       strokeThickness: 5,
       dropShadow: true,
-      dropShadowColor: '#000000',
+      dropShadowColor:'#000000',
       dropShadowBlur: 4,
-      dropShadowAngle: Math.PI / 6,
+      dropShadowAngle: Math.PI/6,
       dropShadowDistance: 6,
       wordWrap: true,
       wordWrapWidth: 400,
@@ -75,45 +75,45 @@ text.addComponent(
 )
 ```
 
-## 参数
+## Options
 
-### text: `string` 
+### text: `string`
 
-显示的文本
+Displayed text
 
 ### style
 
-| Name                 | Type                         | Default           | Description                                                                                                                                                |
-| -------------------- | ---------------------------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `align`              | string                       | 'left'            | optional 作用于多行文本('left', 'center' or 'right'), 单行文本不生效                                                                                       |
-| `breakWords`         | boolean                      | false             | optional 是否在词语中间换行                                                                                                                                |
-| `dropShadow`         | boolean                      | false             | optional 设置文字阴影                                                                                                                                      |
-| `dropShadowAlpha`    | number                       | 1                 | optional 文字阴影的透明度                                                                                                                                  |
-| `dropShadowAngle`    | number                       | Math.PI/6         | optional 文字阴影角度                                                                                                                                      |
-| `dropShadowBlur`     | number                       | 0                 | optional 文字阴影模糊度                                                                                                                                    |
-| `dropShadowColor`    | string &#124; number         | 'black'           | optional 文字阴影颜色   例如 'red', '#00FF00'                                                                                                              |
-| `dropShadowDistance` | number                       | 5                 | optional 文字阴影距离                                                                                                                                      |
-| `fill`               | string                       | 'black'           | optional 文字颜色，可以是渐变 'red', '#00FF00'。传入一个颜色数组则会展示渐变色 ['#000000','#FFFFFF']                                                       |
-| `fillGradientType`   | number                       | 'LINEAR_VERTICAL' | optional 如果文字颜色为渐变，可以设置水平或者垂直渐变, 水平渐变：LINEAR_VERTICAL 垂直渐变：LINEAR_HORIZONTAL                                               |
-| `fillGradientStops`  | Array.<number>               |                   | optional 如果文字颜色为渐变，可以设置各个颜色的定位点，如果不设置是均分的                                                                                  |
-| `fontFamily`         | string &#124; Array.<string> | 'Arial'           | optional 字体                                                                                                                                              |
-| `fontSize`           | number &#124; string         | 26                | optional 字号(如果是数字的话会被转成像素，可以用字符串：'26px','20pt','160%' or '1.6em')                                                                   |
-| `fontStyle`          | string                       | 'normal'          | optional 字体样式 ('normal', 'italic' or 'oblique')                                                                                                        |
-| `fontVariant`        | string                       | 'normal'          | optional 字体变化 ('normal' or 'small-caps')                                                                                                               |
-| `fontWeight`         | string                       | 'normal'          | optional 字体加粗 ('normal', 'bold', 'bolder', 'lighter' and '100', '200', '300', '400', '500', '600', '700', 800' or '900')                               |
-| `leading`            | number                       | 0                 | optional 行间距                                                                                                                                            |
-| `letterSpacing`      | number                       | 0                 | optional 段落前空的距离                                                                                                                                    |
-| `lineHeight`         | number                       |                   | optional 行高                                                                                                                                              |
-| `lineJoin`           | string                       | 'miter'           | optional 边角样式类型 values "miter" (creates a sharp corner), "round" (creates a round corner) or "bevel" (creates a squared corner).                     |
-| `miterLimit`         | number                       | 10                | optionallineJoin 为 miter 的时候，使用此属性，可以减少渲染文字的尖锐性                                                                                     |
-| `padding`            | number                       | 0                 | optional 有些字体会被裁剪，添加 padding 解决此问题                                                                                                         |
-| `stroke`             | string &#124; number         | 'black'           | optional 描边 'blue', '#FCFF00'                                                                                                                            |
-| `strokeThickness`    | number                       | 0                 | optional 描边厚度                                                                                                                                          |
-| `trim`               | boolean                      | false             | optional 去除透明边框                                                                                                                                      |
-| `textBaseline`       | string                       | 'alphabetic'      | optional 文字基线                                                                                                                                          |
-| `whiteSpace`         | string                       | 'pre'             | optional 设置换行的逻辑, "normal" 正常逻辑换行,"pre"   保留空白符序列，但是正常地进行换行,"pre-line" 合并空白符序列，但是保留换行符. 需要 wordWrap 为 true |
-| `wordWrap`           | boolean                      | false             | optional 是否需要换行                                                                                                                                      |
-| `wordWrapWidth`      | number                       | 100               | optional 超出改宽度换行                                                                                                                                    |
+| Name | Type | Default | Description |
+| -------------------- | ---------------------------- | ----------------- | ------------------------- |
+| `align` | string |'left' | optional For multi-line text ('left','center' or'right'), single-line text does not take effect |
+| `breakWords` | boolean | false | optional Whether to break in the middle of a word |
+| `dropShadow` | boolean | false | optional Set text shadow |
+| `dropShadowAlpha` | number | 1 | optional The transparency of the text shadow |
+| `dropShadowAngle` | number | Math.PI/6 | optional Text shadow angle |
+| `dropShadowBlur` | number | 0 | optional Text shadow blur degree |
+| `dropShadowColor` | string &#124; number |'black' | optional Text shadow color, such as'red','#00FF00' |
+| `dropShadowDistance` | number | 5 | optional Text shadow distance |
+| `fill` | string |'black' | optional Text color, can be gradient'red','#00FF00'. Passing in a color array will display the gradient color ['#000000','#FFFFFF'] |
+| `fillGradientType` | number |'LINEAR_VERTICAL' | optional If the text color is a gradient, you can set a horizontal or vertical gradient, horizontal gradient: LINEAR_VERTICAL vertical gradient: LINEAR_HORIZONTAL |
+| `fillGradientStops` | Array.<number> | | optional If the text color is gradient, you can set the anchor point of each color, if not set, it will be divided equally |
+| `fontFamily` | string &#124; Array.<string> |'Arial' | optional font |
+| `fontSize` | number &#124; string | 26 | optional Font size (if it is a number, it will be converted to pixels, you can use a string: '26px','20pt','160%' or '1.6em') |
+| `fontStyle` | string |'normal' | optional font style ('normal','italic' or'oblique') |
+| `fontVariant` | string |'normal' | optional font change ('normal' or'small-caps') |
+| `fontWeight` | string |'normal' | optional font bold ('normal','bold','bolder','lighter' and '100', '200', '300', '400', '500 ', '600', '700', 800' or '900') |
+| `leading` | number | 0 | optional Line spacing |
+| `letterSpacing` | number | 0 | optional The distance before the paragraph |
+| `lineHeight` | number | | optional line height |
+| `lineJoin` | string |'miter' | optional Corner style type values ​​"miter" (creates a sharp corner), "round" (creates a round corner) or "bevel" (creates a squared corner). |
+| `miterLimit` | number | 10 | When optionallineJoin is miter, using this attribute can reduce the sharpness of rendered text |
+| `padding` | number | 0 | optional Some fonts will be cropped, add padding to solve this problem |
+| `stroke` | string &#124; number |'black' | optional Stroke'blue','#FCFF00' |
+| `strokeThickness` | number | 0 | optional Stroke thickness |
+| `trim` | boolean | false | optional Remove transparent border |
+| `textBaseline` | string |'alphabetic' | optional Text Baseline |
+| `whiteSpace` | string |'pre' | optional Set the logic of line breaks, "normal" normal logical line breaks, "pre" retains blank character sequences, but normal line breaks, "pre-line" merges blank character sequences, but keeps them Newline character. Requires wordWrap to be true |
+| `wordWrap` | boolean | false | optional Need to wrap |
+| `wordWrapWidth` | number | 100 | optional Wrap beyond the change width |
 
 <br/>
 <br/>

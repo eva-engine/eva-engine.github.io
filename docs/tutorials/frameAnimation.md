@@ -1,36 +1,36 @@
-# 帧动画
+# Frame animation
 
-帧动画是由多张连续的图片按照一定的时间间隔播放的动画，通常会将图片合并到一张图片里面，然后通过 JSON 来描述图片的位置以及播放的顺序。
+Frame animation is an animation played by multiple consecutive pictures at a certain time interval. The pictures are usually merged into one picture, and then the position of the picture and the order of playback are described through JSON.
 
-Eva.js 的帧动画底层是 pixi.js spriteAnimation 实现的，因此在 Eva.js 中可以使用 spriteAnimation 支持的雪碧图生成工具导出的素材，比如 [TexturePacker](https://www.codeandweb.com/texturepacker/tutorials/how-to-create-sprite-sheets-and-animations-with-pixijs5)。
+The bottom layer of the frame animation of Eva.js is realized by pixi.js spriteAnimation. Therefore, in Eva.js, you can use the materials exported by the sprite animation tool supported by spriteAnimation, such as [TexturePacker](https://www.codeandweb.com/texturepacker /tutorials/how-to-create-sprite-sheets-and-animations-with-pixijs5).
 
 - [https://eva.js.org/playground/#/spriteAnimation](https://eva.js.org/playground/#/spriteAnimation)
 
-## 安装
+## Install
 
 ```bash
 npm i @eva/plugin-renderer-spriteAnimation
 ```
 
-## 使用
+## Usage
 
 ```js
-import { Game, GameObject, resource, RESOURCE_TYPE } from '@eva/eva.js'
-import { RendererSystem } from '@eva/plugin-renderer'
-import { SpriteAnimation, SpriteAnimationSystem } from '@eva/plugin-renderer-spriteAnimation'
+import {Game, GameObject, resource, RESOURCE_TYPE} from'@eva/eva.js'
+import {RendererSystem} from'@eva/plugin-renderer'
+import {SpriteAnimation, SpriteAnimationSystem} from'@eva/plugin-renderer-spriteAnimation'
 
 resource.addResource([
   {
-    name: 'fruit',
+    name:'fruit',
     type: RESOURCE_TYPE.SPRITE_ANIMATION,
     src: {
       image: {
-        type: 'json',
-        url: 'https://gw.alicdn.com/bao/uploaded/TB15pMkkrsTMeJjSszhXXcGCFXa-377-1070.png'
+        type:'json',
+        url:'https://gw.alicdn.com/bao/uploaded/TB15pMkkrsTMeJjSszhXXcGCFXa-377-1070.png'
       },
       json: {
-        type: 'json',
-        url: 'https://gw.alicdn.com/mt/TB1qCvumsyYBuNkSnfoXXcWgVXa.json'
+        type:'json',
+        url:'https://gw.alicdn.com/mt/TB1qCvumsyYBuNkSnfoXXcWgVXa.json'
       }
     },
     preload: false
@@ -49,14 +49,14 @@ const game = new Game({
 })
 
 const cut = new GameObject('cut', {
-  position: { x: 225, y: 400 },
-  size: { width: 300, height: 200 },
-  origin: { x: 0, y: 0 }
+  position: {x: 225, y: 400 },
+  size: {width: 300, height: 200 },
+  origin: {x: 0, y: 0}
 })
 
 const frame = cut.addComponent(
   new SpriteAnimation({
-    resource: 'fruit',
+    resource:'fruit',
     speed: 100
   })
 )
@@ -66,25 +66,25 @@ frame.play()
 game.scene.addChild(cut)
 ```
 
-## 参数
+## Options
 
-### resource `string` 
+### resource `string`
 
-资源名，需要通过 `resource.addResource` 预加载。
+Resource name, which needs to be preloaded by `resource.addResource`.
 
-### speed `number` 
+### speed `number`
 
-每张图片播放的间隔时间，单位 ms。
+The interval time for each picture to be played, in ms.
 
-## 方法
+## Methods
 
 ### play()
 
-播放动画，默认自动播放。
+Play animation, automatically play by default.
 
 ### stop()
 
-停止播放。
+Stop play.
 
 <br/>
 <br/>
