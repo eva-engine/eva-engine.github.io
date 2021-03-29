@@ -1,68 +1,68 @@
-# 准备
+# Preparation
 
-所有渲染相关的操作依赖渲染器，该渲染器是以系统的形式提供出来的，所以我们需要在初始化游戏的时候将渲染器安装到游戏上。目前 Eva.js 提供了一个 2D 的渲染器，在使用渲染相关组件的时候需要提前安装。
+All rendering-related operations depend on the renderer, which is provided in the form of the system, so we need to install the renderer on the game when initializing the game. Currently Eva.js provides a 2D renderer, which needs to be installed in advance when using rendering related components.
 
-## 安装
+## Install
 
 ```bash
 npm i @eva/plugin-renderer
 ```
 
-## 使用系统
+## Usage
 
 ```js
-import { Game, GameObject } from '@eva/eva.js'
-import { RendererSystem, RENDERER_TYPE } from '@eva/plugin-renderer'
+import {Game, GameObject} from'@eva/eva.js'
+import {RendererSystem, RENDERER_TYPE} from'@eva/plugin-renderer'
 
 new Game({
   systems: [
     new RendererSystem({
-      canvas: document.querySelector('#canvas'), //可选，自动生成canvas 挂载game.canvas上
-      width: 750, //必填
-      height: 1000, // 必填
-      transparent: false, // 可选
-      resolution: window.devicePixelRatio / 2, // 可选, 如果是2倍图设计 可以除以 2
-      preventScroll: false, // 阻止页面滚动
-      renderType: RENDERER_TYPE.UNKNOWN, // RENDERER_TYPE.UNKNOWN:自动判断，RENDERER_TYPE.WEBGL/RENDERER_TYPE.CANVAS，建议android6.1以下使用Canvas。
+      canvas: document.querySelector('#canvas'), //Optional, automatically generate canvas and mount it on game.canvas
+      width: 750, //Required
+      height: 1000, // required
+      transparent: false, // optional
+      resolution: window.devicePixelRatio / 2, // Optional, if it is 2 times the image design, it can be divided by 2
+      preventScroll: false, // Prevent page scrolling
+      renderType: RENDERER_TYPE.UNKNOWN, // RENDERER_TYPE.UNKNOWN: automatic judgment, RENDERER_TYPE.WEBGL/RENDERER_TYPE.CANVAS, it is recommended to use Canvas below android6.1.
       backgroundColor: 0xff0000
     })
   ]
 })
 ```
 
-## 参数
+## Options
 
 ### canvas
 
-渲染所需 canvas
+Canvas needed for rendering
 
 ### width
 
-渲染画布的宽度，设计稿的宽度，
+The width of the rendering canvas, the width of the design draft,
 
 ### height
 
-渲染画布的高度，设计稿的高度
+The height of the rendering canvas, the height of the design draft
 
 ### transparent
 
-背景是否透明，默认 false
+Whether the background is transparent, the default is false
 
 ### resolution
 
-分辨率，如果设计稿是 2 倍（750\*1334），可用 window.devicePixelRatio / 2
+Resolution, if the design draft is 2 times (750\*1334), you can use window.devicePixelRatio / 2
 
 ### preventScroll
 
-是否阻止页面滚动，默认 false
+Whether to prevent page scrolling, the default is false
 
 ### renderType
 
-使用 WebGL 或 Canvas 渲染默认为自动判断是否支持 WebGL
+Use WebGL or Canvas to render by default to automatically determine whether to support WebGL
 
 ### backgroundColor
 
-背景颜色
+background color
 
 <br/>
 <br/>

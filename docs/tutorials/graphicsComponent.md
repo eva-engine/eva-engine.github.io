@@ -1,23 +1,23 @@
-# 图形 Graphics
+# Graphics Graphics
 
-Graphics 组件为 GameObject 提供了绘制图形的能力。
+The Graphics component provides GameObject with the ability to draw graphics.
 
 [Demo](https://eva.js.org/playground/#/graphics)
 
-## 安装
+## Install
 
 ```bash
 npm i @eva/plugin-renderer @eva/plugin-renderer-graphics
 ```
 
-## 使用
+## Usage
 
-无需参数，将会返回一个 graphics 挂载 component 实例上，调用 graphics 属性上的方法即可绘制图形
+No parameters are needed, a graphics mounted component instance will be returned, and the graphics can be drawn by calling the method on the graphics property
 
 ```js
-import { Game, GameObject } from '@eva/eva.js'
-import { RendererSystem } from '@eva/plugin-renderer'
-import { Graphics, GraphicsSystem } from '@eva/plugin-renderer-graphics'
+import {Game, GameObject} from'@eva/eva.js'
+import {RendererSystem} from'@eva/plugin-renderer'
+import {Graphics, GraphicsSystem} from'@eva/plugin-renderer-graphics'
 
 const game = new Game({
   systems: [
@@ -64,7 +64,7 @@ outter.addChild(progress)
 game.scene.addChild(outter)
 
 function setProgress(progress) {
-  if (progress > 100) return
+  if (progress> 100) return
   const width = Math.max(12, (296 * progress) / 100)
   progressGraphics.graphics.clear()
   progressGraphics.graphics.beginFill(0x000000, 1)
@@ -73,186 +73,186 @@ function setProgress(progress) {
 }
 ```
 
-### 绘制方法
+### Drawing method
 
-#### beginFill (color, alpha)
+#### beginFill (color, alpha)
 
-指定一个简单的单色填充，随后调用其他 Graphics 方法 （例如：`lineTo()`或`drawCircle()`）在绘制时使用。
+Specify a simple single-color fill, and then call other Graphics methods (for example: `lineTo()` or `drawCircle()`) to use when drawing.
 
-| Name    | Type   | Default | Description           |
+| Name | Type | Default | Description |
 | :------ | :----- | :------ | :-------------------- |
-| `color` | number | 0       | optional 填充的颜色   |
-| `alpha` | number | 1       | optional 填充的 Alpha |
+| `color` | number | 0 | optional Fill color |
+| `alpha` | number | 1 | optional Filled Alpha |
 
-#### endFill ()
+#### endFill()
 
-对自上一次调用 beginFill() 方法以来添加的线条和形状应用填充。
+Filling is applied to the lines and shapes added since the last call to the beginFill() method.
 
-#### lineStyle ({ width, color, alpha, alignment, native })
+#### lineStyle ({ width, color, alpha, alignment, native })
 
-指定用于随后调用 Graphics 方法的线样式，例如：`lineTo()`方法 或 `drawCircle()`方法
+Specify the line style used for subsequent calls to the Graphics method, for example: `lineTo()` method or `drawCircle()` method
 
-| Name        | Type    | Default | Description                                                         |
-| :---------- | :------ | :------ | :------------------------------------------------------------------ |
-| `width`     | number  | 0       | optional 画线的宽度，将更新对象存储的样式                           |
-| `color`     | number  | 0x0     | optional 绘制线条的颜色，将更新对象存储的样式                       |
-| `alpha`     | number  | 1       | optional 绘制线条的 Alpha，将更新对象存储的样式                     |
-| `alignment` | number  | 0.5     | optional 绘制线的对齐方式（0 = 内部，0.5 = 居中，1 = 外部）         |
-| `native`    | boolean | false   | optional 如果为 true，则将使用 LINES 来代替 TRIANGLE_STRIP 绘制线条 |
+| Name | Type | Default | Description ｜
+| :---------- | :------ | :------ | :----------------------------------------------------------------- |
+| `width` | number | 0 | optional The width of the line, the style of the object storage will be updated |
+| `color` | number | 0x0 | optional The color of the drawn line, the style of the object storage will be updated |
+| `alpha` | number | 1 | optional Alpha of the drawn line, the style of the object storage will be updated |
+| `alignment` | number | 0.5 | optional Alignment of the drawn line (0 = internal, 0.5 = center, 1 = external) |
+| `native` | boolean | false | optional If true, LINES will be used instead of TRIANGLE_STRIP to draw lines |
 
-#### lineStyle (width, color, alpha, alignment, native)
+#### lineStyle (width, color, alpha, alignment, native)
 
-指定用于随后调用 Graphics 方法的线样式，例如：`lineTo()`方法或 `drawCircle()`方法
+Specify the line style used for subsequent calls to the Graphics method, for example: `lineTo()` method or `drawCircle()` method
 
-| Name        | Type    | Default | Description                                                         |
-| :---------- | :------ | :------ | :------------------------------------------------------------------ |
-| `width`     | number  | 0       | optional 画线的宽度，将更新对象存储的样式                           |
-| `color`     | number  | 0x0     | optional 绘制线条的颜色，将更新对象存储的样式                       |
-| `alpha`     | number  | 1       | optional 绘制线条的 Alpha，将更新对象存储的样式                     |
-| `alignment` | number  | 0.5     | optional 绘制线的对齐方式（0 = 内部，0.5 = 居中，1 = 外部）         |
-| `native`    | boolean | false   | optional 如果为 true，则将使用 LINES 来代替 TRIANGLE_STRIP 绘制线条 |
+| Name | Type | Default | Description |
+| :---------- | :------ | :------ | :----------- |
+| `width` | number | 0 | optional The width of the line, the style of the object storage will be updated |
+| `color` | number | 0x0 | optional The color of the drawn line, the style of the object storage will be updated |
+| `alpha` | number | 1 | optional Alpha of the drawn line, the style of the object storage will be updated |
+| `alignment` | number | 0.5 | optional Alignment of the drawn line (0 = internal, 0.5 = center, 1 = external) |
+| `native` | boolean | false | optional If true, LINES will be used instead of TRIANGLE_STRIP to draw lines |
 
-#### lineTo (x, y)
+#### lineTo (x, y)
 
-使用当前线样式从当前绘图位置到 (x, y )绘制一条线； 然后将当前图形位置设置为 (x, y)。
+Use the current line style to draw a line from the current drawing position to (x, y); then set the current drawing position to (x, y).
 
-| Name | Type   | Description       |
+| Name | Type | Description |
 | :--- | :----- | :---------------- |
-| `x`  | number | 要绘制到的 X 坐标 |
-| `y`  | number | 要绘制到的 Y 坐标 |
+| `x` | number | X coordinate to be drawn |
+| `y` | number | Y coordinate to be drawn |
 
-#### moveTo (x, y)
+#### moveTo (x, y)
 
-将当前图形位置移动到 x,y。
+Move the current graphic position to x,y.
 
-| Name | Type   | Description       |
+| Name | Type | Description |
 | :--- | :----- | :---------------- |
-| `x`  | number | 要移动到的 X 坐标 |
-| `y`  | number | 要移动到的 Y 坐标 |
+| `x` | number | X coordinate to move to |
+| `y` | number | Y coordinate to move to |
 
-#### quadraticCurveTo (cpX, cpY, toX, toY)
+#### quadraticCurveTo (cpX, cpY, toX, toY)
 
-计算二次贝塞尔曲线的点，然后绘制它。 基于: [https://stackoverflow.com/questions/785097/how-do-i-implement-a-bezier-curve-in-c](https://stackoverflow.com/questions/785097/how-do-i-implement-a-bezier-curve-in-c)
+Calculate the points of the quadratic Bezier curve, and then draw it. Based on: [https://stackoverflow.com/questions/785097/how-do-i-implement-a-bezier-curve-in-c](https://stackoverflow.com/questions/785097/how-do- i-implement-a-bezier-curve-in-c)
 
-| Name  | Type   | Description |
+| Name | Type | Description |
 | :---- | :----- | :---------- |
-| `cpX` | number | 控制点 x    |
-| `cpY` | number | 控制点 y    |
-| `toX` | number | 目的点 x    |
-| `toY` | number | 目的点 y    |
+| `cpX` | number | Control point x |
+| `cpY` | number | Control point y |
+| `toX` | number | Destination point x |
+| `toY` | number | Destination point y |
 
-#### clear ()
+#### clear()
 
-清除绘制到此 Graphics 对象的图形，并重置填充和线条样式设置。
+Clear the graphics drawn to this Graphics object, and reset the fill and line style settings.
 
-#### closePath ()
+#### closePath()
 
-关闭当前路径。
+Close the current path.
 
-### 预设图形
+### Preset graphics
 
-#### arc (cx, cy, radius, startAngle, endAngle, anticlockwise)
+#### arc (cx, cy, radius, startAngle, endAngle, anticlockwise)
 
-圆弧方法创建圆弧/曲线（用于创建圆或圆的一部分）。
+The arc method creates an arc/curve (used to create a circle or part of a circle).
 
-| Name            | Type    | Default | Description                                                                              |
-| :-------------- | :------ | :------ | :--------------------------------------------------------------------------------------- |
-| `cx`            | number  |         | 圆心的 x 坐标                                                                            |
-| `cy`            | number  |         | 圆心的 y 坐标                                                                            |
-| `radius`        | number  |         | 圆的半径                                                                                 |
-| `startAngle`    | number  |         | 起始角度，以弧度为单位（0 是圆弧的 3 点位置）                                            |
-| `endAngle`      | number  |         | 终止角度，以弧度为单位                                                                   |
-| `anticlockwise` | boolean | false   | optional 指定图形是逆时针还是顺时针。 `false` 是默认值，表示顺时针，而`true`表示逆时针。 |
+| Name | Type | Default | Description |
+| :-------------- | :------ | :------ | :-------------------- |
+| `cx` | number | | x coordinate of the center of the circle |
+| `cy` | number | | y coordinate of the center of the circle |
+| `radius`| number | | radius of the circle |
+| `startAngle` | number | | Starting angle, in radians (0 is the 3 point position of the arc) |
+| `endAngle` | number | | End angle, in radians |
+| `anticlockwise` | boolean | false | optional Specifies whether the graph is counterclockwise or clockwise. `false` is the default value, which means clockwise, and `true` means counterclockwise. |
 
-#### arcTo (x1, y1, x2, y2, radius)
+#### arcTo (x1, y1, x2, y2, radius)
 
-arcTo()方法在画布上的两个切线之间创建弧/曲线。
+The arcTo() method creates an arc/curve between two tangents on the canvas.
 
-| Name     | Type   | Description               |
+| Name | Type | Description |
 | :------- | :----- | :------------------------ |
-| `x1`     | number | 圆弧的第一个切点的 x 坐标 |
-| `y1`     | number | 圆弧的第一个切点的 y 坐标 |
-| `x2`     | number | 圆弧末端的 x 坐标         |
-| `y2`     | number | 圆弧末端的 y 坐标         |
-| `radius` | number | 圆弧半径                  |
+| `x1` | number | The x coordinate of the first tangent point of the arc |
+| `y1` | number | The y coordinate of the first tangent point of the arc |
+| `x2` | number | x coordinate of the end of the arc |
+| `y2` | number | y coordinate of the end of the arc |
+| `radius` | number | Arc radius |
 
-#### bezierCurveTo (cpX, cpY, cpX2, cpY2, toX, toY)
+#### bezierCurveTo (cpX, cpY, cpX2, cpY2, toX, toY)
 
-计算贝塞尔曲线的点，然后绘制它。
+Calculate the points of the Bezier curve, and then draw it.
 
-| Name   | Type   | Description  |
+| Name | Type | Description |
 | :----- | :----- | :----------- |
-| `cpX`  | number | 控制点 x     |
-| `cpY`  | number | 控制点 y     |
-| `cpX2` | number | 第二控制点 x |
-| `cpY2` | number | 第二控制点 y |
-| `toX`  | number | 目的点 x     |
-| `toY`  | number | 目的点 y     |
+| `cpX` | number | Control point x |
+| `cpY` | number | Control point y |
+| `cpX2` | number | Second control point x |
+| `cpY2` | number | Second control point y |
+| `toX` | number | Destination point x |
+| `toY` | number | Destination point y |
 
-#### drawCircle (x, y, radius)
+#### drawCircle (x, y, radius)
 
-绘制一个圆。
+Draw a circle.
 
-| Name     | Type   | Description   |
+| Name | Type | Description |
 | :------- | :----- | :------------ |
-| `x`      | number | 圆心的 X 坐标 |
-| `y`      | number | 圆心的 Y 坐标 |
-| `radius` | number | 圆的半径      |
+| `x` | number | X coordinate of the center of the circle |
+| `y` | number | Y coordinate of the center of the circle |
+| `radius` | number | radius of the circle |
 
-#### drawEllipse (x, y, width, height)
+#### drawEllipse (x, y, width, height)
 
-绘制一个椭圆。
+Draw an ellipse.
 
-| Name     | Type   | Description       |
+| Name | Type | Description |
 | :------- | :----- | :---------------- |
-| `x`      | number | 椭圆中心的 X 坐标 |
-| `y`      | number | 椭圆中心的 Y 坐标 |
-| `width`  | number | 椭圆的半宽        |
-| `height` | number | 椭圆的半高        |
+| `x` | number | X coordinate of the center of the ellipse |
+| `y` | number | Y coordinate of the center of the ellipse |
+| `width` | number | Half width of ellipse |
+| `height` | number | Half height of ellipse |
 
-#### drawPolygon (path)
+#### drawPolygon (path)
 
-使用指定的路径绘制多边形。
+Use the specified path to draw the polygon.
 
-| Name   | Type                                | Description                |
-| :----- | :---------------------------------- | :------------------------- |
-| `path` | Array.<number> &#124; Array.<{x,y}> | 用于构造多边形的路径数据。 |
+| Name | Type | Description |
+| :----- | :---------------------------------- | :------------------------ |
+| `path` | Array.<number> &#124; Array.<{x,y}> | Path data used to construct polygons. |
 
-#### drawRect (x, y, width, height)
+#### drawRect(x, y, width, height)
 
-绘制一个矩形。
+Draw a rectangle.
 
-| Name     | Type   | Description         |
+| Name | Type | Description |
 | :------- | :----- | :------------------ |
-| `x`      | number | 矩形左上角的 X 坐标 |
-| `y`      | number | 矩形左上角的 Y 坐标 |
-| `width`  | number | 矩形的宽度          |
-| `height` | number | 矩形的高度          |
+| `x` | number | X coordinate of the upper left corner of the rectangle |
+| `y` | number | Y coordinate of the upper left corner of the rectangle |
+| `width` | number | The width of the rectangle |
+| `height` | number | The height of the rectangle |
 
-#### drawRoundedRect (x, y, width, height, radius)
+#### drawRoundedRect(x, y, width, height, radius)
 
-绘制一个带有圆角/斜角的矩形。
+Draw a rectangle with rounded/beveled corners.
 
-| Name     | Type   | Description         |
+| Name | Type | Description |
 | :------- | :----- | :------------------ |
-| `x`      | number | 矩形左上角的 X 坐标 |
-| `y`      | number | 矩形左上角的 Y 坐标 |
-| `width`  | number | 矩形的宽度          |
-| `height` | number | 矩形的高度          |
-| `radius` | number | 矩形角度的半径      |
+| `x` | number | X coordinate of the upper left corner of the rectangle |
+| `y` | number | Y coordinate of the upper left corner of the rectangle |
+| `width` | number | The width of the rectangle |
+| `height` | number | The height of the rectangle |
+| `radius` | number | The radius of the rectangle angle |
 
-#### drawStar (x, y, points, radius, innerRadius, rotation)
+#### drawStar (x, y, points, radius, innerRadius, rotation)
 
-用任意数量的点画一个星形。
+Draw a star with any number of points.
 
-| Name          | Type   | Default | Description                                   |
-| :------------ | :----- | :------ | :-------------------------------------------- |
-| `x`           | number |         | 星的中心 X 位置                               |
-| `y`           | number |         | 星的中心 Y 位置                               |
-| `points`      | number |         | 星星的点数必须 > 1                            |
-| `radius`      | number |         | 星星的外半径                                  |
-| `innerRadius` | number |         | optional 点之间的内半径，默认为`radius`的一半 |
-| `rotation`    | number | 0       | optional 星星自转的弧度，其中 0 为垂直        |
+| Name | Type | Default | Description |
+| :------------ | :----- | :------ | :---------------------------- |
+| `x` | number | | The center of the star X position |
+| `y` | number | | Center of the star Y position |
+| `points` | number | | The number of stars must be> 1 |
+| `radius` | number | | The outer radius of the star |
+| `innerRadius` | number | | optional The inner radius between points, the default is half of `radius` |
+| `rotation` | number | 0 | optional The radian of the star's rotation, where 0 is vertical |
 
 <br />
 <br />

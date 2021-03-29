@@ -1,61 +1,61 @@
-# 脚本组件
+# Custom component
 
-## 介绍
+## Introduce
 
-在日常业务开发中，我们需要自定义一些业务逻辑，每个游戏对象可能需要单独的逻辑或者“数据驱动器”，我们通过脚本组件的形式进行业务开发。
+In daily business development, we need to customize some business logic. Each game object may need a separate logic or "data driver". We develop business in the form of custom components.
 
-### 举例说明：
+### for example:
 
-芭芭农场的植物中作物生产的经验会实时变化，
+The experience of crop production in the plants of Baba Farm will change in real time,
 
-Step1: 我们创建一个生产组件
-Step2: 在组件上设置描述经验生产的速度，当前经验的属性
-Step3: 通过生命周期方法，实时根据生产速度对经验值进行修改，然后修改文字组件上面的文字来展示经验值
-Step4: 提供收取作物经验的自定义事件出来，当用户点击植物时调用
+Step1: We create a production component
+Step2: Set the speed of experience production and the attributes of current experience on the component
+Step3: Through the life cycle method, modify the experience value according to the production speed in real time, and then modify the text on the text component to display the experience value
+Step4: Provide a custom event to collect crop experience, which is called when the user clicks on the plant
 
 ![image.png](https://img.alicdn.com/imgextra/i1/O1CN01wuCCfA1cXsquhQJ06_!!6000000003611-2-tps-452-492.png)
 
-![image.png](https://img.alicdn.com/imgextra/i4/O1CN01HjkghN1ztAQ93DPan_!!6000000006771-2-tps-1164-512.png)
+![image.png](https://gw.alicdn.com/imgextra/i1/O1CN01TCaFQj1jWEkJC0TGp_!!6000000004555-2-tps-1724-958.png)
 
-## 初始化
+## Initialization
 
-通过继承 Component 的方式创建脚本组件
+Create custom components by inheriting Component
 
 ```js
-import { Component } from '@eva/eva.js'
+import {Component} from'@eva/eva.js'
 class Move extends Component {
-  static componentName = 'Move' // 设置组件的名字
+  static componentName ='Move' // Set the name of the component
 }
 ```
 
-## 属性
+## Attributes
 
-给组件设置属性，在整个组件里面可以使用/修改。
+Set properties to the component, which can be used/modified in the entire component.
 
 ```js
 class Move extends Component {
-  static componentName = 'Move'
+  static componentName ='Move'
   speed = {
-    // 设置属性
-    // 移动速度
+    // set properties
+    // Moving speed
     x: 100,
     y: 200
   }
 }
 ```
 
-## 生命周期
+## life cycle
 
-![image.png](https://img.alicdn.com/imgextra/i2/O1CN01gEgYOz1T8qevGDloU_!!6000000002338-2-tps-1448-906.png)
+![image.png](https://gw.alicdn.com/imgextra/i1/O1CN01VCWqjG1qmuTjGuJ4y_!!6000000005539-2-tps-1422-1202.png)
 
-### 初始化
+### Initialization
 
 #### Init
 
-创建一个脚本组件，实现 init 方法进行初始化，通常都是将参数设置给组件上面的属性。
-实例化组件的时候传入的参数，会在组件被添加到游戏对象的时候传入到 init 方法中。
-一般来讲，我们传入的参数对应到组件上面的属性。
-该方法将会在 `addComponent`  的时候执行，即便事先实例化了当前组件。
+Create a custom component and implement the init method for initialization, usually by setting the parameters to the properties on the component.
+The parameters passed in when the component is instantiated will be passed to the init method when the component is added to the game object.
+Generally speaking, the parameters we pass in correspond to the attributes on the component.
+This method will be executed at the time of `addComponent`, even if the current component is instantiated in advance.
 
 ```js
 interface MoveParams {
@@ -68,16 +68,16 @@ interface MoveParams {
 class Move extends Component {
   //...
   init(params: MoveParams) {
-    this.speed = params.speed || { x: 0, y: 0 }
+    this.speed = params.speed || {x: 0, y: 0}
   }
 }
 ```
 
 #### Awake
 
-游戏对象被安装到游戏对象后执行。
-如果游戏场景以及所有游戏对象已经准备好了，可以拿到已经在游戏对象树上面的节点了。
-正常编码开发我们不会这么做，但是在编辑器开发中就可以派上用场了。
+The game object is executed after it is installed in the game object.
+If the game scene and all game objects are ready, you can get the nodes that are already on the game object tree.
+We don't do this for normal coding development, but it can come in handy in editor development.
 
 ```js
 class Move extends Component {
@@ -88,40 +88,40 @@ class Move extends Component {
 
 #### Start
 
-跟 Awake 一样，Start 也在生命周期最开始的时候被调用，但是它将在这个组件第一次被 update 之前调用。
-我们可以在 Start 回调函数里面去获取对象上绑定其他组件。
+Like Awake, Start is also called at the beginning of the life cycle, but it will be called before the component is updated for the first time.
+We can bind other components to the object in the Start callback function.
 
 ```js
 class Move extends Component {
   // ...
   private img: Img = null
-	start() {
-  	this.img = this.gameObject.getComponent(Img)
+start() {
+  this.img = this.gameObject.getComponent(Img)
   }
 }
 ```
 
-### 游戏事件
+### Game events
 
 #### onPause
 
-在 `game.pause()`  的时候执行
+Execute at the time of `game.pause()`
 
 #### onResume
 
-在 `game.resume()`  的时候执行
+Execute at the time of `game.resume()`
 
-### 游戏循环
+### Game loop
 
 #### Update
 
-每一帧执行
+Execute every frame
 
 ```js
 class Move extends Commponent {
   // ...
   update(e) {
-    // 让物体按照一定速度移动 位移 = 速度 * 时间
+    // Let the object move at a certain speed displacement = speed * event
     const position = this.gameObject.transform.position
     this.gameObject.transform.position.x += this.speed.x * (e.deltaTime / 1000)
     this.gameObject.transform.position.y += this.speed.y * (e.deltaTime / 1000)
@@ -131,17 +131,17 @@ class Move extends Commponent {
 
 #### LateUpdate
 
-每帧最后执行，将会在所有组件的 update 执行以后执行。有些组件依赖另外的组件的运行结果，例如位置跟随，需要在动画组件修改位置后，跟随的组件才去读取 Transform 组件上面的 position 属性。
+The last execution of each frame will be executed after the update execution of all components. Some components rely on the running results of other components, such as position following. After the animation component changes the position, the following component can read the position property on the Transform component.
 
-### 停用
+### Disable
 
 #### Destory
 
-销毁时调用
+Called on destruction
 
-## 自定义事件
+## Custom event
 
-可以在组件上自定义事件进行一些操作，比如以下例子，添加了加速方法和减速方法。
+You can perform some operations on custom events on the component. For example, in the following example, an acceleration method and a deceleration method are added.
 
 ```js
 class Move extends Component {

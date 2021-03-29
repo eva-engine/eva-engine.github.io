@@ -6,13 +6,13 @@ Dragonbone 龙骨动画官网：[http://dragonbones.com/cn/index.html](http://dr
 
 - [https://eva.js.org/playground/#/dragonBone](https://eva.js.org/playground/#/dragonBone)
 
-## 安装
+## Install
 
 ```bash
 npm i @eva/plugin-renderer-dragonbone
 ```
 
-## 使用
+## Usage
 
 ```js
 import { Game, GameObject, resource, RESOURCE_TYPE } from '@eva/eva.js'
@@ -78,7 +78,7 @@ db.play('newAnimation')
 game.scene.addChild(dragonBone)
 ```
 
-## 参数
+## Options
 
 ### resource `string` 
 
@@ -92,7 +92,7 @@ game.scene.addChild(dragonBone)
 
 开始播放的动画名字
 
-## 方法
+## Methods
 
 ### play(name?: string, times?: number)
 
@@ -105,7 +105,7 @@ game.scene.addChild(dragonBone)
 
 停止播放
 
-## 事件
+## Events
 
 参考[龙骨动画官方事件](http://developer.egret.com/cn/apidoc/index/name/dragonBones.EventObject)，`Dragonbone` 组建实例的上能够监听这些事件。
 
@@ -116,7 +116,7 @@ db.on('start', ()=>{})
 db.on('complete', ()=>{})
 ```
 
-## 注意
+## Note
 
 多个骨骼动画 armatureName 不能相同，导出时项目名称要使用英文
 

@@ -1,22 +1,22 @@
-# 数据管理
+# Data Management
 
-## 介绍
+## Introduce
 
-在 react/vue 中，我们经常使用 redux/vuex 来进行数据管理，维护一套统一的数据，在 Eva.js 体系下，我们设计了一套数据管理系统，叫做 EVAX，**通过 EVAX 我们可以维护一份共有数据，多个不同的对象上的组件可能会使用同一份数据进行逻辑运行。**
+In react/vue, we often use redux/vuex for data management and maintain a unified set of data. Under the Eva.js system, we have designed a set of data management system called EVAX, **through EVAX we can maintain For a common data, components on multiple different objects may use the same data for logical operation. **
 
-比如游戏中的生命值，不仅在人的头顶上会显示，游戏中的人物也会根据生命值的多少来展示不同的形态，我们将 EVAX 组件绑定到游戏对象上，可对某个数据进行监听，如果数据发生变化，可以操作当前游戏对象上其他组件上的数据或者事件。
+For example, the life value in the game will not only be displayed on the top of the person’s head, but the characters in the game will also display different forms according to the number of life values. We bind the EVAX component to the game object to perform a certain data Monitor, if the data changes, you can manipulate the data or events on other components of the current game object.
 
-Eva.js 开发游戏不是强依赖 EVAX 的，可以按照需要使用。
+Eva.js does not rely heavily on EVAX to develop games, and can be used as needed.
 
-## 创建 store
+## Create store
 
-所有数据需要事先定义好，如果没有定义好，将不会被监听
+All data needs to be defined in advance, if it is not defined, it will not be monitored
 
 ```js
-// 创建 Store
+// Create Store
 const store = {
   user: {
-    name: 'Mingfei',
+    name:'Mingfei',
     age: 18
   },
   items: [
@@ -28,20 +28,20 @@ const store = {
 }
 ```
 
-## 初始化 EVAX
+## Initialize EVAX
 
 ```js
-// 引入 evax 插件
-import { EvaXSystem, EvaX } from '@eva/plugin-evax'
+// Introduce the evax plugin
+import {EvaXSystem, EvaX} from'@eva/plugin-evax'
 
-// 创建游戏，传入store
+// Create a game and pass it to the store
 const game = new Game({
-  autoStart: true, // 可选
+  autoStart: true, // optional
   frameRate: 60
 })
-const store = { a: 1 }
+const store = {a: 1}
 const evaxSystem = new EvaXSystem({
-  store // 这里将定义的 store 传入
+  store // Here pass the defined store
 })
 game.addSystem(evaxSystem)
 
@@ -57,28 +57,28 @@ evaxManager.addComponent(
 game.scene.addChild(evaxMangager)
 ```
 
-## 监听数据变化
+## Monitor data changes
 
 ```js
-// 添加evax组件
+// Add evax component
 go.addComponent(
   new EvaX({
     events: {
       'store.user': {
-        deep: true, // store.user 下的属性变化也会触发
+        deep: true, // property changes under store.user will also trigger
         handler(store, oldStore) {
-          console.log(this) // 当前组件
+          console.log(this) // current component
         }
       },
       'store.user.age'(store, oldStore) {},
       'store.items.0'(store, oldStore) {
-        // 0 下的属性变化不会触发，如需监听需设置deep
+        // The attribute change under 0 will not be triggered, if you need to monitor, you need to set deep
       },
       'store.items.0.name'(store, oldStore) {
-        // name 变化会触发
+        // name change will trigger
       },
       popUp(arg1, arg2) {
-        // 这是一个事件，参考后面事件触发
+        // This is an event, refer to the following event trigger
       }
     }
   })
@@ -87,28 +87,28 @@ go.addComponent(
 
 ###
 
-## 更新数据
+## update data
 
-### 更新单个值
+### Update a single value
 
-直接修改对象上面的值，如果值与之前相同也会触发监听此值改变的事件
+Directly modify the value on the object, if the value is the same as before, it will also trigger an event that listens for this value change
 
 ```js
-store.user.name = 'Cailun'
-// 或者
-evaxSystem.store.user.name = 'Cailun'
+store.user.name ='Cailun'
+// or
+evaxSystem.store.user.name ='Cailun'
 ```
 
-### evax.updateStore 更新所有值
+### evax.updateStore Update all values
 
-**Tip**: updateStore 和 forceUpdateStore 只会触发最后一层属性的变化。
+**Tip**: updateStore and forceUpdateStore will only trigger the change of the last layer of attributes.
 
-全覆盖模式更新，对比内容变化，变化的内容才会触发更新，
+Full coverage mode updates, compare content changes, the changed content will trigger the update,
 
 ```js
 const newStore = {
   user: {
-    name: 'Cailun',
+    name:'Cailun',
     age: 18
   }
 }
@@ -116,36 +116,36 @@ const newStore = {
 evaxSystem.emit('evax.updateStore', newStore)
 ```
 
-以上操作会触发 `store.user.name` 更新，因为 age 没有变化
+The above operation will trigger the update of `store.user.name` because the age has not changed
 
-### evax.forceUpdateStore 强制更新所有值
+### evax.forceUpdateStore forces all values ​​to be updated
 
-全覆盖模式更新，所有值都会被更新一次，触发所有属性的监听事件
+Full coverage mode update, all values ​​will be updated once, triggering the listening events of all properties
 
 ```js
 const newStore = {
   user: {
-    name: 'Cailun',
+    name:'Cailun',
     age: 18
   }
 }
 evaxSystem.emit('evax.forceUpdateStore', newStore)
 ```
 
-以上操作会触发 `store.user.name` 和 `store.user.age` 数据变化事件，即便没有变化
+The above operation will trigger the `store.user.name` and `store.user.age` data change events, even if there is no change
 
-### 事件触发
+### Events trigger
 
-使用 emit 方法触发约定事件，事件 **不要** 使用 evax. 开头
+Use the emit method to trigger an agreed event, the event **don't** use evax. at the beginning
 
 ```js
-evaxSystem.emit('popUp', arg1, arg2, //...) // 事件约定，事件**不要**使用 evax. 开头
+evaxSystem.emit('popUp', arg1, arg2, //...) // Event convention, event **do not** use evax. at the beginning
 ```
 
-监听方法：
+Monitoring method:
 
 ```js
-// 添加evax组件
+// Add evax component
 go.addComponent(
   new EvaX({
     events: {
@@ -155,56 +155,56 @@ go.addComponent(
 )
 ```
 
-## 使用案例
+## Usage
 
-### 创建一个文字
+### Create a text
 
-这个案例介绍，如果 Store 上面的文字发生变化，我们修改对应组件上面文字的内容
+In this case, if the text on the Store changes, we modify the content of the text on the corresponding component
 
 ```js
-// 创建对象，文字组件使用store里面的名字
+// Create an object, the text component uses the name in the store
 const go = new GameObject('go')
-const txt = go.addComponent(new Text({ text: '' }))
+const txt = go.addComponent(new Text({ text:'' }))
 ```
 
-1、一般来讲，我们的业务逻辑写在脚本组件中，在 EVAX 组件接收到时间或者数据更改的时候，调用脚本组件上面的方法。
-2、将一些需要修改的组件，比如 Text 挂在到脚本组件的属性上，以便后续操作。
+1. Generally speaking, our business logic is written in the script component. When the EVAX component receives the time or data change, the method on the script component is called.
+2. Hang some components that need to be modified, such as Text, on the properties of the script component for subsequent operations.
 
 ```js
-// 创建一个自定义组件，将方法放到自定义组件中
+// Create a custom component and put the method in the custom component
 class AScriptComponent extends Component{
-  static componentName: 'AScriptComponent',
+  static componentName:'AScriptComponent',
   start() {
     this.txt = this.gameObject.getComponent('Text')
-    // 在组件中使用evax可先绑定evax组件，在evax组件上拿到evax对象，进行事件触发和修改
+    // Use evax in the component to bind the evax component first, get the evax object on the evax component, and perform event triggering and modification
     const evax = this.gameObject.getComponent('EvaX')
     this.evax = evax.evax
   },
   setName(store, oldStore) {
-    txt.text = store.user.name // 设置新的text内容
+    txt.text = store.user.name // Set new text content
     setTimeout(()=>{
-      this.evax.emit('animationDown') // 通知修改完毕，由其他的组件来承接变化，不在此案例中
-      this.evax.store.age += 1 // 由其他的组件来承接变化，不在此案例中
+      this.evax.emit('animationDown') // Notify that the modification is complete, and other components will take over the changes, not in this case
+      this.evax.store.age += 1 // other components will take over the changes, not in this case
     }, 1000)
   },
   popUp(store) {
-    // 做事件对应操作
+    // Do event corresponding operations
   }
 })
 
-// 添加自定义组件
+// Add custom components
 const aScript = go.addComponent(new AScriptComponent)
 ```
 
-创建 evax 组件，将需要绑定的事件写入，并且调用自定义组件上的事件
+Create an evax component, write the event that needs to be bound, and call the event on the custom component
 
 ```js
-// 添加evax组件
+// Add evax component
 go.addComponent(
   new EvaX({
     events: {
       'store.user.name'(store, oldStore) {
-        // 建议把触发的方法放在其他自定义组件内部，以便与后续场景编辑器使用
+        // It is recommended to place the trigger method inside other custom components for use with subsequent scene editors
         go.getComponent(AScriptComponent).setName(store, oldStore)
       },
       'store.user.age'(store, oldStore) {

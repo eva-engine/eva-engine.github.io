@@ -1,38 +1,38 @@
-# Spine 骨骼动画
+# Spine skeletal animation
 
-Spine 是一款专门为软件和游戏开发者量身打造的 2D 动画软件。动画师、原画师和工程师共同为您的游戏赋予生命。使用 Spine 骨骼动画可以实现一些更加丰富的效果，相对于帧动画能够更好的减少内存占用。Spine 是收费软件，请购买后使用，Spine 官网：[http://zh.esotericsoftware.com/](http://zh.esotericsoftware.com/)
+Spine is a 2D animation software tailored specifically for software and game developers. Animators, original artists, and engineers work together to give life to your game. Using Spine skeletal animation can achieve some richer effects, which can better reduce memory usage compared to frame animation. Spine is a paid software, please use it after purchase, Spine official website: [http://zh.esotericsoftware.com/](http://zh.esotericsoftware.com/)
 
-- [https://eva.js.org/playground/#/spine](https://eva.js.org/playground/#/spine)
+-[https://eva.js.org/playground/#/spine](https://eva.js.org/playground/#/spine)
 
-## 安装
+## Install
 
 ```bash
 npm i @eva/plugin-renderer-spine
 ```
 
-## 使用
+## Usage
 
 ```js
-import { Game, GameObject, resource, RESOURCE_TYPE } from '@eva/eva.js'
-import { RendererSystem } from '@eva/plugin-renderer'
-import { Spine, SpineSystem } from '@eva/plugin-renderer-spine'
+import {Game, GameObject, resource, RESOURCE_TYPE} from'@eva/eva.js'
+import {RendererSystem} from'@eva/plugin-renderer'
+import {Spine, SpineSystem} from'@eva/plugin-renderer-spine'
 
 resource.addResource([
   {
-    name: 'anim',
-    type: 'SPINE',
+    name:'anim',
+    type:'SPINE',
     src: {
       ske: {
-        type: 'json',
-        url: 'https://pages.tmall.com/wow/eva/b5fdf74313d5ff2609ab82f6b6fd83e6.json'
+        type:'json',
+        url:'https://pages.tmall.com/wow/eva/b5fdf74313d5ff2609ab82f6b6fd83e6.json'
       },
       atlas: {
-        type: 'atlas',
-        url: 'https://pages.tmall.com/wow/eva/b8597f298a5d6fe47095d43ef03210d4.atlas'
+        type:'atlas',
+        url:'https://pages.tmall.com/wow/eva/b8597f298a5d6fe47095d43ef03210d4.atlas'
       },
       image: {
-        type: 'png',
-        url: 'https://gw.alicdn.com/tfs/TB1YHC8Vxz1gK0jSZSgXXavwpXa-711-711.png'
+        type:'png',
+        url:'https://gw.alicdn.com/tfs/TB1YHC8Vxz1gK0jSZSgXXavwpXa-711-711.png'
       }
     }
   }
@@ -66,39 +66,39 @@ const gameObject = new GameObject('spine', {
   }
 })
 
-const spine = new Spine({ resource: 'anim', animationName: 'idle' })
+const spine = new Spine({ resource:'anim', animationName:'idle' })
 
 gameObject.addComponent(spine)
 spine.on('complete', e => {
-  console.log('动画播放结束', e.name)
+  console.log('Animation playback ended', e.name)
 })
 
 spine.play('idle')
 game.scene.addChild(gameObject)
 ```
 
-## 参数
+## Options
 
-### resource `string` 
+### resource `string`
 
-资源名称
+Resource Name
 
-### animationName `string` 
+### animationName `string`
 
-动画名
+Animation name
 
-## 方法
+## Methods
 
 ### play(name?: string, loop?: boolean)
 
-播放动画
+Play animation
 
-- name 动作名
-- loop 是否循环播放
+-name action name
+-loop Whether to play in a loop
 
 ### stop()
 
-停止播放
+Stop play
 
 <br/>
 <br/>

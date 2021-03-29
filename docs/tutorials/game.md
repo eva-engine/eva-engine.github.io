@@ -1,8 +1,8 @@
-# 游戏 Game
+# Game
 
-Game 是游戏对象，通过 Game 实例上的方法，控制游戏暂停、继续。通过将 System 添加到 Game 上让游戏能够支持不同的能力，这些能力都是通过组件添加到 GameObject 上展现出来的。
+Game is a runtime of game. Through the methods on the Game instance, the game is controlled to pause and continue. By adding the System to the Game, the game can support different abilities, which are displayed by adding components to the GameObject.
 
-## 创建游戏
+## Create a game
 
 ```html
 <style>
@@ -15,39 +15,39 @@ Game 是游戏对象，通过 Game 实例上的方法，控制游戏暂停、继
 ```
 
 ```js
-import { Game } from '@eva/eva.js'
-import { RendererSystem } from '@eva/plugin-renderer'
+import {Game} from'@eva/eva.js'
+import {RendererSystem} from'@eva/plugin-renderer'
 
-// 创建渲染系统
+// Create a rendering system
 const renderSystem = new RendererSystem({
-  canvas: document.querySelector('#canvas'), // 可选，自动生成canvas 挂在game.canvas上
-  width: 750, // 必填
-  height: 1000, // 必填
-  transparent: false, // 可选
-  resolution: window.devicePixelRatio / 2, // 可选, 如果是2倍图设计 可以除以 2
-  preventScroll: false, // 阻止页面滚动
-  renderType: 0 // 0:自动判断，1: WebGL，2:Canvas，建议android6.1 ios9 以下使用Canvas，需业务判断。
+  canvas: document.querySelector('#canvas'), // Optional, automatically generate canvas and hang on game.canvas
+  width: 750, // required
+  height: 1000, // required
+  transparent: false, // optional
+  resolution: window.devicePixelRatio / 2, // Optional, if it is 2 times the image design, it can be divided by 2
+  preventScroll: false, // Prevent page scrolling
+  renderType: 0 // 0: automatic judgment, 1: WebGL, 2: Canvas, it is recommended to use Canvas below android6.1 ios9, business judgment is required.
 })
 
-// 初始化游戏
+// Initialize the game
 const game = new Game({
-  frameRate: 60, // 可选
-  autoStart: true, // 可选
+  frameRate: 60, // optional
+  autoStart: true, // optional
   systems: [renderSystem]
 })
 ```
 
-## 添加系统
+## Add system
 
-有两种方式添加系统，一种是在 Game 实例化的时候，传入构造函数的 `systems`  参数中，比如 `renderSystem` 渲染能力是必备的，可以通过这种方式添加。另外一种是在创建游戏后调用游戏实例上面的 `addSystem`  方法添加。Eva.js 提供了很多系统，这些系统都是作为插件单独在一个 package 中，比如，如果我们想检测帧率，可以使用 `@eva/plugin-stats` 插件。
+There are two ways to add a system. One is to pass in the `systems` parameter of the constructor when the Game is instantiated. For example, the `renderSystem` rendering capability is necessary and can be added in this way. The other is to call the `addSystem` method on the game instance after the game is created. Eva.js provides many systems. These systems are used as plug-ins in a package. For example, if we want to detect the frame rate, we can use the `@eva/plugin-stats` plug-in.
 
 ```js
-import { StatsSystem } from '@eva/plugin-stats'
+import {StatsSystem} from'@eva/plugin-stats'
 
 const statsSystem = new StatsSystem({
-  show: true, // 这里设置是否显示 fps 面板
+  show: true, // Set here whether to display the fps panel
   style: {
-    x: 0, // 这里的数值全部都是屏幕宽度的百分比 单位vw
+    x: 0, // The values ​​here are all percentages of the screen width, unit vw
     y: 50,
     width: 20,
     height: 12
@@ -57,36 +57,36 @@ const statsSystem = new StatsSystem({
 game.addSystem(statsSystem)
 ```
 
-## 获取系统
+## Get system
 
 ```ts
-import { StatsSystem } from '@eva/plugin-stats'
+import {StatsSystem} from'@eva/plugin-stats'
 
-const stats = game.getSystem(StatsSystem) // 通过类获取系统
+const stats = game.getSystem(StatsSystem) // Get system through class
 // or
-const stats = game.getSystem('StatsSystem') // 通过系统名获取系统
+const stats = game.getSystem('StatsSystem') // Get system by system name
 ```
 
-## 开始游戏
+## Start the game
 
 ```js
 game.start()
 ```
 
-## 暂停游戏
+## Pause the game
 
-建议在应用退出到后台时暂停游戏，返回后开始
+It is recommended to pause the game when the app exits to the background and start after returning
 
 ```ts
 game.pause()
 ```
 
-## 多场景管理
+## Multi-scene management
 
-### 切换场景
+### Switch scene
 
 ```js
-import { Scene } from '@eva/eva.js'
+import {Scene} from'@eva/eva.js'
 
 const scene = new Scene('bg')
 
@@ -96,12 +96,12 @@ game.loadScene({
 })
 ```
 
-### 渲染到多个 canvas
+### Render to multiple canvases
 
-在项目中，游戏默认会渲染到一个默认 canvas 上，当我们会有渲染到多个 canvas 上的需求，可以将该场景渲染到另一个 canvas 上。
+In the project, the game will be rendered on a default canvas by default. When we need to render on multiple canvases, we can render the scene on another canvas.
 
 ```js
-import { Scene, LOAD_SCENE_MODE } from '@eva/eva.js'
+import {Scene, LOAD_SCENE_MODE} from'@eva/eva.js'
 
 const scene = new Scene('bg')
 
@@ -109,15 +109,15 @@ game.loadScene({
   scene,
   type: LOAD_SCENE_MODE.MULTI_CANVAS,
   params: {
-    // 这里和RendererSystem 参数相同
-    canvas: document.querySelector('#canvas'), //可选，自动生成canvas 挂在game.canvas上
-    width: 750, //必填
-    height: 1000, // 必填
-    transparent: false, // 可选
-    resolution: window.devicePixelRatio / 2, // 可选, 如果是2倍图设计 可以除以 2
-    preventScroll: false, // 阻止页面滚动
+    // This is the same as the RendererSystem parameter
+    canvas: document.querySelector('#canvas'), //Optional, automatically generate canvas and hang on game.canvas
+    width: 750, //Required
+    height: 1000, // required
+    transparent: false, // optional
+    resolution: window.devicePixelRatio / 2, // Optional, if it is 2 times the image design, it can be divided by 2
+    preventScroll: false, // Prevent page scrolling
     renderType: 0
-    // 0:自动判断，1: WebGL，2:Canvas，建议android6.1 ios9 以下使用Canvas，需业务判断。
+    // 0: automatic judgment, 1: WebGL, 2: Canvas, it is recommended to use Canvas under android6.1 ios9, business judgment is required.
   }
 })
 ```

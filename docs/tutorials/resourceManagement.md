@@ -1,19 +1,19 @@
-# 资源管理
+# Resource Management
 
-游戏中所用到的所有资源都会放在资源管理器中进行管理，在使用资源之前需要将资源添加到资源管理器中，并为资源设置一个资源名，在需要时直接使用资源名。这样做的好处：
+All resources used in the game will be managed in the resource manager. Before using the resource, you need to add the resource to the resource manager, and set a resource name for the resource, and use the resource name directly when needed. The benefits of this:
 
-- 统一资源入口管理，在 EVA 生态中有 EVA Store / EVA Workstation 等可直接输入指定资源列表，实现链路统一。
-- 在 Eva.js 加载资源时，资源管理器可以对资源进行预处理，减少运行时处理资源产生卡顿等问题
+-Unified resource entry management. In the EVA ecosystem, there are EVA Store / EVA Workstation, etc., which can be directly input to the specified resource list to achieve unification of links.
+-When Eva.js loads resources, the resource manager can preprocess the resources to reduce the problem of lag in the processing of resources during runtime
 
-## 添加资源
+## Add resource
 
 ```js
-import { RESOURCE_TYPE, resource } from '@eva/eva.js'
+import {RESOURCE_TYPE, resource} from'@eva/eva.js'
 ```
 
-下面列举了最常使用的几种资源
+Listed below are the most commonly used resources
 
-**图片**
+**image**
 
 ```js
 {
@@ -28,7 +28,7 @@ import { RESOURCE_TYPE, resource } from '@eva/eva.js'
 }
 ```
 
-**龙骨动画**
+**Keel Animation**
 
 ```js
 {
@@ -51,7 +51,7 @@ import { RESOURCE_TYPE, resource } from '@eva/eva.js'
 }
 ```
 
-**spine 动画**
+**spine animation**
 
 ```js
 {
@@ -74,19 +74,19 @@ import { RESOURCE_TYPE, resource } from '@eva/eva.js'
 }
 ```
 
-实际项目中可能需要一次性添加很多资源，可以通过 addResource  实现这一目的
+In actual projects, you may need to add a lot of resources at one time, which can be achieved through addResource
 
 ```js
-import { RESOURCE_TYPE, resource } from '@eva/eva.js'
+import {RESOURCE_TYPE, resource} from'@eva/eva.js'
 
 resource.addResource([
   {
-    name: 'img1',
+    name:'img1',
     type: RESOURCE_TYPE.IMAGE,
     src: {
       image: {
-        type: 'png',
-        url: '//gw.alicdn.com/bao/uploaded/TB1lVHuaET1gK0jSZFhXXaAtVXa-200-200.png'
+        type:'png',
+        url:'//gw.alicdn.com/bao/uploaded/TB1lVHuaET1gK0jSZFhXXaAtVXa-200-200.png'
       }
     }
   }
@@ -94,46 +94,46 @@ resource.addResource([
 ])
 ```
 
-## 资源预加载
+## Resource preload
 
-使用 `preload()` 方法将资源列表中 `preload` 为 true 的资源进行加载，可以通过监听 resource 上的事件来获取当前加载进度，适合在游戏初始化展示 loading，切换场景时请求资源时使用。
+Use the `preload()` method to load the resources whose `preload` is true in the resource list. You can obtain the current loading progress by listening to events on the resource, which is suitable for the initial display of the game, loading and requesting resources when switching scenes.
 
 ```js
-resource.on(LOAD_EVENT.START, () => {}) // 开始loader
-resource.on(LOAD_EVENT.PROGRESS, () => {}) // 加载进度更新
-resource.on(LOAD_EVENT.LOADED, () => {}) // 某文件加载成功
-resource.on(LOAD_EVENT.COMPLETE, () => {}) // 加载完成
-resource.on(LOAD_EVENT.ERROR, () => {}) // 某文件加载失败
+resource.on(LOAD_EVENT.START, () => ()) // start loader
+resource.on(LOAD_EVENT.PROGRESS, () => ()) // Load progress update
+resource.on(LOAD_EVENT.LOADED, () => ()) // A file is successfully loaded
+resource.on(LOAD_EVENT.COMPLETE, () => ()) // Load completed
+resource.on(LOAD_EVENT.ERROR, () => ()) // A file failed to load
 resource.preload()
 ```
 
-## 获取资源
+## Access to resources
 
 ### getResource(resourceName)
 
-使用 getResource 方法获取资源，该方法返回的是一个 promise。资源将会存在于 data 属性中，如果资源是 JSON 文件，则 data 的值是一个 js 对象；如果资源是图片，则 data 的值将会是 Image 实例。
+Use the getResource method to get the resource, which returns a promise. The resource will exist in the data attribute. If the resource is a JSON file, the value of data is a js object; if the resource is an image, the value of data will be an Image instance.
 
 ```ts
 resource.getResource('img1').then(res => {
-  const name = res.name // 资源名称
-  const data = res.data // 资源中文件对应的内容 json 或者 img 等
-  const instance = res.instance // 处理后的实例
+  const name = res.name // resource name
+  const data = res.data // The corresponding content of the file in the resource json or img, etc.
+  const instance = res.instance // processed instance
 })
 ```
 
 ### loadSingle(resource)
 
-使用 loadSingle 来加载单个资源，不需要将资源添加到 addResource 里面，该方法返回的是 promise。
+Use loadSingle to load a single resource, you don't need to add the resource to addResource, this method returns a promise.
 
 ```js
 resource
   .loadSingle({
-    name: 'img1',
+    name:'img1',
     type: RESOURCE_TYPE.IMAGE,
     src: {
       image: {
-        type: 'png',
-        url: '//gw.alicdn.com/bao/uploaded/TB1lVHuaET1gK0jSZFhXXaAtVXa-200-200.png'
+        type:'png',
+        url:'//gw.alicdn.com/bao/uploaded/TB1lVHuaET1gK0jSZFhXXaAtVXa-200-200.png'
       }
     },
     preload: true
@@ -141,9 +141,9 @@ resource
   .then(res => {})
 ```
 
-### 资源处理
+### Resource processing
 
-通过为某种类型的资源注册方法，可以在资源请求回来时对资源进行处理，在使用时可以直接获取到资源实例。
+By registering a method for a certain type of resource, the resource can be processed when the resource request comes back, and the resource instance can be directly obtained when it is used.
 
 ```js
 resource.registerInstance(RESOURCE_TYPE.SPRITE, async ({ name, data }) => {
@@ -152,15 +152,15 @@ resource.registerInstance(RESOURCE_TYPE.SPRITE, async ({ name, data }) => {
 })
 ```
 
-### 资源销毁
+### Resource destruction
 
-资源可以主动销毁，需要要注意的是，在销毁资源前要确保游戏中没有使用该资源。
+Resources can be actively destroyed. It should be noted that before destroying resources, make sure that the resources are not used in the game.
 
 ```js
 resource.destory('img1')
 ```
 
-如果为该类型资源注册了销毁方法，则会调用该方法销毁资源。
+If a destruction method is registered for this type of resource, this method will be called to destroy the resource.
 
 ```js
 resource.registerDestroy(RESOURCE_TYPE.SPRITE, async ({ instance }) => {
@@ -168,7 +168,7 @@ resource.registerDestroy(RESOURCE_TYPE.SPRITE, async ({ instance }) => {
 })
 ```
 
-### 加载超时事件设置
+### Load timeout event settings
 
 ```js
 resource.timeout = 30000

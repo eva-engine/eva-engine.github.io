@@ -1,30 +1,30 @@
-# 平铺精灵 TilingSprite
+# Tiled Wizard TilingSprite
 
-在一些无限背景的游戏中可以通过平铺精灵来实现背景的无缝衔接，类似 css 中的 `background-repeat: repeat;` 功能，使用前需要安装渲染器。
+In some games with infinite backgrounds, tile sprites can be used to achieve seamless background connection, similar to the `background-repeat: repeat;` function in css, and a renderer needs to be installed before use.
 
 [Demo](https://eva.js.org/playground/#/tilingSprite)
 
-## 安装
+## Install
 
 ```bash
 npm i @eva/plugin-renderer @eva/plugin-renderer-tiling-sprite
 ```
 
-## 使用
+## Usage
 
 ```js
-import { Game, GameObject, resource, RESOURCE_TYPE } from '@eva/eva.js'
-import { RendererSystem } from '@eva/plugin-renderer'
-import { TilingSprite, TilingSpriteSystem } from '@eva/plugin-renderer-tiling-sprite'
+import {Game, GameObject, resource, RESOURCE_TYPE} from'@eva/eva.js'
+import {RendererSystem} from'@eva/plugin-renderer'
+import {TilingSprite, TilingSpriteSystem} from'@eva/plugin-renderer-tiling-sprite'
 
 resource.addResource([
   {
-    name: 'imageName',
+    name:'imageName',
     type: RESOURCE_TYPE.IMAGE,
     src: {
       image: {
-        type: 'png',
-        url: 'https://gw.alicdn.com/tfs/TB1t7vtOvb2gK0jSZK9XXaEgFXa-300-431.png'
+        type:'png',
+        url:'https://gw.alicdn.com/tfs/TB1t7vtOvb2gK0jSZK9XXaEgFXa-300-431.png'
       }
     },
     preload: true
@@ -43,33 +43,33 @@ const game = new Game({
 })
 
 const tilingSprite = new GameObject('sprite', {
-  size: { width: 750, height: 1000 }
+  size: {width: 750, height: 1000}
 })
 
 tilingSprite.addComponent(
   new TilingSprite({
-    resource: 'imageName',
-    tileScale: { x: 0.7, y: 0.7 },
-    tilePosition: { x: 10, y: 40 }
+    resource:'imageName',
+    tileScale: {x: 0.7, y: 0.7 },
+    tilePosition: {x: 10, y: 40}
   })
 )
 
 game.scene.addChild(tilingSprite)
 ```
 
-## 参数
+## Options
 
 ### resource: `String`
 
-资源名
+Resource name
 
-### tileScale： `{x: float, y: float}` 
+### tileScale: `{x: float, y: float}`
 
-缩放
+Zoom
 
-### tilePosition：`{x: number, y: number}`
+### tilePosition: `{x: number, y: number}`
 
-位移
+Displacement
 
 <br/>
 <br/>

@@ -1,59 +1,65 @@
-# Eva.js 介绍
+# Eva.js Introduction
 
-## Eva.js 是什么
-Eva.js 是一款专注于开发游戏化项目的游戏引擎。
-Eva.js 提供游戏化项目开发中最常用、最基础的功能，让开发前端游戏化变得轻而易举。
-Eva.js 提供高效的游戏运行时、渲染能力，可实现复杂的游戏化场景。
-Eva.js 基于 ECS 设计模式，可自由扩展引擎功能，构建更繁荣的生态系统。
+## What is Eva.js
+Eva.js is a game engine that focuses on developing gamification projects.
 
+Eva.js provides the most commonly used and basic functions in the development of gamification projects, making it easy to develop front-end gamification.
 
-想要了解并开始使用 Eva.js，请继续阅读～
+Eva.js provides efficient game runtime and rendering capabilities, and can realize complex gamification scenes.
 
-
-## 起步
-Eva.js 是一款前端框架，使用者需了解 HTML/CSS/JS 等知识，目前 Eva.js 只有 npm 引入方式，开发者需使用[node/npm](https://nodejs.org/)/[webpack](https://webpack.js.org/)等前端工具。
+Based on the ECS design pattern, Eva.js can freely expand engine functions and build a more prosperous ecosystem.
 
 
-安装 Eva.js
+To learn about and start using Eva.js, please continue reading~
+
+
+## Getting started
+Eva.js is a front-end framework, users need to understand HTML/CSS/JS and other knowledge, currently Eva.js only has npm introduction method, developers need to use [node/npm](https://nodejs.org/)/ [webpack](https://webpack.js.org/) and other front-end tools.
+
+
+Install Eva.js
 
 ```bash
 npm i @eva/eva.js -S
 ```
 
 
-其实，不用看下面这些概念，直接看 [playground](https://eva.alibaba-inc.com/playground/image) 就可以开始开发了，看了下面概念更容易理解引擎的设计理念，开发更专业的游戏。
+In fact, you don’t need to look at the following concepts, just look at [playground](https://eva.alibaba-inc.com/playground/image) to start development. It is easier to understand the design concept of the engine after reading the following concepts, and the development is more Professional games.
 
 
-## 概念
-### 游戏
+## Concept
 
-游戏（Game）是整个 Eva.js 项目的运行时载体，因为 Eva.js 是专注于游戏化项目的游戏框架，所以这个载体也被称之为游戏（Game）。
+### Game
 
-### 游戏对象
+Game is the runtime carrier of the entire Eva.js project. Because Eva.js is a game framework that focuses on gamification projects, this carrier is also called Game.
 
-游戏对象（GameObject）是 **游戏中的物体**，为了实现游戏能力的插拔，可实时的添加/移除/修改某些能力，我们将游戏对象设计成了一个**可以装载任何能力的容器**，新初始化的对象没有任何能力。例如某个游戏对象是一个飞机，它需要一个飞机的图片来展示，我们就给游戏对象添加展示图片的能力，如果它需要移动，需要添加移动能力。
+### GameObject
 
-### 组件
+GameObject is an **object in the game**. In order to realize the plugging and unplugging of the game ability, some abilities can be added/removed/modified in real time. We designed the game object as a **can load any ability The container**, the newly initialized object does not have any capabilities. For example, a game object is an airplane, and it needs a picture of the airplane to display, we add the ability to display the picture to the game object, if it needs to move, it needs to add the ability to move.
 
-组件（Component）可以 **赋予游戏对象能力，** 也就是上文中提到的可插拔能力，通常上面只存储一些数据。每一个对象可以安装多个组件来添加对应的能力，通常组件只对自己绑定的对象负责。
+### Components
 
-Eva.js 官方提供了很多渲染、动画、数据管理相关的组件，可以直接使用到业务中，日常简单游戏开发中，我们会使用**脚本组件来实现一些业务逻辑**。
+Component can **endow the game object ability**, which is the pluggable ability mentioned above, usually only some data is stored on it. Each object can install multiple components to add corresponding capabilities, and usually components are only responsible for the objects they are bound to.
 
-### 脚本组件
+Eva.js officially provides many components related to rendering, animation, and data management, which can be directly used in the business. In daily simple game development, we will use **script components to implement some business logic**.
 
-脚本组件能力与组件相似，**来实现一些业务逻辑**，但是相对于组件而言，脚本组件提供一套生命周期函数，可以通过这套生命周期当前组件绑定的游戏对象进行操作，例如移动位置、修改其他组件的属性等操作。**推荐在游戏开发中使用脚本组件来开发业务逻辑。**
+### Custom component
 
-### 系统
+The capabilities of script components are similar to those of components, ** to implement some business logic**, but compared to components, script components provide a set of life cycle functions that can be operated through the game objects bound to the current component of this life cycle, for example Move the location, modify the properties of other components, etc. **It is recommended to use script components to develop business logic in game development.**
 
-系统（System）通常用来读取组件上面的数据，实现组件对应的能力，通常在游戏开始前或使用到的时候进行安装，**Eva.js 的核心是非常轻量级的运行时**，是没有默认安装系统的，包括渲染系统都需要手动安装。例如图片组件上面只有一个图片资源属性，系统会读取该资源属性将对应的图片渲染到画布上，通常这一步是不被开发者所看见的，开发者只需要添加图片组件即可实现图片的渲染。
+### System
 
-### 插件
+System is usually used to read the data on the component and realize the corresponding ability of the component. It is usually installed before the game starts or when it is used. The core of Eva.js is a very lightweight runtime. , There is no default installation system, including the rendering system need to be installed manually. For example, there is only one image resource attribute on the image component, and the system will read the resource attribute and render the corresponding image on the canvas. Usually this step is not seen by the developer. The developer only needs to add the image component to achieve the image. Rendering.
 
-插件是**组件与系统的组合**，通常通过 npm 包的形式提供出来，系统通常在游戏开始前或使用到的时候进行安装。组件在给游戏对象添加能力时使用。
+### Plugins
 
-![image.png](https://gw.alicdn.com/imgextra/i1/O1CN01NLc5R21Y9NCS6Hb6q_!!6000000003016-2-tps-1491-946.png)
+A plugin is a combination of **component and system**, usually provided in the form of an npm package, and the system is usually installed before the game starts or when it is used. Components are used when adding capabilities to game objects.
 
-让我们一起来[使用 Eva.js](/tutorials/quickstart) 吧。
+![image.png](https://gw.alicdn.com/imgextra/i1/O1CN01fYzaFt1URSNYG3T7h_!!6000000002514-2-tps-1420-1208.png)
+
+This is the system's lifecycle.
+
+Let's [use Eva.js](/tutorials/quickstart) together.
 
 <br/>
 <br/>
