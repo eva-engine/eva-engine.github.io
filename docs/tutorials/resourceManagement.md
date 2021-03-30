@@ -1,8 +1,8 @@
 # Resource Management
 
-All resources used in the game will be managed in the resource manager. Before using the resource, you need to add the resource to the resource manager, and set a resource name for the resource, and use the resource name directly when needed. The benefits of this:
+All resources used in the game will be managed by the resource manager. Before using the resource, you need to add the resource to the resource manager, and set a resource name for the resource, and use the resource name directly when needed. The benefits of this:
 
--Unified resource entry management. In the EVA ecosystem, there are EVA Store / EVA Workstation, etc., which can be directly input to the specified resource list to achieve unification of links.
+-Unified resource entry management. In the EVA ecosystem, there are EVA Store / EVA Workstation, etc., which can be directly inputted to the specified resource list to achieve unification of links.
 -When Eva.js loads resources, the resource manager can preprocess the resources to reduce the problem of lag in the processing of resources during runtime
 
 ## Add resource
@@ -74,7 +74,7 @@ Listed below are the most commonly used resources
 }
 ```
 
-In actual projects, you may need to add a lot of resources at one time, which can be achieved through addResource
+In actual projects, you may need to add a lot of resources at one time, which can be achieved through the `addResource` method.
 
 ```js
 import {RESOURCE_TYPE, resource} from'@eva/eva.js'
@@ -123,7 +123,7 @@ resource.getResource('img1').then(res => {
 
 ### loadSingle(resource)
 
-Use loadSingle to load a single resource, you don't need to add the resource to addResource, this method returns a promise.
+Use loadSingle to load a single resource, you don't need to add the resource to the `addResource` method, this method returns a promise.
 
 ```js
 resource

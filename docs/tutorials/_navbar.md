@@ -1,7 +1,7 @@
 <!-- _navbar.md -->
 
 - [Tutorials](/tutorials/intro)
-- [API Docmentation](/api/index)
+- [API](/api/index)
 - [Playground](https://eva.js.org/playground)
 - [Blog](https://yuque.com/eva/blog)
 - [Changelog](/others/changelog)
