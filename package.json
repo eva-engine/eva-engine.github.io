@@ -4,7 +4,8 @@
   "description": "Eva.js Website",
   "private": false,
   "scripts": {
-    "start": "docsify serve docs",
+    "start:en": "docsify serve docs",
+    "start:cn": "docsify serve docs_cn",
     "api": "node ./scripts/api.js"
   },
   "repository": {
