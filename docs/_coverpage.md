@@ -4,6 +4,7 @@
 
 # Eva.js <small>1.0.0</small>
 
+[Github](https://github.com/eva-engine/eva.js)
 [Playground](https://eva.js.org/playground)
 [Blog](https://yuque.com/eva/blog)
 [Get Started](/tutorials/quickstart)
