@@ -1,10 +1,21 @@
+### 1.0.3
+
+**新功能**
+- resource loader 支持加载 audio arraybuffer
+  
+**其他**
+- 更新 resource loader 测试用例
+
 ### 1.0.1
+
+**修复了**
 - 将 lodash 更换成 lodash-es 解决编译报错问题
 
 ### 1.0.0
+
+**新功能**
 - 增加 MatterJS 物理引擎
-- 增加 Lottie 支持
-- 重构 Resource 模块
+- 增加 Lottie 插件
 
 ### 1.0.0-alpha.10
 

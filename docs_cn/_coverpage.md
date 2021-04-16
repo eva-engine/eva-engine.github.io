@@ -4,7 +4,9 @@
 
 # Eva.js <small>1.0.0</small>
 
-[Github](https://github.com/eva-engine/eva.js)
+> 互动游戏引擎
+
+[Github](https://github.com/eva-engine)
 [Playground](https://eva.js.org/playground)
 [博客](https://yuque.com/eva/blog)
 [教程](/tutorials/quickstart)

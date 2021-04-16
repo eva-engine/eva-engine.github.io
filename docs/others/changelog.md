@@ -1,5 +1,13 @@
+### 1.0.3
+**Feature**
+- Support audio arraybuffer for resource loader
+  
+**Other**
+- Update test case for resource loader
+
 ### 1.0.1
-- fix: change lodash with lodash-es, fix compile error.
+**Fixed** 
+- Change lodash with lodash-es, fix compile error.
 
 ### 1.0.0
 **feature**
