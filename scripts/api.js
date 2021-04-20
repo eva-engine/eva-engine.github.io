@@ -5,9 +5,10 @@ const shell = require('shelljs')
 const chalk = require('chalk')
 
 const WORKSPACE = 'workspace'
-const Eva.js_REPO = process.env.Eva.js_REPO
-if (!Eva.js_REPO) {
-  console.log(chalk.yellow('Please set repo by `export Eva.js_REPO=xxxx`.'))
+const REPO = 'git@github.com:eva-engine/eva.js.git'
+
+if (!REPO) {
+  console.log(chalk.yellow('Please set repo by `export REPO=xxxx`.'))
   process.exit(0)
 }
 
@@ -36,8 +37,7 @@ async function main() {
     process.exit(0)
   }
 
-  const evaBranch = args.branch || 'dev1.0'
-  shell.exec(`git clone -b ${evaBranch} ${Eva.js_REPO} ${WORKSPACE}`)
+  shell.exec(`git clone ${REPO} ${WORKSPACE}`)
   shell.cd(WORKSPACE)
 
   let packages
