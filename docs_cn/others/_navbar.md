@@ -5,7 +5,7 @@
 - [使用范例](https://eva.js.org/playground)
 - [博客](https://yuque.com/eva/blog)
 - [更新日志](/others/changelog)
-- [英文](https://eva.js.org)
+- [English](https://eva.js.org)
 - 服务
   - [Gitter](https://gitter.im/eva-engine/Eva.js)
   - Eva.js 内部服务群
