@@ -1,3 +1,7 @@
+### 1.0.4
+**Feature**
+- Support Game Object playback [audio](https://eva.js.org/#/tutorials/sound)
+
 ### 1.0.3
 **Feature**
 - Support audio arraybuffer for resource loader

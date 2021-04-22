@@ -1,3 +1,9 @@
+### 1.0.4
+
+**新功能**
+- 支持Game Object播放[音频](https://eva-engine.gitee.io/#/tutorials/sound) 
+
+
 ### 1.0.3
 
 **新功能**

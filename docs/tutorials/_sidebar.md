@@ -6,6 +6,7 @@
     * [Game](/tutorials/game)
     * [GameObject](/tutorials/gameObject)
     * [Transform](/tutorials/transformComponent)
+    * [Sound](/tutorials/sound)
 * Graphics
     * [Prepare](/tutorials/prepareRender)
     * [Image](/tutorials/imageComponent)
