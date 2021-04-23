@@ -4,7 +4,7 @@
 
 # Eva.js <small>1.0.0</small>
 
-> A front-end game engine for gamification project
+> A front-end game engine specifically for creating interactive game projects.
 
 [Github](https://github.com/eva-engine)
 [Playground](https://eva.js.org/playground)
