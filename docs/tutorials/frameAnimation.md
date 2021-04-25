@@ -25,7 +25,7 @@ resource.addResource([
     type: RESOURCE_TYPE.SPRITE_ANIMATION,
     src: {
       image: {
-        type:'json',
+        type:'png',
         url:'https://gw.alicdn.com/bao/uploaded/TB15pMkkrsTMeJjSszhXXcGCFXa-377-1070.png'
       },
       json: {
