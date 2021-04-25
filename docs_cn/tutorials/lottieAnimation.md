@@ -1,6 +1,8 @@
 # Lottie 动画
 
-支持 Lottie 作为 `GameObject` 快速接入 Eva.js，同时支持 [Lottie 插槽](https://unpkg.alipay.com/@eva/lottie-pixi-docs@0.0.12/docs/index.html#/introduce) 的扩展能力。
+[Lottie](https://airbnb.design/lottie/) 可以播放通过 [Bodymovin](https://aescripts.com/bodymovin/) 导出的 [Adobe After Effects](https://www.adobe.com/products/aftereffects.html) 动画。
+
+Eva.js 的 Lottie 插件支持 [Lolita](https://design.alipay.com/lolita) 导出的动画。
 
 ## 安装
 

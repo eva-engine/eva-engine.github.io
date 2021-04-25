@@ -1,6 +1,8 @@
 # Lottie Animation
 
-Support Lottie as a `GameObject` to quickly access Eva.js, and support [Lottie slot].
+[Lottie](https://airbnb.design/lottie/) is a mobile library for Web, and iOS that parses [Adobe After Effects](https://www.adobe.com/products/aftereffects.html) animations exported as json with [Bodymovin](https://aescripts.com/bodymovin/) and renders them natively on mobile!
+
+This plugin suport animation exported with [Lolita](https://design.alipay.com/lolita).
 
 ## Install
 
