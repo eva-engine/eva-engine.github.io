@@ -46,6 +46,17 @@ class Move extends Component {
 }
 ```
 
+## 组件安装
+```js
+const go = new GameObject('name')
+go.addComponent(new Move({
+  speed: {
+    x: 100,
+    y: 100
+  }
+}))
+```
+
 ## 生命周期
 
 ![image.png](https://img.alicdn.com/imgextra/i2/O1CN01gEgYOz1T8qevGDloU_!!6000000002338-2-tps-1448-906.png)
@@ -73,14 +84,6 @@ class Move extends Component {
     this.speed = params.speed || { x: 0, y: 0 }
   }
 }
-
-const go = new GameObject('name')
-go.addComponent(new Move({
-  speed: {
-    x: 100,
-    y: 100
-  }
-}))
 ```
 
 #### Awake
