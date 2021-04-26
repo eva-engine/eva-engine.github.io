@@ -46,6 +46,19 @@ class Move extends Component {
 }
 ```
 
+## Install
+To use custom component.
+
+```js
+const go = new GameObject('name')
+go.addComponent(new Move({
+  speed: {
+    x: 100,
+    y: 100
+  }
+}))
+```
+
 ## life cycle
 
 ![image.png](https://gw.alicdn.com/imgextra/i1/O1CN01VCWqjG1qmuTjGuJ4y_!!6000000005539-2-tps-1422-1202.png)
@@ -73,13 +86,7 @@ class Move extends Component {
     this.speed = params.speed || {x: 0, y: 0}
   }
 }
-const go = new GameObject('name')
-go.addComponent(new Move({
-  speed: {
-    x: 100,
-    y: 100
-  }
-}))
+
 ```
 
 #### Awake
