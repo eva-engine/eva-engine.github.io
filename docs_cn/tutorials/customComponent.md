@@ -128,7 +128,7 @@ class Move extends Component {
 每一帧执行
 
 ```js
-class Move extends Commponent {
+class Move extends Component {
   // ...
   update(e) {
     // 让物体按照一定速度移动 位移 = 速度 * 时间

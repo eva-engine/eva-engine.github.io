@@ -127,7 +127,7 @@ Execute at the time of `game.resume()`
 Execute every frame
 
 ```js
-class Move extends Commponent {
+class Move extends Component {
   // ...
   update(e) {
     // Let the object move at a certain speed displacement = speed * event
