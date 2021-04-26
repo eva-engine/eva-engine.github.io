@@ -4,6 +4,8 @@
 
 In daily business development, we need to customize some business logic. Each game object may need a separate logic or "data driver". We develop business in the form of custom components.
 
+Demo：[https://eva.js.org/playground/#/component](https://eva.js.org/playground/#/component)
+
 ### for example:
 
 The experience of crop production in the plants of Baba Farm will change in real time,
@@ -71,6 +73,13 @@ class Move extends Component {
     this.speed = params.speed || {x: 0, y: 0}
   }
 }
+const go = new GameObject('name')
+go.addComponent(new Move({
+  speed: {
+    x: 100,
+    y: 100
+  }
+}))
 ```
 
 #### Awake
