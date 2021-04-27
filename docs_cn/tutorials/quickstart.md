@@ -99,6 +99,7 @@ npm i @eva/plugin-renderer-img
 ```
 
 ```js
+import { GameObject } from '@eva/eva.js'
 import { Img, ImgSystem } from '@eva/plugin-renderer-img' // 引入渲染图片所需要的组件和系统
 
 game.addSystem(new ImgSystem()) // 给游戏添加渲染图片的能力

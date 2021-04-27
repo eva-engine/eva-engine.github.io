@@ -99,6 +99,7 @@ npm i @eva/plugin-renderer-img
 ```
 
 ```js
+import { GameObject } from '@eva/eva.js'
 import {Img, ImgSystem} from'@eva/plugin-renderer-img' // Introduce the components and systems needed to render pictures
 
 game.addSystem(new ImgSystem()) // Add the ability to render pictures to the game
