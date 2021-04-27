@@ -26,6 +26,7 @@
 * [Interaction Event](/tutorials/interactionEvent)
 * [Custom Component](/tutorials/customComponent)
 * Plugin
+    * [Physics](/tutorials/matterJS)
     * [Accessibility](/tutorials/a11yPlugin)
     * [EvaX DataManager](/tutorials/evaxPlugin)
     * [Performance Monitor](/tutorials/performancePlugin)

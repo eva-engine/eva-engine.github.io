@@ -4,6 +4,8 @@
 
 在日常业务开发中，我们需要自定义一些业务逻辑，每个游戏对象可能需要单独的逻辑或者“数据驱动器”，我们通过脚本组件的形式进行业务开发。
 
+Demo：[https://eva.js.org/playground/#/component](https://eva.js.org/playground/#/component)
+
 ### 举例说明：
 
 芭芭农场的植物中作物生产的经验会实时变化，
@@ -44,6 +46,17 @@ class Move extends Component {
 }
 ```
 
+## 组件安装
+```js
+const go = new GameObject('name')
+go.addComponent(new Move({
+  speed: {
+    x: 100,
+    y: 100
+  }
+}))
+```
+
 ## 生命周期
 
 ![image.png](https://img.alicdn.com/imgextra/i2/O1CN01gEgYOz1T8qevGDloU_!!6000000002338-2-tps-1448-906.png)
@@ -55,7 +68,7 @@ class Move extends Component {
 创建一个脚本组件，实现 init 方法进行初始化，通常都是将参数设置给组件上面的属性。
 实例化组件的时候传入的参数，会在组件被添加到游戏对象的时候传入到 init 方法中。
 一般来讲，我们传入的参数对应到组件上面的属性。
-该方法将会在 `addComponent`  的时候执行，即便事先实例化了当前组件。
+该方法将会在 `addComponent` 的时候执行。
 
 ```js
 interface MoveParams {
@@ -118,7 +131,7 @@ class Move extends Component {
 每一帧执行
 
 ```js
-class Move extends Commponent {
+class Move extends Component {
   // ...
   update(e) {
     // 让物体按照一定速度移动 位移 = 速度 * 时间

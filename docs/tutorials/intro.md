@@ -1,11 +1,11 @@
 # Eva.js Introduction
 
 ## What is Eva.js
-Eva.js is a game engine that focuses on developing gamification projects.
+Eva.js is a game engine that focuses on developing interactive game projects.
 
-Eva.js provides the most commonly used and basic functions in the development of gamification projects, making it easy to develop front-end gamification.
+Eva.js provides the most commonly used and basic functions in the development of interactive game projects, making it easy to develop front-end interactive game.
 
-Eva.js provides efficient game runtime and rendering capabilities, and can realize complex gamification scenes.
+Eva.js provides efficient game runtime and rendering capabilities, and can realize complex interactive game scenes.
 
 Based on the ECS design pattern, Eva.js can freely expand engine functions and build a more prosperous ecosystem.
 
@@ -31,7 +31,7 @@ In fact, you don’t need to look at the following concepts, just look at [playg
 
 ### Game
 
-Game is the runtime carrier of the entire Eva.js project. Because Eva.js is a game framework that focuses on gamification projects, this carrier is also called Game.
+Game is the runtime carrier of the entire Eva.js project. Because Eva.js is a game framework that focuses on interactive game projects, this carrier is also called Game.
 
 ### GameObject
 

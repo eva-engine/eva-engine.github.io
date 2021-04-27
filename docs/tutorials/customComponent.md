@@ -4,6 +4,8 @@
 
 In daily business development, we need to customize some business logic. Each game object may need a separate logic or "data driver". We develop business in the form of custom components.
 
+Demo：[https://eva.js.org/playground/#/component](https://eva.js.org/playground/#/component)
+
 ### for example:
 
 The experience of crop production in the plants of Baba Farm will change in real time,
@@ -44,6 +46,19 @@ class Move extends Component {
 }
 ```
 
+## Install
+To use custom component.
+
+```js
+const go = new GameObject('name')
+go.addComponent(new Move({
+  speed: {
+    x: 100,
+    y: 100
+  }
+}))
+```
+
 ## life cycle
 
 ![image.png](https://gw.alicdn.com/imgextra/i1/O1CN01VCWqjG1qmuTjGuJ4y_!!6000000005539-2-tps-1422-1202.png)
@@ -71,6 +86,7 @@ class Move extends Component {
     this.speed = params.speed || {x: 0, y: 0}
   }
 }
+
 ```
 
 #### Awake
@@ -118,7 +134,7 @@ Execute at the time of `game.resume()`
 Execute every frame
 
 ```js
-class Move extends Commponent {
+class Move extends Component {
   // ...
   update(e) {
     // Let the object move at a certain speed displacement = speed * event
