@@ -7,16 +7,24 @@ Spine is a 2D animation software tailored specifically for software and game dev
 
 ## Install
 
+### With NPM
 ```bash
 npm i @eva/plugin-renderer-spine
+```
+
+### In Browser
+```html
+<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.plugin.renderer-spine.min.js"></script>
+
+<script src="https://unpkg.com/@eva/plugin-renderer-spine@1.0.4/dist/EVA.plugin.renderer.spine.min.js"></script>
 ```
 
 ## Usage
 
 ```js
-import {Game, GameObject, resource, RESOURCE_TYPE} from'@eva/eva.js'
-import {RendererSystem} from'@eva/plugin-renderer'
-import {Spine, SpineSystem} from'@eva/plugin-renderer-spine'
+import {Game, GameObject, resource, RESOURCE_TYPE} from '@eva/eva.js'
+import {RendererSystem} from '@eva/plugin-renderer'
+import {Spine, SpineSystem} from '@eva/plugin-renderer-spine'
 
 resource.addResource([
   {

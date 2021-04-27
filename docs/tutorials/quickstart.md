@@ -6,8 +6,16 @@ Demo project created based on webpack: [https://github.com/eva-engine/start-demo
 
 ## Install
 
+### With NPM
 ```bash
 npm install @eva/eva.js
+```
+
+### In Browser
+```html
+<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.min.js"></script>
+
+<script src="https://unpkg.com/@eva/eva.js@1.0.4/dist/EVA.min.js"></script>
 ```
 
 ## Create a canvas
@@ -29,7 +37,7 @@ Eva.js relies on canvas in HTML for drawing. If the width and height in the desi
 Before creating the game, we need to add resource files to the resource manager, here we add two image resources. Of course, you can add keel animation and spine animation resources. For more information, please see [Resource Management](/tutorials/resourceManagement).
 
 ```js
-import {resource, RESOURCE_TYPE} from'@eva/eva.js'
+import {resource, RESOURCE_TYPE} from '@eva/eva.js'
 
 resource.addResource([
   {
@@ -66,8 +74,8 @@ npm i @eva/plugin-renderer
 ```
 
 ```js
-import {Game} from'@eva/eva.js'
-import {RendererSystem} from'@eva/plugin-renderer'
+import {Game} from '@eva/eva.js'
+import {RendererSystem} from '@eva/plugin-renderer'
 
 // Create a rendering system
 const renderSystem = new RendererSystem({
@@ -100,7 +108,7 @@ npm i @eva/plugin-renderer-img
 
 ```js
 import { GameObject } from '@eva/eva.js'
-import {Img, ImgSystem} from'@eva/plugin-renderer-img' // Introduce the components and systems needed to render pictures
+import {Img, ImgSystem} from '@eva/plugin-renderer-img' // Introduce the components and systems needed to render pictures
 
 game.addSystem(new ImgSystem()) // Add the ability to render pictures to the game
 

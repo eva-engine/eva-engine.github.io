@@ -6,16 +6,24 @@ A sprite is a picture that packs multiple pictures, which can reduce the number 
 
 ## Install
 
+### With NPM
 ```bash
 npm i @eva/plugin-renderer @eva/plugin-renderer-sprite
+```
+
+### In Browser
+```html
+<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.plugin.renderer.sprite.min.js"></script>
+
+<script src="https://unpkg.com/@eva/plugin-renderer-sprite@1.0.4/dist/EVA.plugin.renderer.sprite.min.js"></script>
 ```
 
 ## Usage
 
 ```js
-import {Game, GameObject, resource, RESOURCE_TYPE} from'@eva/eva.js'
-import {RendererSystem} from'@eva/plugin-renderer'
-import {Sprite, SpriteSystem} from'@eva/plugin-renderer-sprite'
+import {Game, GameObject, resource, RESOURCE_TYPE} from '@eva/eva.js'
+import {RendererSystem} from '@eva/plugin-renderer'
+import {Sprite, SpriteSystem} from '@eva/plugin-renderer-sprite'
 
 resource.addResource([
   {

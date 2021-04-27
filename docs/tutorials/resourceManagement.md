@@ -8,7 +8,7 @@ All resources used in the game will be managed by the resource manager. Before u
 ## Add resource
 
 ```js
-import {RESOURCE_TYPE, resource} from'@eva/eva.js'
+import {RESOURCE_TYPE, resource} from '@eva/eva.js'
 ```
 
 Listed below are the most commonly used resources
@@ -77,7 +77,7 @@ Listed below are the most commonly used resources
 In actual projects, you may need to add a lot of resources at one time, which can be achieved through the `addResource` method.
 
 ```js
-import {RESOURCE_TYPE, resource} from'@eva/eva.js'
+import {RESOURCE_TYPE, resource} from '@eva/eva.js'
 
 resource.addResource([
   {

@@ -4,6 +4,20 @@
 
 [https://eva.js.org/playground/#/event](https://eva.js.org/playground/#/event)
 
+## Install
+
+### With NPM
+```sh
+npm i @eva/plugin-renderer-event
+```
+
+### In Browser
+```html
+<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.plugin.renderer.event.min.js"></script>
+
+<script src="https://unpkg.com/@eva/plugin-renderer-event@1.0.4/dist/EVA.plugin.renderer.event.min.js"></script>
+```
+
 ## Member
 
 ### hitArea `object` `optional`
@@ -12,16 +26,16 @@ Click the hot zone, the response area of ​​the picture with transparency is 
 The attribute value of the hitArea area is relative to the rectangular area of ​​the GameObject.
 Normally, there is no need to set hitArea.
 
-| Type | **Type** | **Attribute** |
-| -------- | ------------------------- | ----------------------------- |
-| Circle | HIT_AREA_TYPE.Circle | {style: {x,y,radius}} |
-| Ellipse | HIT_AREA_TYPE.Ellipse | {style:{x,y,width,height}} |
-| Rectangle | HIT_AREA_TYPE.Rect | {style:{x,y,width,height}} |
-| Rounded rectangle | HIT_AREA_TYPE.RoundedRect | {style:{x,y,width,height,radius}} |
-| Polygon | HIT_AREA_TYPE.Polygon | {style: {paths: [x,y,x,y,x,y]}} or {style: {paths: [{x,y},{x,y},{x ,y}]}} |
+| Type              | **Type**                  | **Attribute**                                                             |
+| ----------------- | ------------------------- | ------------------------------------------------------------------------- |
+| Circle            | HIT_AREA_TYPE.Circle      | {style: {x,y,radius}}                                                     |
+| Ellipse           | HIT_AREA_TYPE.Ellipse     | {style:{x,y,width,height}}                                                |
+| Rectangle         | HIT_AREA_TYPE.Rect        | {style:{x,y,width,height}}                                                |
+| Rounded rectangle | HIT_AREA_TYPE.RoundedRect | {style:{x,y,width,height,radius}}                                         |
+| Polygon           | HIT_AREA_TYPE.Polygon     | {style: {paths: [x,y,x,y,x,y]}} or {style: {paths: [{x,y},{x,y},{x ,y}]}} |
 
 ```js
-import {Event, HIT_AREA_TYPE} from'@eva/plugin-render'
+import {Event, HIT_AREA_TYPE} from '@eva/plugin-renderer-event'
 const evt = image.addComponent(
   new Event({
     hitArea: {
@@ -38,13 +52,13 @@ const evt = image.addComponent(
 
 Event Component is used to support the event binding of Entity, the events are
 
-| Event name | Event type |
-| --------------- | -------------------------- |
-| tap | Click, if touchstart and touchend are both on the current gameObject, it will be triggered, if you don’t need it, you can add e.stopPropagation() to touchend according to certain conditions |
-| touchstart | |
-| touchmove | Move will also trigger if it is not on the current object, very strange |
-| touchend | |
-| touchendoutside | When touchend, when touch is no longer on the object, it will trigger |
+| Event name      | Event type                                                                                                                                                                                    |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| tap             | Click, if touchstart and touchend are both on the current gameObject, it will be triggered, if you don’t need it, you can add e.stopPropagation() to touchend according to certain conditions |
+| touchstart      |                                                                                                                                                                                               |
+| touchmove       | Move will also trigger if it is not on the current object, very strange                                                                                                                       |
+| touchend        |                                                                                                                                                                                               |
+| touchendoutside | When touchend, when touch is no longer on the object, it will trigger                                                                                                                         |
 
 ### on (eventName, listener)
 

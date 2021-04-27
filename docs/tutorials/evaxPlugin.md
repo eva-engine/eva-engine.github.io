@@ -8,6 +8,20 @@ For example, the life value in the game will not only be displayed on the top of
 
 Eva.js does not rely heavily on EVAX to develop games, and can be used as needed.
 
+## Install
+
+### With NPM
+```sh
+npm i @eva/plugin-evax
+```
+
+### In Browser
+```html
+<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.plugin.EVAX.min.js"></script>
+
+<script src="https://unpkg.com/@eva/plugin-evax@1.0.4/dist/EVA.plugin.EVAX.min.js"></script>
+```
+
 ## Create store
 
 All data needs to be defined in advance, if it is not defined, it will not be monitored
@@ -32,7 +46,7 @@ const store = {
 
 ```js
 // Introduce the evax plugin
-import {EvaXSystem, EvaX} from'@eva/plugin-evax'
+import {EvaXSystem, EvaX} from '@eva/plugin-evax'
 
 // Create a game and pass it to the store
 const game = new Game({

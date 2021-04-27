@@ -7,17 +7,25 @@ Make linear changes to the properties on the Component to achieve transition ani
 
 ## Install
 
+### With NPM
 ```bash
 npm i @eva/plugin-transition
+```
+
+### In Browser
+```html
+<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.plugin.transition.min.js"></script>
+
+<script src="https://unpkg.com/@eva/plugin-transition@1.0.4/dist/EVA.plugin.transition.min.js"></script>
 ```
 
 ## Usage
 
 ```js
-import {Game, GameObject, resource, RESOURCE_TYPE} from'@eva/eva.js'
-import {RendererSystem} from'@eva/plugin-renderer'
-import {Img, ImgSystem} from'@eva/plugin-renderer-img'
-import {Transition, TransitionSystem} from'@eva/plugin-transition'
+import {Game, GameObject, resource, RESOURCE_TYPE} from '@eva/eva.js'
+import {RendererSystem} from '@eva/plugin-renderer'
+import {Img, ImgSystem} from '@eva/plugin-renderer-img'
+import {Transition, TransitionSystem} from '@eva/plugin-transition'
 
 resource.addResource([
   {

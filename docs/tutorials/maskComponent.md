@@ -6,17 +6,25 @@ The Mask component can cut the display range of the GameObject, and a renderer n
 
 ## Install
 
+### With NPM
 ```bash
 npm i @eva/plugin-renderer @eva/plugin-renderer-mask
+```
+
+### In Browser
+```html
+<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.plugin.renderer.mask.min.js"></script>
+
+<script src="https://unpkg.com/@eva/plugin-renderer-mask@1.0.4/dist/EVA.plugin.renderer.mask.min.js"></script>
 ```
 
 ## Usage
 
 ```js
-import {Game, GameObject, resource, RESOURCE_TYPE} from'@eva/eva.js'
-import {RendererSystem} from'@eva/plugin-renderer'
-import {Img, ImgSystem} from'@eva/plugin-renderer-img'
-import {Mask, MaskSystem, MASK_TYPE} from'@eva/plugin-renderer-mask'
+import {Game, GameObject, resource, RESOURCE_TYPE} from '@eva/eva.js'
+import {RendererSystem} from '@eva/plugin-renderer'
+import {Img, ImgSystem} from '@eva/plugin-renderer-img'
+import {Mask, MaskSystem, MASK_TYPE} from '@eva/plugin-renderer-mask'
 
 resource.addResource([
   {
@@ -140,15 +148,15 @@ game.scene.addChild(image2)
 
 ### style: `object`
 
-| Type | **Type** | **Attribute** |
-| -------- | --------------------- | ------------------- |
-| Circle | MASK_TYPE.Circle | {style: {x,y,radius}} |
-| Ellipse | MASK_TYPE.Ellipse | {style:{x,y,width,height}} |
-| Rectangle | MASK_TYPE.Rect | {style:{x,y,width,height}} |
-| Rounded rectangle | MASK_TYPE.RoundedRect | {style:{x,y,width,height,radius}} |
-| Polygon | MASK_TYPE.Polygon | {style: {paths: [x,y,x,y,x,y]}} or {style: {paths: [{x,y},{x,y},{x ,y}]}} |
-| Picture | MASK_TYPE.Img | {resource,style:{x,y,width,height}} |
-| Sprite image | MASK_TYPE.Sprite | {resource,spriteName,style:{x,y,width,height}} |
+| Type              | **Type**              | **Attribute**                                                             |
+| ----------------- | --------------------- | ------------------------------------------------------------------------- |
+| Circle            | MASK_TYPE.Circle      | {style: {x,y,radius}}                                                     |
+| Ellipse           | MASK_TYPE.Ellipse     | {style:{x,y,width,height}}                                                |
+| Rectangle         | MASK_TYPE.Rect        | {style:{x,y,width,height}}                                                |
+| Rounded rectangle | MASK_TYPE.RoundedRect | {style:{x,y,width,height,radius}}                                         |
+| Polygon           | MASK_TYPE.Polygon     | {style: {paths: [x,y,x,y,x,y]}} or {style: {paths: [{x,y},{x,y},{x ,y}]}} |
+| Picture           | MASK_TYPE.Img         | {resource,style:{x,y,width,height}}                                       |
+| Sprite image      | MASK_TYPE.Sprite      | {resource,spriteName,style:{x,y,width,height}}                            |
 
 <br/>
 <br/>

@@ -4,25 +4,25 @@
 
 Eva physics engine
 
-## Usage
+## Install
 
-### Install
-
+### With NPM
 ```bash
 tnpm install @eva/plugin-matterjs
 ```
 
-### Import
+### In Browser
+```html
+<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.plugin.renderer.matterjs.min.js"></script>
 
-```javascript
-import {Physics} from'@eva/plugin-matterjs';
+<script src="https://unpkg.com/@eva/plugin-matterjs@1.0.4/dist/EVA.plugin.renderer.matterjs.min.js"></script>
 ```
 
-### Use
+## Usage
 
 ```javascript
 // 1. Introduced after installing the physics engine
-import {PhysicsSystem, Physics, PhysicsType} from'@eva/plugin-matterjs';
+import {PhysicsSystem, Physics, PhysicsType} from '@eva/plugin-matterjs';
 
 // 2. Register the plugin in EVA
 const game = new Game({
@@ -102,3 +102,9 @@ physics.on('collisionStart', (body, gameObject1, gameObject2) => {});
 
 console.log("physics",physics);
 ```
+
+<br />
+<br />
+<br />
+<br />
+<br />

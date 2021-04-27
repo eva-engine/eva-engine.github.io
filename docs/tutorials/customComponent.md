@@ -24,7 +24,7 @@ Step4: Provide a custom event to collect crop experience, which is called when t
 Create custom components by inheriting Component
 
 ```js
-import {Component} from'@eva/eva.js'
+import {Component} from '@eva/eva.js'
 class Move extends Component {
   static componentName ='Move' // Set the name of the component
 }

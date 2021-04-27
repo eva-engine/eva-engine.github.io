@@ -10,21 +10,26 @@ Eva.js accessibility plugin, used to add accessibility capabilities to game obje
 
 ## Install
 
+### With NPM
 ```bash
 tnpm install @eva/plugin-a11y
 ```
 
-## Import
+### In Browser
+```html
+<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.plugin.a11y.min.js"></script>
 
-```js
-import { A11ySystem, A11y, A11yActivate } from '@eva/plugin-a11y'
+<script src="https://unpkg.com/@eva/plugin-a11y@1.0.4/dist/EVA.plugin.a11y.min.js"></script>
 ```
+
 
 ## Usage
 
 First add system, and then add a11y component to the game objects.
 
 ```js
+import { A11ySystem, A11y, A11yActivate } from '@eva/plugin-a11y'
+
 game.addSystem(new A11ySystem({
   debug: true,
   activate: A11yActivate.CHECK,
@@ -66,28 +71,28 @@ gameObject.removeComponent('A11y')
 
 游戏场景无障碍能力
 
-| 参数     | 类型         | 说明                                           | 默认值 |
-| -------- | ------------ | ---------------------------------------------- | ------ |
-| debug    | boolean      | Whether to turn on debugging, a red mask will appear after turning on             | false  |
+| 参数     | 类型         | 说明                                                                                                                | 默认值 |
+| -------- | ------------ | ------------------------------------------------------------------------------------------------------------------- | ------ |
+| debug    | boolean      | Whether to turn on debugging, a red mask will appear after turning on                                               | false  |
 | activate | A11yActivate | Whether to activate accessibility, the default is to automatically activate according to the user's system settings | CHECK  |
 
 **2、A11y**
 Accessibility components, game objects give accessibility capabilities
 
-| 参数    | 类型   | 说明                           | 默认值 |
-| ------- | ------ | ------------------------------ | ------ |
-| hint    | string | What needs to be read                 | -      |
+| 参数    | 类型   | 说明                                       | 默认值 |
+| ------- | ------ | ------------------------------------------ | ------ |
+| hint    | string | What needs to be read                      | -      |
 | role    | string | Accessibility roles, such as role="button" | -      |
-| delay   | number | Delay div inner time, in milliseconds       | 0      |
-| aria-\* | string | Accessibility attributes                     |        |
+| delay   | number | Delay div inner time, in milliseconds      | 0      |
+| aria-\* | string | Accessibility attributes                   |        |
 
 **3、A11yActivate**
 
-| 参数    | 说明                         |
-| ------- | ---------------------------- |
+| 参数    | 说明                                                     |
+| ------- | -------------------------------------------------------- |
 | CHECK   | Check the accessibility according to the incoming method |
-| ENABLE  | Enable plugin accessibility           |
-| DISABLE | Disable plugin accessibility           |
+| ENABLE  | Enable plugin accessibility                              |
+| DISABLE | Disable plugin accessibility                             |
 
 ## Tips
 

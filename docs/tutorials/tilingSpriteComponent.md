@@ -6,16 +6,24 @@ In some games with infinite backgrounds, tile sprites can be used to achieve sea
 
 ## Install
 
+### With NPM
 ```bash
 npm i @eva/plugin-renderer @eva/plugin-renderer-tiling-sprite
+```
+
+### In Browser
+```html
+<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.plugin.renderer.tilingSprite.min.js"></script>
+
+<script src="https://unpkg.com/@eva/plugin-renderer-tiling-sprite@1.0.4/dist/EVA.plugin.renderer.tilingSprite.min.js"></script>
 ```
 
 ## Usage
 
 ```js
-import {Game, GameObject, resource, RESOURCE_TYPE} from'@eva/eva.js'
-import {RendererSystem} from'@eva/plugin-renderer'
-import {TilingSprite, TilingSpriteSystem} from'@eva/plugin-renderer-tiling-sprite'
+import {Game, GameObject, resource, RESOURCE_TYPE} from '@eva/eva.js'
+import {RendererSystem} from '@eva/plugin-renderer'
+import {TilingSprite, TilingSpriteSystem} from '@eva/plugin-renderer-tiling-sprite'
 
 resource.addResource([
   {

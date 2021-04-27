@@ -6,16 +6,24 @@ The Image component provides the GameObject with the ability to use Image. The I
 
 ## Install
 
+### With NPM
 ```bash
 npm i @eva/plugin-renderer @eva/plugin-renderer-img
+```
+
+### In Browser
+```html
+<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.plugin.renderer.img.min.js"></script>
+
+<script src="https://unpkg.com/@eva/plugin-renderer-img@1.0.4/dist/EVA.plugin.renderer.img.min.js"></script>
 ```
 
 ## Usage
 
 ```js
-import {Game, GameObject, resource, RESOURCE_TYPE} from'@eva/eva.js'
-import {RendererSystem} from'@eva/plugin-renderer'
-import {Img, ImgSystem} from'@eva/plugin-renderer-img'
+import {Game, GameObject, resource, RESOURCE_TYPE} from '@eva/eva.js'
+import {RendererSystem} from '@eva/plugin-renderer'
+import {Img, ImgSystem} from '@eva/plugin-renderer-img'
 
 // Add image resources
 resource.addResource([

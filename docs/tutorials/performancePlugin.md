@@ -5,10 +5,24 @@ This plug-in is implemented using [stat.js](https://github.com/mrdoob/stats.js/)
 ![image.png](https://gw.alicdn.com/imgextra/i4/O1CN01AHtNyp1Zi0lkTonZg_!!6000000003227-2-tps-476-422.png)
 ![image.png](https://gw.alicdn.com/imgextra/i3/O1CN01bgazxT1FteWFFpp72_!!6000000000545-2-tps-470-402.png)
 
+## Install
+
+### With NPM
+```sh
+npm i @eva/plugin-stats
+```
+
+### In Browser
+```html
+<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.plugin.stats.min.js"></script>
+
+<script src="https://unpkg.com/@eva/plugin-stats@1.0.4/dist/EVA.plugin.stats.min.js"></script>
+```
+
 ## Usage
 
 ```js
-import {StatsSystem} from'@eva/plugin-stats'
+import {StatsSystem} from '@eva/plugin-stats'
 
 const game = new Game({
    autoStart: true, // optional

@@ -7,7 +7,7 @@ GameObject are the **basic elements** of the game, representing characters, obje
 Create a game object, `new GameObject(name, transfrom)`, the first parameter is the name of the object, and the second parameter is the properties of the object's Transform component.
 
 ```js
-import {GameObject} from'@eva/eva.js'
+import {GameObject} from '@eva/eva.js'
 const gameObject = new GameObject('name', {
   size: {width: 100, height: 100 },
   position: {x: 50, y: 50}
@@ -32,7 +32,7 @@ gameObject.removeChild(childGameObject)
 method 1:
 
 ```js
-import {Img} from'@eva/plugn-render'
+import {Img} from '@eva/plugn-render'
 // Method 2: Pass in the instance directly
 const img = new Img({
   // Here you can set the default parameters
@@ -45,7 +45,7 @@ gameObject.addComponent(img)
 ### Remove components
 
 ```js
-import {Img} from'@eva/plugn-render'
+import {Img} from '@eva/plugn-render'
 gameObject.removeComponent(Img)
 ```
 

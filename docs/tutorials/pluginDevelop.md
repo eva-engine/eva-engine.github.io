@@ -51,7 +51,7 @@ First design the Component, both need to give the ability of the game object.
 
 ### Usage
 ```js
-import {A11y, A11ySystem} from'@eva/plugin-a11y'
+import {A11y, A11ySystem} from '@eva/plugin-a11y'
 
 const game = new Game({
   systems: [new A11ySystem()]
@@ -73,7 +73,7 @@ game.scene.addChild(go)
   -hint what needs to be read
 
 ```js
-import {Component} from'@eva/eva.js'
+import {Component} from '@eva/eva.js'
 export default class A11y extends Component {
   static componentName: string ='A11y' // Here is the name of the Component, which is used by the System to monitor changes
 
@@ -101,7 +101,7 @@ export default class A11y extends Component {
 #### Step1 Determine the components and parameters to be monitored
 
 ```js
-import {System, decorators} from'@eva/eva.js'
+import {System, decorators} from '@eva/eva.js'
 
 @decorators.componentObserver({
   A11y: ['hint'] // monitor the hint attribute changes of the A11y component
@@ -161,7 +161,7 @@ If you want to monitor changes in multiple components, you can write like this
 Set a name for System
 
 ```js
-import {System, decorators} from'@eva/eva.js'
+import {System, decorators} from '@eva/eva.js'
 
 @decorators.componentObserver({
   A11y: ['hint'] // monitor the hint attribute changes of the A11y component
@@ -178,7 +178,7 @@ Before that, we did some monitoring configuration, so how do we get the correspo
 We know that System has an update life cycle, and we can get the changes of the current frame Component during the life cycle.
 
 ```js
-import {System, decorators, ComponentChanged} from'@eva/eva.js'
+import {System, decorators, ComponentChanged} from '@eva/eva.js'
 
 @decorators.componentObserver({
   A11y: ['hint'] // monitor the hint attribute changes of the A11y component
@@ -302,13 +302,13 @@ Take the picture component as an example:
     ComponentChanged,
     RESOURCE_TYPE,
     OBSERVER_TYPE,
-  } from'@eva/eva.js';
+  } from '@eva/eva.js';
   import {
     RendererManager,
     ContainerManager,
     RendererSystem,
     Renderer,
-  } from'@eva/plugin-renderer';
+  } from '@eva/plugin-renderer';
 
   @decorators.componentObserver({
     Img: [{prop: ['resource'], deep: false}],

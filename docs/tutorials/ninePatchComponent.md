@@ -7,16 +7,24 @@ In the picture below, the second one is a bubble created by Jiugongge, and the l
 
 ## Install
 
+### With NPM
 ```bash
 npm i @eva/plugin-renderer @eva/plugin-renderer-ninepatch
+```
+
+### In Browser
+```html
+<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.plugin.renderer.ninePatch.min.js"></script>
+
+<script src="https://unpkg.com/@eva/plugin-renderer-ninepatch@1.0.4/dist/EVA.plugin.renderer.ninePatch.min.js"></script>
 ```
 
 ## Usage
 
 ```js
-import {Game, GameObject, resource, RESOURCE_TYPE} from'@eva/eva.js'
-import {RendererSystem} from'@eva/plugin-renderer'
-import {NinePatch, NinePatchSystem} from'@eva/plugin-renderer-nine-patch'
+import {Game, GameObject, resource, RESOURCE_TYPE} from '@eva/eva.js'
+import {RendererSystem} from '@eva/plugin-renderer'
+import {NinePatch, NinePatchSystem} from '@eva/plugin-renderer-nine-patch'
 
 resource.addResource([
   {
