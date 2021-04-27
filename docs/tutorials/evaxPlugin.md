@@ -11,7 +11,7 @@ Eva.js does not rely heavily on EVAX to develop games, and can be used as needed
 ## Install
 
 ### With NPM
-```sh
+```bash
 npm i @eva/plugin-evax
 ```
 

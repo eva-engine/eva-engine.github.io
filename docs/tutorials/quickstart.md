@@ -103,7 +103,7 @@ Of course, this only allows Eva.js to have basic rendering capabilities, but no 
 After creating the game, we need to add a [GameObject](/tutorials/gameObject) to the game, and add [component](/tutorials/customComponent) to the GameObject. The GameObject is the most basic operable unit in the game, and the component gives the GameObject various abilities. For example, the Img component allows a gameObject to display a picture.
 
 ```bash
-npm i @eva/plugin-renderer-img
+npm i @eva/plugin-renderer @eva/plugin-renderer-img
 ```
 
 ```js

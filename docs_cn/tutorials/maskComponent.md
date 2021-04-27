@@ -6,8 +6,16 @@ Mask 组件可以将 GameObject 的展示范围进行裁剪，使用前需要安
 
 ## 安装
 
+### 使用 NPM
 ```bash
 npm i @eva/plugin-renderer @eva/plugin-renderer-mask
+```
+
+### 在浏览器中
+```html
+<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.plugin.renderer.mask.min.js"></script>
+
+<script src="https://unpkg.com/@eva/plugin-renderer-mask@1.0.4/dist/EVA.plugin.renderer.mask.min.js"></script>
 ```
 
 ## 使用

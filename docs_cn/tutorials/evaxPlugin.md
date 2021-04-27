@@ -8,6 +8,20 @@
 
 Eva.js 开发游戏不是强依赖 EVAX 的，可以按照需要使用。
 
+## 安装
+
+### 使用 NPM
+```bash
+npm i @eva/plugin-evax
+```
+
+### 在浏览器中
+```html
+<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.plugin.EVAX.min.js"></script>
+
+<script src="https://unpkg.com/@eva/plugin-evax@1.0.4/dist/EVA.plugin.EVAX.min.js"></script>
+```
+
 ## 创建 store
 
 所有数据需要事先定义好，如果没有定义好，将不会被监听

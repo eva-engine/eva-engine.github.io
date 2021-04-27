@@ -8,7 +8,7 @@ The Text component provides the gameObject with the ability to display text. Aft
 
 ### With NPM
 ```bash
-npm i @eva/plugin-renderer  @eva/plugin-renderer-text
+npm i @eva/plugin-renderer @eva/plugin-renderer-text
 ```
 
 ### In Browser

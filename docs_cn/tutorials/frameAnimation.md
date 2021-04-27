@@ -8,8 +8,16 @@ Eva.js 的帧动画底层是 pixi.js spriteAnimation 实现的，因此在 Eva.j
 
 ## 安装
 
+### 使用 NPM
 ```bash
-npm i @eva/plugin-renderer-spriteAnimation
+npm i @eva/plugin-renderer @eva/plugin-renderer-sprite-animation
+```
+
+### 在浏览器中
+```html
+<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.plugin.renderer-spriteAnimation.min.js"></script>
+
+<script src="https://unpkg.com/@eva/plugin-renderer-sprite-animation@1.0.4/dist/EVA.plugin.renderer.spriteAnimation.min.js"></script>
 ```
 
 ## 使用

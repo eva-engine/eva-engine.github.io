@@ -17,7 +17,7 @@ Eva.js 是一款前端框架，使用者需了解 HTML/CSS/JS 等知识，目前
 安装 Eva.js
 
 ```bash
-npm i @eva/eva.js -S
+npm i @eva/eva.js
 ```
 
 

@@ -6,8 +6,16 @@ Spine 是一款专门为软件和游戏开发者量身打造的 2D 动画软件�
 
 ## 安装
 
+### 使用 NPM
 ```bash
-npm i @eva/plugin-renderer-spine
+npm i @eva/plugin-renderer @eva/plugin-renderer-spine
+```
+
+### 在浏览器中
+```html
+<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.plugin.renderer-spine.min.js"></script>
+
+<script src="https://unpkg.com/@eva/plugin-renderer-spine@1.0.4/dist/EVA.plugin.renderer.spine.min.js"></script>
 ```
 
 ## 使用

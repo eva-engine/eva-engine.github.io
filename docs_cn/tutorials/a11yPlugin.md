@@ -1,23 +1,21 @@
 # A11y 无障碍插件
 
-## Demo
-
-//TODO
-
 ## 介绍
 
 Eva.js 无障碍插件，用于为游戏对象添加无障碍的能力。插件通过定位游戏对象的位置，自动化地添加辅助 DOM，使得游戏对象能被聚焦，游戏拥有无障碍能力。
 
 ## 安装
 
+### 使用 NPM
 ```bash
-tnpm install @eva/plugin-a11y
+npm install @eva/plugin-a11y
 ```
 
-## 引入
+### 在浏览器中
+```html
+<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.plugin.a11y.min.js"></script>
 
-```js
-import { A11ySystem, A11y, A11yActivate } from '@eva/plugin-a11y'
+<script src="https://unpkg.com/@eva/plugin-a11y@1.0.4/dist/EVA.plugin.a11y.min.js"></script>
 ```
 
 ## 使用
@@ -25,6 +23,7 @@ import { A11ySystem, A11y, A11yActivate } from '@eva/plugin-a11y'
 先引入无障碍系统，然后为相应的游戏对象添加无障碍能力。
 
 ```js
+import { A11ySystem, A11y, A11yActivate } from '@eva/plugin-a11y'
 // 为游戏场景添加无障碍能力
 game.addSystem(new A11ySystem({
   debug: true, // 上线时关闭debug

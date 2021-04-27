@@ -10,7 +10,7 @@ The bottom layer of the frame animation of Eva.js is realized by pixi.js spriteA
 
 ### With NPM
 ```bash
-npm i @eva/plugin-renderer-sprite-animation
+npm i @eva/plugin-renderer @eva/plugin-renderer-sprite-animation
 ```
 
 ### In Browser

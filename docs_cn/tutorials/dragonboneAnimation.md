@@ -8,8 +8,16 @@ Dragonbone 龙骨动画官网：[http://dragonbones.com/cn/index.html](http://dr
 
 ## 安装
 
+### 使用 NPM
 ```bash
-npm i @eva/plugin-renderer-dragonbone
+npm i @eva/plugin-renderer @eva/plugin-renderer-dragonbone
+```
+
+### 在浏览器中
+```html
+<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.plugin.renderer.dragonbone.min.js"></script>
+
+<script src="https://unpkg.com/@eva/plugin-renderer-dragonbone@1.0.4/dist/EVA.plugin.renderer.dragonbone.min.js"></script>
 ```
 
 ## 使用

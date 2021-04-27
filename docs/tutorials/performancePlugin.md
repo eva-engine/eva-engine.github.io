@@ -8,7 +8,7 @@ This plug-in is implemented using [stat.js](https://github.com/mrdoob/stats.js/)
 ## Install
 
 ### With NPM
-```sh
+```bash
 npm i @eva/plugin-stats
 ```
 

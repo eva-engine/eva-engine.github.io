@@ -10,7 +10,7 @@ Dragonbone 龙骨动画官网：[http://dragonbones.com/cn/index.html](http://dr
 
 ### With NPM
 ```bash
-npm i @eva/plugin-renderer-dragonbone
+npm i @eva/plugin-renderer @eva/plugin-renderer-dragonbone
 ```
 
 ### In Browser

@@ -1,27 +1,26 @@
 
 # MatterJS
 
-## Introduction
-
 Eva 物理引擎
 
-## Usage
+## Install
 
-### Install
-
+### 使用 NPM
 ```bash
-tnpm install @eva/plugin-matterjs
+npm install @eva/plugin-matterjs
 ```
 
-### Import
+### 在浏览器中
+```html
+<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.plugin.renderer.matterjs.min.js"></script>
 
-```javascript
+<script src="https://unpkg.com/@eva/plugin-matterjs@1.0.4/dist/EVA.plugin.renderer.matterjs.min.js"></script>
+```
+
+### 使用
+
+```js
 import {Physics} from '@eva/plugin-matterjs';
-```
-
-### Use
-
-```javascript
 // 1.安装物理引擎后引入
 import {PhysicsSystem, Physics, PhysicsType} from '@eva/plugin-matterjs';
 

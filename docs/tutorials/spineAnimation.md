@@ -9,7 +9,7 @@ Spine is a 2D animation software tailored specifically for software and game dev
 
 ### With NPM
 ```bash
-npm i @eva/plugin-renderer-spine
+npm i @eva/plugin-renderer @eva/plugin-renderer-spine
 ```
 
 ### In Browser

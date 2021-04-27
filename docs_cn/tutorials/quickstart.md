@@ -103,7 +103,7 @@ const game = new Game({
 创建完游戏后，我们需要在游戏里面添加一个[游戏对象](/tutorials/gameObject)，并且给游戏对象添加[组件](/tutorials/customComponent)。游戏对象是游戏中最基本的可操作单位，而组件则赋予了游戏对象各种能力，比如 Img 组件让一个 gameObject 展示一张图片。
 
 ```bash
-npm i @eva/plugin-renderer-img
+npm i @eva/plugin-renderer @eva/plugin-renderer-img
 ```
 
 ```js

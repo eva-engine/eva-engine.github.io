@@ -4,13 +4,21 @@
 
 ## 安装
 
+### 使用 NPM
 ```bash
 npm install @eva/plugin-sound
 ```
 
+### 在浏览器中
+```html
+<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.plugin.sound.min.js"></script>
+
+<script src="https://unpkg.com/@eva/plugin-sound@1.0.4/dist/EVA.plugin.sound.min.js"></script>
+```
+
 ## 使用
 
-```javascript
+```js
 import { Game, GameObject, resource, RESOURCE_TYPE } from '@eva/eva.js';
 import { RendererSystem } from '@eva/plugin-renderer';
 import { Sound, SoundSystem } from '@eva/plugin-sound';

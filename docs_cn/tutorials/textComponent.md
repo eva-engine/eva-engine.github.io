@@ -6,8 +6,16 @@ Text 组件为 gameObject 提供了展示文字的能力，使用了 Text 组件
 
 ## 安装
 
+### 使用 NPM
 ```bash
-npm i @eva/plugin-renderer-text
+npm i @eva/plugin-renderer @eva/plugin-renderer-text
+```
+
+### 在浏览器中
+```html
+<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.plugin.renderer.text.min.js"></script>
+
+<script src="https://unpkg.com/@eva/plugin-renderer-text@1.0.4/dist/EVA.plugin.renderer.text.min.js"></script>
 ```
 
 ## 使用

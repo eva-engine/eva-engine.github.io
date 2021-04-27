@@ -7,8 +7,8 @@
 ## Install
 
 ### With NPM
-```sh
-npm i @eva/plugin-renderer-event
+```bash
+npm i @eva/plugin-renderer @eva/plugin-renderer-event
 ```
 
 ### In Browser
