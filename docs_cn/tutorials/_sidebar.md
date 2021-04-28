@@ -7,7 +7,6 @@
   - [游戏](/tutorials/game)
   - [游戏对象](/tutorials/gameObject)
   - [Transform 组件](/tutorials/transformComponent)
-  - [Sound 组件](/tutorials/sound)
 - 绘图
   - [准备](/tutorials/prepareRender)
   - [Image 组件](/tutorials/imageComponent)
@@ -27,6 +26,7 @@
 - [交互事件](/tutorials/interactionEvent)
 - [自定义组件](/tutorials/customComponent)
 - 插件
+  - [Sound 组件](/tutorials/sound)
   - [物理](/tutorials/matterJS)
   - [a11y 无障碍插件](/tutorials/a11yPlugin)
   - [数据管理](/tutorials/evaxPlugin)

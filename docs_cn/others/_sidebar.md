@@ -25,6 +25,7 @@
 * [交互事件](/tutorials/interactionEvent)
 * [自定义组件](/tutorials/customComponent)
 * 插件
+    * [Sound 组件](/tutorials/sound)
     * [a11y 无障碍插件](/tutorials/a11yPlugin)
     * [数据管理](/tutorials/evaxPlugin)
     * [性能监控](/tutorials/performancePlugin)
