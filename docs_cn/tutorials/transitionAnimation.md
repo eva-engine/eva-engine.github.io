@@ -14,8 +14,6 @@ npm i @eva/plugin-transition
 
 ### 在浏览器中
 ```html
-<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.plugin.transition.min.js"></script>
-
 <script src="https://unpkg.com/@eva/plugin-transition@1.0.4/dist/EVA.plugin.transition.min.js"></script>
 ```
 

@@ -17,8 +17,6 @@ tnpm install @eva/plugin-a11y
 
 ### In Browser
 ```html
-<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.plugin.a11y.min.js"></script>
-
 <script src="https://unpkg.com/@eva/plugin-a11y@1.0.4/dist/EVA.plugin.a11y.min.js"></script>
 ```
 

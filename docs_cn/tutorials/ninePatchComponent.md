@@ -14,8 +14,6 @@ npm i @eva/plugin-renderer @eva/plugin-renderer-ninepatch
 
 ### 在浏览器中
 ```html
-<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.plugin.renderer.ninePatch.min.js"></script>
-
 <script src="https://unpkg.com/@eva/plugin-renderer-ninepatch@1.0.4/dist/EVA.plugin.renderer.ninePatch.min.js"></script>
 ```
 

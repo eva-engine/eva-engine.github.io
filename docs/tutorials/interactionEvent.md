@@ -13,8 +13,6 @@ npm i @eva/plugin-renderer @eva/plugin-renderer-event
 
 ### In Browser
 ```html
-<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.plugin.renderer.event.min.js"></script>
-
 <script src="https://unpkg.com/@eva/plugin-renderer-event@1.0.4/dist/EVA.plugin.renderer.event.min.js"></script>
 ```
 
