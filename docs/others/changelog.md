@@ -1,3 +1,12 @@
+### 1.0.5
+**Fixed**
+* Lottie plugin dependencies error ([#23](https://github.com/eva-engine/eva.js/pull/23))
+* Dragonbone Error ([#21](https://github.com/eva-engine/eva.js/pull/21))
+* Update resource link([#18](https://github.com/eva-engine/eva.js/pull/18))
+
+**Other**
+* Update guidelines url
+
 ### 1.0.4
 **Feature**
 - Support Game Object playback [audio](https://eva.js.org/#/tutorials/sound)

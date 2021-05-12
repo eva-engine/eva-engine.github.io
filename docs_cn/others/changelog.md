@@ -1,3 +1,12 @@
+### 1.0.5
+**Fixed**
+* Lottie 依赖引入问题 ([#23](https://github.com/eva-engine/eva.js/pull/23))
+* Dragonbone 报错问题 ([#21](https://github.com/eva-engine/eva.js/pull/21))
+* 更新 Demo 资源跨域问题([#18](https://github.com/eva-engine/eva.js/pull/18))
+
+**Other**
+* 更新 guidelines url
+
 ### 1.0.4
 
 **新功能**
