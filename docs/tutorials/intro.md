@@ -24,7 +24,7 @@ npm i @eva/eva.js -S
 ```
 
 
-In fact, you don’t need to look at the following concepts, just look at [playground](https://eva.alibaba-inc.com/playground/image) to start development. It is easier to understand the design concept of the engine after reading the following concepts, and the development is more Professional games.
+In fact, you don’t need to look at the following concepts, just look at [playground](https://eva.js.org/playground/#/image) to start development. It is easier to understand the design concept of the engine after reading the following concepts, and the development is more Professional games.
 
 
 ## Concept

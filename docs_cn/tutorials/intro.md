@@ -21,7 +21,7 @@ npm i @eva/eva.js
 ```
 
 
-其实，不用看下面这些概念，直接看 [playground](https://eva.alibaba-inc.com/playground/image) 就可以开始开发了，看了下面概念更容易理解引擎的设计理念，开发更专业的游戏。
+其实，不用看下面这些概念，直接看 [playground](https://eva.js.org/playground/#/image) 就可以开始开发了，看了下面概念更容易理解引擎的设计理念，开发更专业的游戏。
 
 
 ## 概念
