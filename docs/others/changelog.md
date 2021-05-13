@@ -1,3 +1,7 @@
+### 1.0.6
+**Fixed**
+* System destroy error [#27](https://github.com/eva-engine/eva.js/pull/27)
+
 ### 1.0.5
 **Fixed**
 * Lottie plugin dependencies error ([#23](https://github.com/eva-engine/eva.js/pull/23))

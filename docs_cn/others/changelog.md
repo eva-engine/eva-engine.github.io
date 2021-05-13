@@ -1,3 +1,7 @@
+### 1.0.6
+**Fixed**
+* 系统销毁时报错 [#27](https://github.com/eva-engine/eva.js/pull/27)
+
 ### 1.0.5
 **Fixed**
 * Lottie 依赖引入问题 ([#23](https://github.com/eva-engine/eva.js/pull/23))
