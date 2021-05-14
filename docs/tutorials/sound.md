@@ -70,20 +70,30 @@ const bgSound = bgSoundObj.addComponent(
 bgSound.play();
 ```
 
+If you want to play a part of the audio, you can control it through the seek property and the duration property. Refer to the property table for details. The following example indicates that the Component starts playing at 1.2 seconds and stops after playing for 3 seconds.
+
+```js
+const bgSound = bgSoundObj.addComponent(
+  new Sound({ resource: 'bgSound', autoplay: true, volume: 0.5, seek: 1.2, duration: 3 })
+);
+```
+
 ## API
 
 ### Sound
 
 #### Constructor
 
-| param    | type       | default | description                                               |
-| -------- | ---------- | ------- | --------------------------------------------------------- |
-| resource | string     | ''      | The name of the audio resource registered in the resource |
-| autoplay | boolean    | false   |                                                           |
-| muted    | boolean    | false   |                                                           |
-| loop     | boolean    | false   |                                                           |
-| volume   | number     | 1       | \[0-1\]                                                   |
-| onEnd    | () => void | -       | Triggered at the end of playback                          |
+| param    | type       | default | description                                                                                                                           |
+| -------- | ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| resource | string     | ''      | The name of the audio resource registered in the resource                                                                             |
+| autoplay | boolean    | false   |                                                                                                                                       |
+| muted    | boolean    | false   |                                                                                                                                       |
+| loop     | boolean    | false   |                                                                                                                                       |
+| volume   | number     | 1       | \[0-1\]                                                                                                                               |
+| seek     | number     | 0       | ArrayBufferSourceNode.start(when, seek, duration) [MDN](https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/start) |
+| duration | number     |         | ArrayBufferSourceNode.start(when, seek, duration) [MDN](https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/start) |
+| onEnd    | () => void | -       | Triggered at the end of playback                                                                                                      |
 
 #### 属性
 
