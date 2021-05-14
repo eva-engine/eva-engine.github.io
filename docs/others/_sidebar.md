@@ -25,6 +25,7 @@
 * [Interaction Event](/tutorials/interactionEvent)
 * [Custom Component](/tutorials/customComponent)
 * Plugin
+    * [Sound](/tutorials/sound)
     * [Accessibility](/tutorials/a11yPlugin)
     * [EvaX DataManager](/tutorials/evaxPlugin)
     * [Performance Monitor](/tutorials/performancePlugin)

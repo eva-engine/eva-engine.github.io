@@ -6,7 +6,6 @@
     * [Game](/tutorials/game)
     * [GameObject](/tutorials/gameObject)
     * [Transform](/tutorials/transformComponent)
-    * [Sound](/tutorials/sound)
 * Graphics
     * [Prepare](/tutorials/prepareRender)
     * [Image](/tutorials/imageComponent)
@@ -26,6 +25,7 @@
 * [Interaction Event](/tutorials/interactionEvent)
 * [Custom Component](/tutorials/customComponent)
 * Plugin
+    * [Sound](/tutorials/sound)
     * [Physics](/tutorials/matterJS)
     * [Accessibility](/tutorials/a11yPlugin)
     * [EvaX DataManager](/tutorials/evaxPlugin)

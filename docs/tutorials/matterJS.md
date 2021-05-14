@@ -13,8 +13,6 @@ tnpm install @eva/plugin-matterjs
 
 ### In Browser
 ```html
-<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.plugin.renderer.matterjs.min.js"></script>
-
 <script src="https://unpkg.com/@eva/plugin-matterjs@1.0.4/dist/EVA.plugin.renderer.matterjs.min.js"></script>
 ```
 

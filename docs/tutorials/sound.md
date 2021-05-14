@@ -11,8 +11,6 @@ tnpm install @eva/plugin-sound
 
 ### In Browser
 ```html
-<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.plugin.sound.min.js"></script>
-
 <script src="https://unpkg.com/@eva/plugin-sound@1.0.4/dist/EVA.plugin.sound.min.js"></script>
 ```
 

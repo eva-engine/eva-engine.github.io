@@ -17,8 +17,6 @@ npm i @eva/plugin-evax
 
 ### In Browser
 ```html
-<script src="https://g.alicdn.com/eva/jscdn/1.0.4/EVA.plugin.EVAX.min.js"></script>
-
 <script src="https://unpkg.com/@eva/plugin-evax@1.0.4/dist/EVA.plugin.EVAX.min.js"></script>
 ```
 
