@@ -28,7 +28,7 @@ new Game({
       height: 1000, // 必填
       transparent: false, // 可选
       resolution: window.devicePixelRatio / 2, // 可选, 如果是2倍图设计 可以除以 2
-      preventScroll: false, // 阻止页面滚动
+      enableScroll: true, // 允许页面滚动
       renderType: RENDERER_TYPE.UNKNOWN, // RENDERER_TYPE.UNKNOWN:自动判断，RENDERER_TYPE.WEBGL/RENDERER_TYPE.CANVAS，建议android6.1以下使用Canvas。
       backgroundColor: 0xff0000
     })
@@ -58,9 +58,9 @@ new Game({
 
 分辨率，如果设计稿是 2 倍（750\*1334），可用 window.devicePixelRatio / 2
 
-### preventScroll
+### enableScroll
 
-是否阻止页面滚动，默认 false
+是否允许页面滚动，默认 true
 
 ### renderType
 

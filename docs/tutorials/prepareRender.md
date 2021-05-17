@@ -28,7 +28,7 @@ new Game({
       height: 1000, // required
       transparent: false, // optional
       resolution: window.devicePixelRatio / 2, // Optional, if it is 2 times the image design, it can be divided by 2
-      preventScroll: false, // Prevent page scrolling
+      enableScroll: true, // Enable page scrolling
       renderType: RENDERER_TYPE.UNKNOWN, // RENDERER_TYPE.UNKNOWN: automatic judgment, RENDERER_TYPE.WEBGL/RENDERER_TYPE.CANVAS, it is recommended to use Canvas below android6.1.
       backgroundColor: 0xff0000
     })
@@ -58,9 +58,9 @@ Whether the background is transparent, the default is false
 
 Resolution, if the design draft is 2 times (750\*1334), you can use window.devicePixelRatio / 2
 
-### preventScroll
+### enableScroll
 
-Whether to prevent page scrolling, the default is false
+Whether to Enable page scrolling, the default is true
 
 ### renderType
 

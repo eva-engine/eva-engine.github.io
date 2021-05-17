@@ -82,7 +82,7 @@ const renderSystem = new RendererSystem({
   height: 1000,
   transparent: false,
   resolution: window.devicePixelRatio / 2, // 可选, 如果是2倍图设计 可以除以2
-  preventScroll: false, // 阻止页面滚动
+  enableScroll: true, // 允许页面滚动
   renderType: 0 // 0:自动判断，1: WebGL，2:Canvas
 })
 

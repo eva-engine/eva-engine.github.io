@@ -25,7 +25,7 @@ const renderSystem = new RendererSystem({
   height: 1000, // 必填
   transparent: false, // 可选
   resolution: window.devicePixelRatio / 2, // 可选, 如果是2倍图设计 可以除以 2
-  preventScroll: false, // 阻止页面滚动
+  enableScroll: true, // 允许页面滚动
   renderType: 0 // 0:自动判断，1: WebGL，2:Canvas，建议android6.1 ios9 以下使用Canvas，需业务判断。
 })
 
@@ -115,7 +115,7 @@ game.loadScene({
     height: 1000, // 必填
     transparent: false, // 可选
     resolution: window.devicePixelRatio / 2, // 可选, 如果是2倍图设计 可以除以 2
-    preventScroll: false, // 阻止页面滚动
+    enableScroll: true, // 允许页面滚动
     renderType: 0
     // 0:自动判断，1: WebGL，2:Canvas，建议android6.1 ios9 以下使用Canvas，需业务判断。
   }
