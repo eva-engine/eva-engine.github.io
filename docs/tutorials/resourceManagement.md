@@ -2,8 +2,8 @@
 
 All resources used in the game will be managed by the resource manager. Before using the resource, you need to add the resource to the resource manager, and set a resource name for the resource, and use the resource name directly when needed. The benefits of this:
 
--Unified resource entry management. In the EVA ecosystem, there are EVA Store / EVA Workstation, etc., which can be directly inputted to the specified resource list to achieve unification of links.
--When Eva.js loads resources, the resource manager can preprocess the resources to reduce the problem of lag in the processing of resources during runtime
+- Unified resource entry management. 
+- When Eva.js loads resources, the resource manager can preprocess the resources to reduce the problem of lag in the processing of resources during runtime
 
 ## Add resource
 
