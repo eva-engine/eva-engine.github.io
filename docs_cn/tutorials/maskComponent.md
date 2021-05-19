@@ -13,7 +13,7 @@ npm i @eva/plugin-renderer @eva/plugin-renderer-mask
 
 ### 在浏览器中
 ```html
-<script src="https://unpkg.com/@eva/plugin-renderer-mask@1.0.4/dist/EVA.plugin.renderer.mask.min.js"></script>
+<script src="https://unpkg.com/@eva/plugin-renderer-mask@1.0.x/dist/EVA.plugin.renderer.mask.min.js"></script>
 ```
 
 ## 使用

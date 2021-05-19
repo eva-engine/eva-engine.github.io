@@ -13,7 +13,7 @@ npm install @eva/eva.js
 
 ### 在浏览器中
 ```html
-<script src="https://unpkg.com/@eva/eva.js@1.0.4/dist/EVA.min.js"></script>
+<script src="https://unpkg.com/@eva/eva.js@1.0.x/dist/EVA.min.js"></script>
 ```
 
 ## 创建画布
@@ -100,9 +100,22 @@ const game = new Game({
 
 创建完游戏后，我们需要在游戏里面添加一个[游戏对象](/tutorials/gameObject)，并且给游戏对象添加[组件](/tutorials/customComponent)。游戏对象是游戏中最基本的可操作单位，而组件则赋予了游戏对象各种能力，比如 Img 组件让一个 gameObject 展示一张图片。
 
+
+- 使用 NPM
 ```bash
-npm i @eva/plugin-renderer @eva/plugin-renderer-img
+npm i @eva/plugin-renderer
 ```
+
+- 在浏览器中
+```html
+<!-- import PixiJS -->
+<script src="//unpkg.com/pixi.js@4.8.9/dist/pixi.min.js"></script>
+<!-- import RendererAdapter -->
+<script src="//unpkg.com/@eva/renderer-adapter@1.0.x/dist/EVA.rendererAdapter.min.js"></script>
+<script src="https://unpkg.com/@eva/plugin-renderer@1.0.x/dist/EVA.plugin.renderer.min.js"></script>
+<script src="//unpkg.com/@eva/plugin-renderer-img@1.0.x/dist/EVA.plugin.renderer.img.min.js"></script>
+```
+
 
 ```js
 import { GameObject } from '@eva/eva.js'

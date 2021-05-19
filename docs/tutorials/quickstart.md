@@ -13,7 +13,7 @@ npm install @eva/eva.js
 
 ### In Browser
 ```html
-<script src="https://unpkg.com/@eva/eva.js@1.0.4/dist/EVA.min.js"></script>
+<script src="https://unpkg.com/@eva/eva.js@1.0.x/dist/EVA.min.js"></script>
 ```
 
 ## Create a canvas
@@ -67,9 +67,20 @@ resource.addResource([
 
 The Eva.js kernel is a very lightweight runtime, and other functions are implemented through plug-ins. If you want to achieve the most basic rendering capabilities of the game, you need to install the rendering plug-in `@eva/plugin-renderer`.
 
+- With NPM
 ```bash
 npm i @eva/plugin-renderer
 ```
+
+- In Browser
+```html
+<!-- import PixiJS -->
+<script src="//unpkg.com/pixi.js@4.8.9/dist/pixi.min.js"></script>
+<!-- import RendererAdapter -->
+<script src="//unpkg.com/@eva/renderer-adapter@1.0.x/dist/EVA.rendererAdapter.min.js"></script>
+<script src="https://unpkg.com/@eva/plugin-renderer@1.0.x/dist/EVA.plugin.renderer.min.js"></script>
+```
+
 
 ```js
 import {Game} from '@eva/eva.js'
@@ -103,6 +114,7 @@ After creating the game, we need to add a [GameObject](/tutorials/gameObject) to
 ```bash
 npm i @eva/plugin-renderer @eva/plugin-renderer-img
 ```
+
 
 ```js
 import { GameObject } from '@eva/eva.js'

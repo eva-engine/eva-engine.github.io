@@ -14,7 +14,7 @@ npm i @eva/plugin-stats
 
 ### In Browser
 ```html
-<script src="https://unpkg.com/@eva/plugin-stats@1.0.4/dist/EVA.plugin.stats.min.js"></script>
+<script src="https://unpkg.com/@eva/plugin-stats@1.0.x/dist/EVA.plugin.stats.min.js"></script>
 ```
 
 ## Usage

@@ -17,7 +17,7 @@ npm i @eva/plugin-evax
 
 ### In Browser
 ```html
-<script src="https://unpkg.com/@eva/plugin-evax@1.0.4/dist/EVA.plugin.EVAX.min.js"></script>
+<script src="https://unpkg.com/@eva/plugin-evax@1.0.x/dist/EVA.plugin.EVAX.min.js"></script>
 ```
 
 ## Create store

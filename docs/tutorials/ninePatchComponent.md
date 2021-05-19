@@ -14,7 +14,7 @@ npm i @eva/plugin-renderer @eva/plugin-renderer-ninepatch
 
 ### In Browser
 ```html
-<script src="https://unpkg.com/@eva/plugin-renderer-ninepatch@1.0.4/dist/EVA.plugin.renderer.ninePatch.min.js"></script>
+<script src="https://unpkg.com/@eva/plugin-renderer-ninepatch@1.0.x/dist/EVA.plugin.renderer.ninePatch.min.js"></script>
 ```
 
 ## Usage

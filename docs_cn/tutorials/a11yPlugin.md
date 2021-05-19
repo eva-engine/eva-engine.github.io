@@ -13,7 +13,7 @@ npm install @eva/plugin-a11y
 
 ### 在浏览器中
 ```html
-<script src="https://unpkg.com/@eva/plugin-a11y@1.0.4/dist/EVA.plugin.a11y.min.js"></script>
+<script src="https://unpkg.com/@eva/plugin-a11y@1.0.x/dist/EVA.plugin.a11y.min.js"></script>
 ```
 
 ## 使用

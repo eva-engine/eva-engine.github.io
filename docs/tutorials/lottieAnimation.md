@@ -13,7 +13,7 @@ npm i @eva/plugin-renderer @eva/plugin-renderer-lottie -S
 
 ### In Browser
 ```html
-<script src="https://unpkg.com/@eva/plugin-renderer-lottie@1.0.4/dist/EVA.plugin.renderer.lottie.min.js"></script>
+<script src="https://unpkg.com/@eva/plugin-renderer-lottie@1.0.x/dist/EVA.plugin.renderer.lottie.min.js"></script>
 ```
 
 ## Usage
