@@ -1,3 +1,7 @@
+### 1.0.7
+**Fixed**
+* RendererSystem preventScroll 参数Bug [#31](https://github.com/eva-engine/eva.js/pull/31)
+
 ### 1.0.6
 **Fixed**
 * 系统销毁时报错 [#27](https://github.com/eva-engine/eva.js/pull/27)

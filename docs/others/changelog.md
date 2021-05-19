@@ -1,3 +1,7 @@
+### 1.0.7
+**Fixed**
+* Renderer preventScroll property bug [#31](https://github.com/eva-engine/eva.js/pull/31)
+
 ### 1.0.6
 **Fixed**
 * System destroy error [#27](https://github.com/eva-engine/eva.js/pull/27)
