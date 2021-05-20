@@ -20,11 +20,12 @@ npm i @eva/plugin-renderer @eva/plugin-renderer-lottie -S
 
 ```js
 import { Game, GameObject, resource } from '@eva/eva.js'
+import { RendererSystem } from '@eva/plugin-renderer'
 import { LottieSystem, Lottie } from '@eva/plugin-renderer-lottie'
 
 const game = new Game({
   systems: [
-    new RenderSystem({
+    new RendererSystem({
       canvas: document.querySelector('#canvas'),
       width: 750,
       height: 1624
