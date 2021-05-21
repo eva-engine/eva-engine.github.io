@@ -17,6 +17,7 @@
     * [renderer-sprite-animation](api/eva-plugin-renderer-sprite-animation)
     * [renderer-text](api/eva-plugin-renderer-text)
     * [renderer-tiling-sprite](api/eva-plugin-renderer-tiling-sprite)
+    * [renderer-render](api/eva-plugin-renderer-render)
     * [renderer-adapter](api/eva-renderer-adapter)
 * [evax](api/eva-plugin-evax)
 * [stats](api/eva-plugin-stats)

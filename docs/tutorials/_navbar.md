@@ -5,7 +5,7 @@
 - [Playground](https://eva.js.org/playground)
 - [Blog](https://yuque.com/eva/blog)
 - [Changelog](/others/changelog)
-- [Chinese](https://eva-engine.gitee.io)
+- <a href="javascript:location.href = location.href.replace('eva.js.org', 'eva-engine.gitee.io');" title="Chinese">中文</a>
 - Service
   - [Gitter](https://gitter.im/eva-engine/Eva.js)
   - Dingtalk
