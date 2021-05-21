@@ -5,7 +5,7 @@
 - [使用范例](https://eva.js.org/playground)
 - [博客](https://yuque.com/eva/blog)
 - [更新日志](/others/changelog)
-- [English](https://eva.js.org)
+- <a href="javascript:location.href = location.href.replace('eva-engine.gitee.io', 'eva.js.org');"title="English">English</a>
 - 服务
   - [Gitter](https://gitter.im/eva-engine/Eva.js)
   - Eva.js 内部服务群
