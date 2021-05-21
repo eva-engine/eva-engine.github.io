@@ -87,7 +87,7 @@ import {Game} from '@eva/eva.js'
 import {RendererSystem} from '@eva/plugin-renderer'
 
 // Create a rendering system
-const renderSystem = new RendererSystem({
+const rendererSystem = new RendererSystem({
   canvas: document.querySelector('#canvas'), // Optional, automatically generated canvas hanging on game.canvas
   width: 750,
   height: 1000,
@@ -101,7 +101,7 @@ const renderSystem = new RendererSystem({
 const game = new Game({
   frameRate: 60, // Optional, game frame rate, default 60
   autoStart: true, // optional, start automatically
-  systems: [renderSystem]
+  systems: [rendererSystem]
 })
 ```
 

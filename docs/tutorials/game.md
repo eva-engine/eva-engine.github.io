@@ -19,7 +19,7 @@ import {Game} from '@eva/eva.js'
 import {RendererSystem} from '@eva/plugin-renderer'
 
 // Create a rendering system
-const renderSystem = new RendererSystem({
+const rendererSystem = new RendererSystem({
   canvas: document.querySelector('#canvas'), // Optional, automatically generate canvas and hang on game.canvas
   width: 750, // required
   height: 1000, // required
@@ -33,13 +33,13 @@ const renderSystem = new RendererSystem({
 const game = new Game({
   frameRate: 60, // optional
   autoStart: true, // optional
-  systems: [renderSystem]
+  systems: [rendererSystem]
 })
 ```
 
 ## Add system
 
-There are two ways to add a system. One is to pass in the `systems` parameter of the constructor when the Game is instantiated. For example, the `renderSystem` rendering capability is necessary and can be added in this way. The other is to call the `addSystem` method on the game instance after the game is created. Eva.js provides many systems. These systems are used as plug-ins in a package. For example, if we want to detect the frame rate, we can use the `@eva/plugin-stats` plug-in.
+There are two ways to add a system. One is to pass in the `systems` parameter of the constructor when the Game is instantiated. For example, the `rendererSystem` rendering capability is necessary and can be added in this way. The other is to call the `addSystem` method on the game instance after the game is created. Eva.js provides many systems. These systems are used as plug-ins in a package. For example, if we want to detect the frame rate, we can use the `@eva/plugin-stats` plug-in.
 
 ```js
 import {StatsSystem} from '@eva/plugin-stats'

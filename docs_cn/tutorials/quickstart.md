@@ -76,7 +76,7 @@ import { Game } from '@eva/eva.js'
 import { RendererSystem } from '@eva/plugin-renderer'
 
 // 创建渲染系统
-const renderSystem = new RendererSystem({
+const rendererSystem = new RendererSystem({
   canvas: document.querySelector('#canvas'), // 可选，自动生成 canvas 挂在 game.canvas 上
   width: 750,
   height: 1000,
@@ -90,7 +90,7 @@ const renderSystem = new RendererSystem({
 const game = new Game({
   frameRate: 60, // 可选，游戏帧率，默认60
   autoStart: true, // 可选，自动开始
-  systems: [renderSystem]
+  systems: [rendererSystem]
 })
 ```
 

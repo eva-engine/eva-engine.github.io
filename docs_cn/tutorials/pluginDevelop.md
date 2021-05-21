@@ -314,10 +314,10 @@ add(changed) {
     Img: [{prop: ['resource'], deep: false}],
   })
   export default class Img extends Renderer { // 基于 PixiJS 渲染的插件，我们的 System 需要继承于统一的一个 Renderer 类
-  renderSystem: RendererSystem;
-  init() { // 在init中去获取 renderSystem 以便后续添加 Pixi 对象，并且需要将当前系统注册到rendererManager中。
-    this.renderSystem = this.game.getSystem(RendererSystem) as RendererSystem;
-    this.renderSystem.rendererManager.register(this);
+  rendererSystem: RendererSystem;
+  init() { // 在init中去获取 rendererSystem 以便后续添加 Pixi 对象，并且需要将当前系统注册到rendererManager中。
+    this.rendererSystem = this.game.getSystem(RendererSystem) as RendererSystem;
+    this.rendererSystem.rendererManager.register(this);
   }
   rendererUpdate(gameObject: GameObject) { // rendererUpdate 代替 Update 方法，因为update在 Renderer 类中已经实现
     const {width, height} = gameObject.transform.size;

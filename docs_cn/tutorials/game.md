@@ -19,7 +19,7 @@ import { Game } from '@eva/eva.js'
 import { RendererSystem } from '@eva/plugin-renderer'
 
 // 创建渲染系统
-const renderSystem = new RendererSystem({
+const rendererSystem = new RendererSystem({
   canvas: document.querySelector('#canvas'), // 可选，自动生成canvas 挂在game.canvas上
   width: 750, // 必填
   height: 1000, // 必填
@@ -33,13 +33,13 @@ const renderSystem = new RendererSystem({
 const game = new Game({
   frameRate: 60, // 可选
   autoStart: true, // 可选
-  systems: [renderSystem]
+  systems: [rendererSystem]
 })
 ```
 
 ## 添加系统
 
-有两种方式添加系统，一种是在 Game 实例化的时候，传入构造函数的 `systems`  参数中，比如 `renderSystem` 渲染能力是必备的，可以通过这种方式添加。另外一种是在创建游戏后调用游戏实例上面的 `addSystem`  方法添加。Eva.js 提供了很多系统，这些系统都是作为插件单独在一个 package 中，比如，如果我们想检测帧率，可以使用 `@eva/plugin-stats` 插件。
+有两种方式添加系统，一种是在 Game 实例化的时候，传入构造函数的 `systems`  参数中，比如 `rendererSystem` 渲染能力是必备的，可以通过这种方式添加。另外一种是在创建游戏后调用游戏实例上面的 `addSystem`  方法添加。Eva.js 提供了很多系统，这些系统都是作为插件单独在一个 package 中，比如，如果我们想检测帧率，可以使用 `@eva/plugin-stats` 插件。
 
 ```js
 import { StatsSystem } from '@eva/plugin-stats'

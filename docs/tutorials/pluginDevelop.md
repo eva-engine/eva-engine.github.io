@@ -314,10 +314,10 @@ Take the picture component as an example:
     Img: [{prop: ['resource'], deep: false}],
   })
   export default class Img extends Renderer {// Based on PixiJS rendering plug-in, our System needs to inherit from a unified Renderer class
-  renderSystem: RendererSystem;
-  init() {// Get the renderSystem in init to add Pixi objects later, and the current system needs to be registered in the rendererManager.
-    this.renderSystem = this.game.getSystem(RendererSystem) as RendererSystem;
-    this.renderSystem.rendererManager.register(this);
+  rendererSystem: RendererSystem;
+  init() {// Get the rendererSystem in init to add Pixi objects later, and the current system needs to be registered in the rendererManager.
+    this.rendererSystem = this.game.getSystem(RendererSystem) as RendererSystem;
+    this.rendererSystem.rendererManager.register(this);
   }
   rendererUpdate(gameObject: GameObject) {// rendererUpdate replaces the Update method, because update has been implemented in the Renderer class
     const {width, height} = gameObject.transform.size;
