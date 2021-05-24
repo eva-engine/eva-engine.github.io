@@ -75,7 +75,7 @@
 changelog demo
 **新功能**
  - 这是 changelog 的范例，每次发布版本按照这个格式网上堆叠；
- - 新增 Lottie 插件，可以在 EVA 中使用 Lottie 动画啦。
+ - 新增 Lottie 插件，可以在 Eva.js 中使用 Lottie 动画啦。
 
 **改进了**
  - 粒子动画性能提升。

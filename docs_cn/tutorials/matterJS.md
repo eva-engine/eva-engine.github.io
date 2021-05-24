@@ -22,7 +22,7 @@ import {Physics} from '@eva/plugin-matterjs';
 // 1.安装物理引擎后引入
 import {PhysicsSystem, Physics, PhysicsType} from '@eva/plugin-matterjs';
 
-// 2.在EVA中注册插件
+// 2.在Eva.js中注册插件
 const game = new Game({
   autoStart: true,
   frameRate: 70, // 兼容Eva自身bug, 帧率必须大于60

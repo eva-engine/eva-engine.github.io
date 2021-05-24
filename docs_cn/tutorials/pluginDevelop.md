@@ -43,7 +43,7 @@ game.scene.addChild(go)
 
 ## 开发实践
 
-下面以 [@eva/plugin-a11y](/tutorials/a11yPlugin) 插件为例，对 EVA 插件开发做一个详细的介绍。
+下面以 [@eva/plugin-a11y](/tutorials/a11yPlugin) 插件为例，对 Eva.js 插件开发做一个详细的介绍。
 
 > @eva/plugin-a11y 用于为游戏对象添加无障碍的能力。在 DOM 开发中，无障碍阅读器是可以阅读到 HTML 元素内容的，目前在 Canvas 里的绘制元素无法实现无障碍化的能力，@eva/plugin-a11y 插件通过定位游戏对象的位置，自动化地添加辅助 DOM，使得游戏对象能被无障碍阅读器聚焦，让游戏拥有无障碍功能。
 

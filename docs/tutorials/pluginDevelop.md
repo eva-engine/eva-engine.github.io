@@ -43,7 +43,7 @@ Next, I will explain how to design a component and how the System monitors compo
 
 ## Development Practice
 
-Take [@eva/plugin-a11y](/tutorials/a11yPlugin) plug-in as an example to give a detailed introduction to EVA plug-in development.
+Take [@eva/plugin-a11y](/tutorials/a11yPlugin) plug-in as an example to give a detailed introduction to Eva.js plug-in development.
 
 > @eva/plugin-a11y is used to add accessibility to game objects. In DOM development, an accessible reader can read the content of HTML elements. Currently, drawing elements in Canvas cannot achieve accessibility. The @eva/plugin-a11y plug-in automatically adds by locating the position of the game object Auxiliary DOM allows game objects to be focused by an accessible reader, allowing the game to have accessibility features.
 

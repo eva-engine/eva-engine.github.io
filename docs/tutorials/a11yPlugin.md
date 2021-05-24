@@ -100,7 +100,7 @@ Some points to note when using:
 - The auxiliary DOM node of the DragonBones animation is 1px
 - Click events will automatically trigger 'touchstart/touchend/tip' events on the Event component
 
-## EVA 无障碍插件动画
+## Eva.js 无障碍插件动画
 
 For transition animations, the barrier-free DOM layer needs to wait until the animation ends to know the position of the game object.
 

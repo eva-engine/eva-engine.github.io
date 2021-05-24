@@ -95,7 +95,7 @@ gameObject.removeComponent('A11y')
 - 龙骨动画的辅助 DOM 节点为 1px
 - 点击事件将自动触发 Event 组件上面的 touchstart/touchend/tip 事件
 
-## EVA 无障碍插件动画
+## Eva.js 无障碍插件动画
 
 对于普通的过渡动画，无障碍的 DOM 层需要等到动画结束后才能知道游戏对象的位置。
 
