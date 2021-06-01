@@ -9,12 +9,12 @@ In the picture below, the second one is a bubble created by Jiugongge, and the l
 
 ### With NPM
 ```bash
-npm i @eva/plugin-renderer @eva/plugin-renderer-ninepatch
+npm i @eva/plugin-renderer @eva/plugin-renderer-nine-patch
 ```
 
 ### In Browser
 ```html
-<script src="https://unpkg.com/@eva/plugin-renderer-ninepatch@1.0.x/dist/EVA.plugin.renderer.ninePatch.min.js"></script>
+<script src="https://unpkg.com/@eva/plugin-renderer-nine-patch@1.0.x/dist/EVA.plugin.renderer.ninePatch.min.js"></script>
 ```
 
 ## Usage
