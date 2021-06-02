@@ -83,7 +83,7 @@ const rendererSystem = new RendererSystem({
   transparent: false,
   resolution: window.devicePixelRatio / 2, // 可选, 如果是2倍图设计 可以除以2
   enableScroll: true, // 允许页面滚动
-  renderType: 0 // 0:自动判断，1: WebGL，2:Canvas
+  renderType: 0 // 0:自动判断，1: WebGL，2:Canvas，建议android6.1 ios9 以下使用Canvas，需业务判断。
 })
 
 // 创建游戏对象

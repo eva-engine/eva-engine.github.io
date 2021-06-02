@@ -94,7 +94,7 @@ const rendererSystem = new RendererSystem({
   transparent: false,
   resolution: window.devicePixelRatio / 2, // Optional, if it is 2 times the image design, it can be divided by 2
   enableScroll: true, // Enable page scrolling
-  renderType: 0 // 0: automatic judgment, 1: WebGL, 2: Canvas
+  renderType: 0 // 0: automatic judgment, 1: WebGL, 2: Canvas, it is recommended to use Canvas below android6.1 ios9, business judgment is required.
 })
 
 // Create GameObject
