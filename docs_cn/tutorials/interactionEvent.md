@@ -21,7 +21,7 @@ hitArea 区域的属性值相对于 GameObject 的矩形区域。
 | 多边形   | HIT_AREA_TYPE.Polygon     | {style: {paths: [x,y,x,y,x,y]}} 或 {style: {paths: [{x,y},{x,y},{x,y}]}} |
 
 ```js
-import { Event, HIT_AREA_TYPE } from '@eva/plugin-render'
+import { Event, HIT_AREA_TYPE } from '@eva/plugin-renderer-event'
 const evt = image.addComponent(
   new Event({
     hitArea: {
