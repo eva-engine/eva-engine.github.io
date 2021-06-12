@@ -90,8 +90,8 @@ const physics = box.addComponent(
           x: 0,
           y: 0,
         },
-        stopRotation: true, // 默认false，通常不用设置
     },
+    stopRotation: true, // 默认false，通常不用设置
   }),
 );
 //目前支持的碰撞事件 collisionStart  collisionActive  collisionEnd

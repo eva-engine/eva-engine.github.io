@@ -90,8 +90,8 @@ const physics = box.addComponent(
           x: 0,
           y: 0,
         },
-        stopRotation: true, // default false, usually do not need to be set
     },
+    stopRotation: true, // default false, usually do not need to be set
   }),
 );
 //Currently supported collision events collisionStart collisionActive collisionEnd
