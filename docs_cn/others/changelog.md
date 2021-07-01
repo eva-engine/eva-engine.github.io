@@ -1,3 +1,14 @@
+### 1.0.8
+**Feature**
+- 给物理引擎添加等边多边形 (#61)
+- 给 SpriteAnimation 添加事件和播放次数 (#52)
+- 新增中文Readme
+
+**Fixed**
+- 移动 PixiJS 的 ticker 到 LateUpdate #58 (#59)
+- 修复丢帧到问题 #25 (#50)
+- Try catch checkA11yOpen #48 (#55)
+  
 ### 1.0.7
 **Fixed**
 * RendererSystem preventScroll 参数Bug [#31](https://github.com/eva-engine/eva.js/pull/31)

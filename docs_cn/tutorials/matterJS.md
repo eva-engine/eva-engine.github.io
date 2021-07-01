@@ -1,7 +1,7 @@
 
 # MatterJS
 
-Eva 物理引擎
+Eva.js 基于 [Matterjs](https://brm.io/matter-js) 的物理引擎，目前只接入了小部分内容，如需更多人容可持续接入。
 
 ## Install
 
@@ -75,11 +75,6 @@ const box = new GameObject('box', {
 const physics = box.addComponent(
   new Physics({
     type: PhysicsType.RECTANGLE,
-    // body:{
-    //   options:{
-
-    //   }
-    // }
     bodyOptions: {
         isStatic: false, // 物体是否静止，静止状态下任何作用力作用于物体都不会产生效果
         restitution: 0.8,
@@ -100,3 +95,26 @@ physics.on('collisionStart', (body, gameObject1, gameObject2) => {});
 
 console.log("physics",physics);
 ```
+
+## 参数
+### type `PhysicsType`
+碰撞包围盒的形状 
+- `RECTANGLE` 矩形
+- `CIRCLE` 圆形
+- `POLYGON` 等边多边形
+
+### sides
+当type为 `POLYGON` 的时候，设置包围盒的边数
+
+### radius
+当 type 为 `POLYGON` 和 `CIRCLE` 时的半径
+
+### bodyOptions
+相关属性，可参考 [Matterjs官网](https://brm.io/matter-js/docs/classes/Body.html#properties)
+
+
+<br />
+<br />
+<br />
+<br />
+<br />

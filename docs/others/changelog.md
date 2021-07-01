@@ -1,3 +1,14 @@
+### 1.0.8
+**Feature**
+- Adding polygon body for Matterjs plugin (#61)
+- Enhancement spriteAnimation (#52)
+- Chinese Readme
+
+**Fixed**
+- Move pixi ticker to lateUpdate. #58 (#59)
+- Lost frame bug #25 (#50)
+- Try catch checkA11yOpen #48 (#55)
+
 ### 1.0.7
 **Fixed**
 * Renderer preventScroll property bug [#31](https://github.com/eva-engine/eva.js/pull/31)

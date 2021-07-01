@@ -101,6 +101,23 @@ physics.on('collisionStart', (body, gameObject1, gameObject2) => {});
 console.log("physics",physics);
 ```
 
+
+## 参数
+### type `PhysicsType`
+rigid body model shape.
+- `RECTANGLE`
+- `CIRCLE`
+- `POLYGON` regular polygon
+
+### sides
+Number of sides while type with `POLYGON`.
+
+### radius
+The radius of `POLYGON` / `CIRCLE`.
+
+### bodyOptions
+Visiting [Matterjs offical](https://brm.io/matter-js/docs/classes/Body.html#properties) to learn more.
+
 <br />
 <br />
 <br />

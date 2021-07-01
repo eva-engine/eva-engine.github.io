@@ -18,7 +18,7 @@
     * [排序和不透明度](/tutorials/orderAndTransparent)
 * 动画
     * [过渡动画](/tutorials/transitionAnimation)
-    * [帧动画](/tutorials/frameAnimation)
+    * [帧动画](/tutorials/spriteAnimation)
     * [spine 骨骼动画](/tutorials/spineAnimation)
     * [龙骨动画](/tutorials/dragonboneAnimation)
     * [lottie 动画](/tutorials/lottieAnimation)
