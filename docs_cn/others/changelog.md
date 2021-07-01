@@ -6,7 +6,7 @@
 
 **Fixed**
 - 移动 PixiJS 的 ticker 到 LateUpdate #58 (#59)
-- 修复丢帧到问题 #25 (#50)
+- 修复丢帧的问题 #25 (#50)
 - Try catch checkA11yOpen #48 (#55)
   
 ### 1.0.7
