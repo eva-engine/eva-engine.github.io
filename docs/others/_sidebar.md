@@ -18,7 +18,7 @@
     * [Order & Alpha](/tutorials/orderAndTransparent)
 * Animation
     * [Transition Animation](/tutorials/transitionAnimation)
-    * [FrameAnimation](/tutorials/frameAnimation)
+    * [SpriteAnimation](/tutorials/spriteAnimation)
     * [Spine Animation](/tutorials/spineAnimation)
     * [DragonBones Animation](/tutorials/dragonboneAnimation)
     * [Lottie Animation](/tutorials/lottieAnimation)
