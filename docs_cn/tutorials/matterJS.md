@@ -25,7 +25,7 @@ import {PhysicsSystem, Physics, PhysicsType} from '@eva/plugin-matterjs';
 // 2.在Eva.js中注册插件
 const game = new Game({
   autoStart: true,
-  frameRate: 70, // 兼容Eva自身bug, 帧率必须大于60
+  frameRate: 60,
   systems: [
     new RendererSystem({
       transparent: true,

@@ -25,7 +25,7 @@ import {PhysicsSystem, Physics, PhysicsType} from '@eva/plugin-matterjs';
 // 2. Register the plugin in EVA
 const game = new Game({
   autoStart: true,
-  frameRate: 70, // Compatible with Eva's own bug, the frame rate must be greater than 60
+  frameRate: 60,
   systems: [
     new RendererSystem({
       transparent: true,
