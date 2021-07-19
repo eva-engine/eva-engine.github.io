@@ -1,3 +1,7 @@
+### 1.0.11
+**Fixed**
+- 停止游戏的时候 transition 动画没有停止
+
 ### 1.0.10
 **Fixed**
 - 销毁 Sound component 后仍然播放 (#60)

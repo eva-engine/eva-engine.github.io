@@ -1,3 +1,7 @@
+### 1.0.11
+**Fixed**
+- transition animation does not stop when the game is stopped
+
 ### 1.0.10
 **Fixed**
 - Still playing after destroying the sound component (#60)
