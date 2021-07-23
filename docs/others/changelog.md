@@ -1,3 +1,15 @@
+### 1.0.11
+**Fixed**
+- transition animation does not stop when the game is stopped
+
+### 1.0.10
+**Fixed**
+- Still playing after destroying the sound component (#60)
+
+### 1.0.9
+**Fixed**
+- Throw error when create circle box (#65)
+
 ### 1.0.8
 **Feature**
 - Adding polygon body for Matterjs plugin (#61)
