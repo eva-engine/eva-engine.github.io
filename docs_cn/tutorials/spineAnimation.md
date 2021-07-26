@@ -1,10 +1,12 @@
 # Spine 骨骼动画
 
-Spine 是一款专门为软件和游戏开发者量身打造的 2D 动画软件。动画师、原画师和工程师共同为您的游戏赋予生命。使用 Spine 骨骼动画可以实现一些更加丰富的效果，相对于帧动画能够更好的减少内存占用。Spine 是收费软件，请购买后使用，Spine 官网：[http://zh.esotericsoftware.com/](http://zh.esotericsoftware.com/)。目前支持 Spine 版本为：3.6.53，可以在这里[查看如何设置](http://zh.esotericsoftware.com/spine-settings#Version)
+Spine 是一款专门为软件和游戏开发者量身打造的 2D 动画软件。动画师、原画师和工程师共同为您的游戏赋予生命。使用 Spine 骨骼动画可以实现一些更加丰富的效果，相对于帧动画能够更好的减少内存占用。Spine 是收费软件，请购买后使用，Spine 官网：[http://zh.esotericsoftware.com/](http://zh.esotericsoftware.com/)。目前支持 Spine 版本为：3.6 和 3.8，这两个版本资源不兼容，可以在这里[查看如何设置](http://zh.esotericsoftware.com/spine-settings#Version)
 
 - [https://eva.js.org/playground/#/spine](https://eva.js.org/playground/#/spine)
 
 ## 安装
+
+当前支持 spine 的 3.6 和 3.8 版本，如果你使用 3.6 版本可以直接安装 `@eva/plugin-renderer-spine` 如果使用 3.8 版本可以安装 `@eva/plugin-renderer-spine38`
 
 ### 使用 NPM
 ```bash

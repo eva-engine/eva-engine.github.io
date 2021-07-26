@@ -1,11 +1,13 @@
 # Spine skeletal animation
 
-Spine is a 2D animation software tailored specifically for software and game developers. Animators, original artists, and engineers work together to give life to your game. Using Spine skeletal animation can achieve some richer effects, which can better reduce memory usage compared to sprite animation. Spine is a paid software, please use it after purchase, Spine official website: [http://zh.esotericsoftware.com/](http://zh.esotericsoftware.com/). The currently supported Spine version is: 3.6.53, you can click here [see how to set](http://esotericsoftware.com/spine-settings)
+Spine is a 2D animation software tailored specifically for software and game developers. Animators, original artists, and engineers work together to give life to your game. Using Spine skeletal animation can achieve some richer effects, which can better reduce memory usage compared to sprite animation. Spine is a paid software, please use it after purchase, Spine official website: [http://zh.esotericsoftware.com/](http://zh.esotericsoftware.com/). The currently supported Spine version is: 3.6 and 3.8, you can click here [see how to set](http://esotericsoftware.com/spine-settings)
 
 
 -[https://eva.js.org/playground/#/spine](https://eva.js.org/playground/#/spine)
 
 ## Install
+
+The currently supported Spine version is: 3.6 and 3.8, if you need 3.6, you can install `@eva/plugin-renderer-spine`, if you need 3.8, you should install `@eva/plugin-renderer-spine38`
 
 ### With NPM
 ```bash
