@@ -1,3 +1,11 @@
+### 1.0.12
+**Feature**
+- spine3.8
+
+**Fix**
+- memory leak (#82)
+
+
 ### 1.0.11
 **Fixed**
 - transition animation does not stop when the game is stopped
