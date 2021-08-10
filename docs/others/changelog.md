@@ -7,8 +7,6 @@
 **Fixed**
 - Touchmove will also be triggered if it is not inside the gameObject(#10)
 
-**Fixed**
-
 ### 1.0.13
 **Fixed**
 - Throw error while use a texture resource after gameObject destroy.

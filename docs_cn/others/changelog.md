@@ -6,8 +6,6 @@
 **Fixed**
 - touchmove 不在游戏对象内也会触发的问题(#10)
 
-**Fixed**
-
 ### 1.0.13
 **Fixed**
 - Throw error while use a texture resource after gameObject destroy.
