@@ -1,4 +1,4 @@
-### 1.1.0
+### 1.1.1
 **Fixed**
 设置 tsconfig 的 target 为 es5
 
