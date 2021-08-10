@@ -74,6 +74,11 @@ Use WebGL or Canvas to render by default to automatically determine whether to s
 
 background color
 
+## Method
+### resize(width: number, height: number)
+
+reset rendering canvas size.
+
 <br/>
 <br/>
 <br/>

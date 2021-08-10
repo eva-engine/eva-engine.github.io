@@ -4,7 +4,14 @@
 
 [https://eva.js.org/playground/#/event](https://eva.js.org/playground/#/event)
 
-## Member
+## System
+```js
+import { EventSystem } from '@eva/plugin-renderer-event'
+```
+### moveWhenInside `boolean` `optional`
+Touchmove 只会在游戏对象内部出发。
+
+## Options
 
 ### hitArea `object` `可选` 
 

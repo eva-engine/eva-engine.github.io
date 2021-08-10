@@ -15,8 +15,14 @@ npm i @eva/plugin-renderer @eva/plugin-renderer-event
 ```html
 <script src="https://unpkg.com/@eva/plugin-renderer-event@1.0.x/dist/EVA.plugin.renderer.event.min.js"></script>
 ```
+## System
+```js
+import { EventSystem } from '@eva/plugin-renderer-event'
+```
+### moveWhenInside `boolean` `optional`
+Touchmove will also be triggered if it is not inside the gameObject, default is false.
 
-## Member
+## Options
 
 ### hitArea `object` `optional`
 
@@ -33,7 +39,13 @@ Normally, there is no need to set hitArea.
 | Polygon           | HIT_AREA_TYPE.Polygon     | {style: {paths: [x,y,x,y,x,y]}} or {style: {paths: [{x,y},{x,y},{x ,y}]}} |
 
 ```js
-import {Event, HIT_AREA_TYPE} from '@eva/plugin-renderer-event'
+
+import {Event, EventSystem, HIT_AREA_TYPE} from '@eva/plugin-renderer-event'
+
+game.addSystem(new EventSystem({
+  moveWhenInside: true // default is false
+}))
+
 const evt = image.addComponent(
   new Event({
     hitArea: {

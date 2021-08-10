@@ -1,3 +1,17 @@
+### 1.1.0
+**Feature**
+- 给组件添加参数类型提示(#19)
+- 在游戏过程中修改画布框高(#24)
+- 使用 vite 运行开发时 example
+**Fixed**
+- touchmove 不在游戏对象内也会触发的问题(#10)
+
+**Fixed**
+
+### 1.0.13
+**Fixed**
+- Throw error while use a texture resource after gameObject destroy.
+
 ### 1.0.12
 **Feature**
 - 增加对 spine3.8 版本对支持

@@ -74,6 +74,12 @@ new Game({
 
 背景颜色
 
+
+## Method
+### resize(width: number, height: number)
+
+重新设置游戏渲染画布的尺寸。
+
 <br/>
 <br/>
 <br/>

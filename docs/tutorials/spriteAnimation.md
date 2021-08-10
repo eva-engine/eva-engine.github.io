@@ -92,10 +92,11 @@ Play animation, automatically play by default, times is the number of loops, def
 
 Stop play.
 
-## Methods
+## Events
 ### frameChange
 ### loop
 ### complete
+
 
 <br/>
 <br/>

@@ -1,8 +1,23 @@
+### 1.1.0
+**Feature**
+- Add TypeScript declaration for components constructor.(#19)
+- Modify the game canvas size during the game.(#24)
+- Adding play times for sprite animation.(#38)
+- develop example use vite
+**Fixed**
+- Touchmove will also be triggered if it is not inside the gameObject(#10)
+
+**Fixed**
+
+### 1.0.13
+**Fixed**
+- Throw error while use a texture resource after gameObject destroy.
+
 ### 1.0.12
 **Feature**
 - spine3.8
 
-**Fix**
+**Fixed**
 - memory leak (#82)
 
 
