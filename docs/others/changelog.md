@@ -1,4 +1,8 @@
 ### 1.1.0
+**Fixed**
+set tsconfig target to es5
+
+### 1.1.0
 **Feature**
 - Add TypeScript declaration for components constructor.(#19)
 - Modify the game canvas size during the game.(#24)
