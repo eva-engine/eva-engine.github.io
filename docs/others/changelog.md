@@ -2,7 +2,6 @@
 **Feature**
 - Add TypeScript declaration for components constructor.(#19)
 - Modify the game canvas size during the game.(#24)
-- Adding play times for sprite animation.(#38)
 - develop example use vite
 **Fixed**
 - Touchmove will also be triggered if it is not inside the gameObject(#10)
