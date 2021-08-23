@@ -89,8 +89,14 @@ game.scene.addChild(cut)
 播放动画，默认自动播放。times 参数为播放次数，默认是无限次
 
 ### stop()
-
 停止播放。
+
+### gotoAndPlay(frameNumber)
+定位到某一帧，并且开始播放
+
+### gotoAndStop(frameNumber)
+播放到某一帧停止
+
 
 ## 事件
 ### frameChange 每帧图片变换

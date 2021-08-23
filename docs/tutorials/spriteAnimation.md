@@ -92,6 +92,13 @@ Play animation, automatically play by default, times is the number of loops, def
 
 Stop play.
 
+### gotoAndPlay(frameNumber)
+Goes to a specific frame and begins playing the SpriteAnimation.
+
+### gotoAndStop(frameNumber)
+Stops the SpriteAnimation and goes to a specific frame.
+
+
 ## Events
 ### frameChange
 ### loop
