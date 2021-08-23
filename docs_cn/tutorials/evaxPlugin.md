@@ -17,7 +17,7 @@ npm i @eva/plugin-evax
 
 ### 在浏览器中
 ```html
-<script src="https://unpkg.com/@eva/plugin-evax@1.0.x/dist/EVA.plugin.EVAX.min.js"></script>
+<script src="https://unpkg.com/@eva/plugin-evax@1.1.x/dist/EVA.plugin.EVAX.min.js"></script>
 ```
 
 ## 创建 store

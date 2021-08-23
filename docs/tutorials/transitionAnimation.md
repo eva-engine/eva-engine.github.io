@@ -14,7 +14,7 @@ npm i @eva/plugin-transition
 
 ### In Browser
 ```html
-<script src="https://unpkg.com/@eva/plugin-transition@1.0.x/dist/EVA.plugin.transition.min.js"></script>
+<script src="https://unpkg.com/@eva/plugin-transition@1.1.x/dist/EVA.plugin.transition.min.js"></script>
 ```
 
 ## Usage

@@ -13,7 +13,7 @@ npm i @eva/plugin-renderer @eva/plugin-renderer-tiling-sprite
 
 ### In Browser
 ```html
-<script src="https://unpkg.com/@eva/plugin-renderer-tiling-sprite@1.0.x/dist/EVA.plugin.renderer.tilingSprite.min.js"></script>
+<script src="https://unpkg.com/@eva/plugin-renderer-tiling-sprite@1.1.x/dist/EVA.plugin.renderer.tilingSprite.min.js"></script>
 ```
 
 ## Usage

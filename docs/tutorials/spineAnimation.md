@@ -16,7 +16,7 @@ npm i @eva/plugin-renderer @eva/plugin-renderer-spine
 
 ### In Browser
 ```html
-<script src="https://unpkg.com/@eva/plugin-renderer-spine@1.0.x/dist/EVA.plugin.renderer.spine.min.js"></script>
+<script src="https://unpkg.com/@eva/plugin-renderer-spine@1.1.x/dist/EVA.plugin.renderer.spine.min.js"></script>
 ```
 
 ## Usage

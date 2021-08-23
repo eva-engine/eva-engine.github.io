@@ -11,7 +11,7 @@ npm install @eva/plugin-sound
 
 ### 在浏览器中
 ```html
-<script src="https://unpkg.com/@eva/plugin-sound@1.0.x/dist/EVA.plugin.sound.min.js"></script>
+<script src="https://unpkg.com/@eva/plugin-sound@1.1.x/dist/EVA.plugin.sound.min.js"></script>
 ```
 
 ## 使用

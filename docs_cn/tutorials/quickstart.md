@@ -13,7 +13,7 @@ npm install @eva/eva.js
 
 ### 在浏览器中
 ```html
-<script src="https://unpkg.com/@eva/eva.js@1.0.x/dist/EVA.min.js"></script>
+<script src="https://unpkg.com/@eva/eva.js@1.1.x/dist/EVA.min.js"></script>
 ```
 
 ## 创建画布
@@ -111,9 +111,9 @@ npm i @eva/plugin-renderer
 <!-- import PixiJS -->
 <script src="//unpkg.com/pixi.js@4.8.9/dist/pixi.min.js"></script>
 <!-- import RendererAdapter -->
-<script src="//unpkg.com/@eva/renderer-adapter@1.0.x/dist/EVA.rendererAdapter.min.js"></script>
-<script src="https://unpkg.com/@eva/plugin-renderer@1.0.x/dist/EVA.plugin.renderer.min.js"></script>
-<script src="//unpkg.com/@eva/plugin-renderer-img@1.0.x/dist/EVA.plugin.renderer.img.min.js"></script>
+<script src="//unpkg.com/@eva/renderer-adapter@1.1.x/dist/EVA.rendererAdapter.min.js"></script>
+<script src="https://unpkg.com/@eva/plugin-renderer@1.1.x/dist/EVA.plugin.renderer.min.js"></script>
+<script src="//unpkg.com/@eva/plugin-renderer-img@1.1.x/dist/EVA.plugin.renderer.img.min.js"></script>
 ```
 
 
