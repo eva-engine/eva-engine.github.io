@@ -1,6 +1,24 @@
+### 1.1.3
+**Fixed**
+- 解决inspector-decorator 的cdn依赖问题
+
+### 1.1.2
+**Feature**
+- 提供 DevTool 相关能力 (#88) 
+- 优化 vite3 TS 提示 (#95)
+**Fixed**  
+- Event 类型提示 (#94)
+- MatterJS mouse.open=true 报错 (#101)
+- Transition play 方法类型定义 (#99)
+- 解决编译时问题，跳过非当前仓库包的package版本设置 767e30
+- MatterJS  isTest=false 报错 (#113)
+- 修复spine38播放带有mesh动作异常 (#115) 
+- spine 换皮肤bug(#97)
+
+
 ### 1.1.1
 **Fixed**
-设置 tsconfig 的 target 为 es5
+- 设置 tsconfig 的 target 为 es5
 
 ### 1.1.0
 **Feature**

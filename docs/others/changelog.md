@@ -1,3 +1,21 @@
+### 1.1.3
+**Fixed**
+- inspector-decorator cdn dependency bug
+
+### 1.1.2
+**Feature**
+- Devtool feature
+- vite TS tip (#95)
+**Fixed**  
+- Event type intelligence (#94)
+- Bug when mouse.open=true (#101)
+- Provide information for devtools (#88) 
+- Transition play type definition (#99)
+- Skip other deps version (767e30)
+- Hit error when isTest=false (#113)
+- Spine3.8 mesh bug (#115) 
+- Spine change skin bug (#97)
+
 ### 1.1.1
 **Fixed**
 set tsconfig target to es5
