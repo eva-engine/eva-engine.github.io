@@ -95,7 +95,7 @@ game.scene.addChild(cut)
 定位到某一帧，并且开始播放
 
 ### gotoAndStop(frameNumber)
-播放到某一帧停止
+定位到某一帧，并且停止播放
 
 
 ## 事件
