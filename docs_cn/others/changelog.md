@@ -1,3 +1,20 @@
+### 1.1.6
+**Feature**
+- 在console展示Eva.js版本
+
+**Fixed**
+- Mask 销毁错误 (#122)
+- Sound 游戏暂停后开始不能继续 #119 (#123)
+- 移除 Object.values
+- Spine38 d.ts (#126)
+- A11y 参数bug (#127)
+
+### 1.1.4
+**Feature**
+- Add types for systems
+**Fixed**
+- Matter js time slow
+
 ### 1.1.3
 **Fixed**
 - 解决inspector-decorator 的cdn依赖问题
@@ -30,7 +47,7 @@
 
 ### 1.0.13
 **Fixed**
-- Throw error while use a texture resource after gameObject destroy.
+- 解决游戏对象销毁导致texture被销毁问题
 
 ### 1.0.12
 **Feature**

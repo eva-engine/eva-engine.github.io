@@ -1,3 +1,20 @@
+### 1.1.6
+**Feature**
+- Display Eva.js version at console
+
+**Fixed**
+- Mask destroy error (#122)
+- Sound onResume no resume #119 (#123)
+- Remove Object.values
+- Spine38 d.ts (#126)
+- A11y params (#127)
+
+### 1.1.4
+**Feature**
+- Add types for systems
+**Fixed**
+- Matter js time slow
+
 ### 1.1.3
 **Fixed**
 - inspector-decorator cdn dependency bug
