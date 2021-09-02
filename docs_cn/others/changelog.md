@@ -11,9 +11,9 @@
 
 ### 1.1.4
 **Feature**
-- Add types for systems
+- 为System添加类型提示
 **Fixed**
-- Matter js time slow
+- 解决matterjs速度变快问题
 
 ### 1.1.3
 **Fixed**
