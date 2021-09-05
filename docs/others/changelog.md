@@ -1,3 +1,8 @@
+### 1.1.7
+**Fixed**
+- Umd throw error
+- Spine one resource use multi resource name error
+
 ### 1.1.6
 **Feature**
 - Display Eva.js version at console

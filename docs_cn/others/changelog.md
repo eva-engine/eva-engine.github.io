@@ -1,3 +1,8 @@
+### 1.1.7
+**Fixed**
+- 使用 Umd 报错
+- Spine 一个资源多个名字切换时报错
+
 ### 1.1.6
 **Feature**
 - 在console展示Eva.js版本
