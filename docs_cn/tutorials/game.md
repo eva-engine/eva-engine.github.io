@@ -122,6 +122,21 @@ game.loadScene({
 })
 ```
 
+## Ticker
+### 增加每帧执行的方
+建议在Component中的update方法实增加每帧执行的方法，也可以使用`add` 方法，该方法将会在所有System的lateUpdate执行后执行
+```js
+game.ticker.add((e: UpdateParams)=>{
+
+})
+```
+
+### 修改游戏播放速度
+```js
+game.ticker.setPlaybackRate(1.5) // 1.5倍速播放
+```
+
+
 <br/>
 <br/>
 <br/>

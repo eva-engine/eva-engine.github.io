@@ -1,3 +1,12 @@
+### 1.1.8
+**Feature**
+- Change game playbackRate
+
+**Fixed**
+- A11y hint change
+- Use iife for cdn
+- Change spine resource error
+
 ### 1.1.7
 **Fixed**
 - Umd throw error

@@ -1,3 +1,12 @@
+### 1.1.8
+**Feature**
+- 调整游戏速率
+
+**Fixed**
+- A11y 修改 hint 监听
+- cdn 使用 iife
+- 修改 Spine 的 resource 报错问题
+
 ### 1.1.7
 **Fixed**
 - 使用 Umd 报错
