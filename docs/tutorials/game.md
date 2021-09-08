@@ -122,6 +122,21 @@ game.loadScene({
 })
 ```
 
+## Ticker
+### add function in per frame
+It is recommended that the `update` method in the `Component` add the function to be executed per frame, or you can use the `add` method, which will be executed after the lateUpdate of all systems is executed
+
+```js
+game.ticker.add((e: UpdateParams)=>{
+
+})
+```
+
+### 修改游戏播放速度
+```js
+game.ticker.setPlaybackRate(1.5) // 1.5倍速播放
+```
+
 <br/>
 <br/>
 <br/>
