@@ -1,6 +1,13 @@
+### 1.1.11
+**Fixed**
+- transition delay (#135)
+- decodeAudioData promise rejection (#136)
+- spine change error (#138)
+
 ### 1.1.8
 **Feature**
 - Change game playbackRate
+- CDN use IIFE 
 
 **Fixed**
 - A11y hint change

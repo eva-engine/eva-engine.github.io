@@ -1,6 +1,13 @@
+### 1.1.11
+**Fixed**
+- 延迟播放transition (#135)
+- 解决decodeAudioData promise rejection 问题(#136)
+- spine 修改资源报错 (#138)
+
 ### 1.1.8
 **Feature**
 - 调整游戏速率
+- CDN 使用 IIFE
 
 **Fixed**
 - A11y 修改 hint 监听
