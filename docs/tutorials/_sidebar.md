@@ -1,6 +1,7 @@
 <!-- tutorials/_sidebar.md -->
 
 * [Quickstart](/tutorials/quickstart)
+* [Q&A](/tutorials/readme)
 * Basic
     * [resourceManagement](/tutorials/resourceManagement)
     * [Game](/tutorials/game)
