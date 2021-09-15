@@ -1,7 +1,7 @@
 <!-- tutorials/_sidebar.md -->
 
 * [Quickstart](/tutorials/quickstart)
-* [Q&A](/tutorials/readme)
+* [Q&A](https://github.com/eva-engine/eva.js/issues/140)
 * Basic
     * [resourceManagement](/tutorials/resourceManagement)
     * [Game](/tutorials/game)

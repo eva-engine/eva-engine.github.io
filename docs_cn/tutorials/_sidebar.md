@@ -1,7 +1,7 @@
 <!-- tutorials/_sidebar.md -->
 
 - [介绍](/tutorials/intro)
-- [常见问题](/tutorials/readme)
+- [常见问题](https://github.com/eva-engine/eva.js/issues/140)
 - [快速开始](/tutorials/quickstart)
 - 基本能力
   - [资源管理](/tutorials/resourceManagement)
