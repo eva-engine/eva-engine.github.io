@@ -1,6 +1,7 @@
 <!-- tutorials/_sidebar.md -->
 
 * [快速开始](/tutorials/quickstart)
+* [常见问题](/tutorials/readme)
 * 基本能力
     * [资源管理](/tutorials/resourceManagement)
     * [游戏](/tutorials/game)
