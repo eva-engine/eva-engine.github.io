@@ -1,6 +1,6 @@
 # Eva.js 常见问题以及解决方案
 
-> 欢迎大家贡献常见问题和小技巧
+欢迎大家贡献常见问题和小技巧，在[这里评论](https://github.com/eva-engine/eva.js/issues/140)添加
 
 ## 注意
 - 在使用Eva.js的时候，要保证官方仓库里的所有的插件和@eva/eva.js的npm包版本号保持一致。

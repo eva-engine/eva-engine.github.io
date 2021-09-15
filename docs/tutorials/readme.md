@@ -1,6 +1,6 @@
 # Eva.js common problems and solutions
 
-> Everyone is welcome to contribute FAQs and tips
+> Everyone is welcome to contribute FAQs and tips, in this [issue](https://github.com/eva-engine/eva.js/issues/140)
 
 ## Notice
 - When using Eva.js, make sure that all the plugins in the official repository are consistent with the npm package version number of @eva/eva.js.
