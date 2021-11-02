@@ -109,7 +109,12 @@ resource.addResource([{
 }])
 ```
 
+## Compressed texture generation
+You can use [PVRTexTool](https://developer.imaginationtech.com/pvrtextool/) to generate compressed textures.
 
+In Eva.js, a compressed texture with premultiplied alpha is needed.
+
+*Alibaba intranet users can use EVAStore to generate directly. *
 
 <br/>
 <br/>

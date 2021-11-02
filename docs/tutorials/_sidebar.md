@@ -6,6 +6,7 @@
     * [Game](/tutorials/game)
     * [GameObject](/tutorials/gameObject)
     * [Transform](/tutorials/transformComponent)
+    * [Texture Compression Format](/tutorials/compressedTexture)
 * Graphics
     * [Prepare](/tutorials/prepareRender)
     * [Image](/tutorials/imageComponent)

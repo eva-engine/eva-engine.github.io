@@ -7,6 +7,7 @@
   - [游戏](/tutorials/game)
   - [游戏对象](/tutorials/gameObject)
   - [Transform 组件](/tutorials/transformComponent)
+  - [使用纹理压缩格式](/tutorials/compressedTexture)
 - 绘图
   - [准备](/tutorials/prepareRender)
   - [Image 组件](/tutorials/imageComponent)

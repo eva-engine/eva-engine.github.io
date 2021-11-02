@@ -6,6 +6,7 @@
     * [Game](/tutorials/game)
     * [GameObject](/tutorials/gameObject)
     * [Transform](/tutorials/transformComponent)
+    * [Texture Compression Format](/tutorials/compressedTexture)
 * Graphics
     * [Prepare](/tutorials/prepareRender)
     * [Image](/tutorials/imageComponent)
@@ -26,6 +27,7 @@
 * [Custom Component](/tutorials/customComponent)
 * Plugin
     * [Sound](/tutorials/sound)
+    * [Physics](/tutorials/matterJS)
     * [Accessibility](/tutorials/a11yPlugin)
     * [EvaX DataManager](/tutorials/evaxPlugin)
     * [Performance Monitor](/tutorials/performancePlugin)
