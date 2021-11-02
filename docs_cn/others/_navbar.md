@@ -1,6 +1,7 @@
 <!-- _navbar.md -->
 
 - [教程](/tutorials/intro)
+- [常见问题](https://github.com/eva-engine/eva.js/issues/140)
 - [API 文档](/api/index)
 - [使用范例](https://eva.js.org/playground)
 - [博客](https://yuque.com/eva/blog)
