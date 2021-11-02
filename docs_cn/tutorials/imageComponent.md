@@ -31,7 +31,7 @@ resource.addResource([
     src: {
       image: {
         type: 'png',
-        url: 'https://gw.alicdn.com/tfs/TB1DNzoOvb2gK0jSZK9XXaEgFXa-658-1152.webp'
+        url: 'https://gw.alicdn.com/imgextra/i1/O1CN01376pu91tylcmKqXIt_!!6000000005971-2-tps-658-1152.png'
       }
     },
     preload: true
