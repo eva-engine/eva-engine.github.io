@@ -92,7 +92,7 @@ const scene = new Scene('bg')
 
 game.loadScene({
   scene,
-  type: LOAD_SCENE_MODE.SINGLE
+  mode: LOAD_SCENE_MODE.SINGLE
 })
 ```
 
@@ -107,7 +107,7 @@ const scene = new Scene('bg')
 
 game.loadScene({
   scene,
-  type: LOAD_SCENE_MODE.MULTI_CANVAS,
+  mode: LOAD_SCENE_MODE.MULTI_CANVAS,
   params: {
     // This is the same as the RendererSystem parameter
     canvas: document.querySelector('#canvas'), //Optional, automatically generate canvas and hang on game.canvas

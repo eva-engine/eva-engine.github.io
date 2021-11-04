@@ -92,7 +92,7 @@ const scene = new Scene('bg')
 
 game.loadScene({
   scene,
-  type: LOAD_SCENE_MODE.SINGLE
+  mode: LOAD_SCENE_MODE.SINGLE
 })
 ```
 
@@ -107,7 +107,7 @@ const scene = new Scene('bg')
 
 game.loadScene({
   scene,
-  type: LOAD_SCENE_MODE.MULTI_CANVAS,
+  mode: LOAD_SCENE_MODE.MULTI_CANVAS,
   params: {
     // 这里和RendererSystem 参数相同
     canvas: document.querySelector('#canvas'), //可选，自动生成canvas 挂在game.canvas上
