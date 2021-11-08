@@ -1,3 +1,26 @@
+### 1.2.0
+**Feature**
+- Support compressed texture
+**Fixed**
+- Optimize a11y
+- Solve the problem that spine38 uses the same resource to delete and immediately add an error
+
+### 1.1.15
+**Fixed**
+- Solve the a11y error
+
+### 1.1.14
+**Fixed**
+- Solve the problem of adding and deleting components in the same frame
+
+### 1.1.13
+**Fixed**
+- Use TS to rewrite timeline
+
+### 1.1.12
+**Fxied**
+- Solve the problem of timeline reporting errors in the old system
+
 ### 1.1.11
 **Fixed**
 - transition delay (#135)
