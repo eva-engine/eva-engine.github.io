@@ -1,6 +1,6 @@
 # Image
 
-The Image component provides the GameObject with the ability to use Image. The Image loaded by resource can be added to the GameObject for display. [Renderer](/tutorials/prepareRender) needs to be installed before use
+The Image component provides the GameObject with the ability to use Image. The Image loaded by resource can be added to the GameObject for display. [Renderer](prepareRender) needs to be installed before use
 
 [Demo](https://eva.js.org/playground/#/image)
 
@@ -78,8 +78,3 @@ image.addComponent(
 
 Resource name. The resource name here corresponds to the resource name in the resource information passed in by calling `resource.addResource`.
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>

@@ -79,8 +79,3 @@ background color
 
 reset rendering canvas size.
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>

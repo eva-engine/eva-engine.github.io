@@ -109,8 +109,3 @@ Play animation
 
 Stop play
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>

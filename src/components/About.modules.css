@@ -1,0 +1,27 @@
+.about {
+    background: #f4f4f4;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.title {
+    font-size: 32px;
+    color: #000;
+}
+.content {
+    font-size: 22px;
+    color: #666;
+    font-weight: lighter;
+    margin-top: 10px;
+    text-align: center;
+}
+.learnMore {
+    font-size: 22px;
+    color: #000;
+}
+.learnMore:hover {
+    color: #000;
+    text-decoration: none;
+}

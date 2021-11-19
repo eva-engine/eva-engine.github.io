@@ -222,7 +222,7 @@ Use the specified path to draw the polygon.
 
 | Name   | Type                                | Description                           |
 | :----- | :---------------------------------- | :------------------------------------ |
-| `path` | Array.<number> &#124; Array.<{x,y}> | Path data used to construct polygons. |
+| `path` | number[] &#124; Array.<{x,y}> | Path data used to construct polygons. |
 
 #### drawRect(x, y, width, height)
 
@@ -259,9 +259,3 @@ Draw a star with any number of points.
 | `radius`      | number |         | The outer radius of the star                                              |
 | `innerRadius` | number |         | optional The inner radius between points, the default is half of `radius` |
 | `rotation`    | number | 0       | optional The radian of the star's rotation, where 0 is vertical           |
-
-<br />
-<br />
-<br />
-<br />
-<br />

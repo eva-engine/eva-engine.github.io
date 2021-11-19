@@ -1,0 +1,34 @@
+{
+  "link.title.Docs": {
+    "message": "Docs",
+    "description": "The title of the footer links column with title=Docs in the footer"
+  },
+  "link.title.Community": {
+    "message": "Community",
+    "description": "The title of the footer links column with title=Community in the footer"
+  },
+  "link.title.More": {
+    "message": "More",
+    "description": "The title of the footer links column with title=More in the footer"
+  },
+  "link.item.label.Tutorial": {
+    "message": "教程",
+    "description": "The label of footer link with label=Tutorial linking to /docs/tutorials/quickstart"
+  },
+  "link.item.label.Blog": {
+    "message": "博客",
+    "description": "The label of footer link with label=Blog linking to https://www.yuque.com/eva/blog"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/eva-engine/eva.js"
+  },
+  "copyright": {
+    "message": "Eva.js 2019 - NOW &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MIT License",
+    "description": "The footer copyright"
+  },
+  "link.item.label.Q&A": {
+    "message": "常见问题",
+    "description": "The label of footer link with label=Q&A linking to https://github.com/eva-engine/eva.js/issues/140"
+  }
+}

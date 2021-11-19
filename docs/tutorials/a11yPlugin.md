@@ -138,8 +138,4 @@ The construction of the barrier-free component also provides a delay parameter, 
 image.addComponent(new A11y({ hint: 'What needs to be read', delay: 1000})
 ```
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+

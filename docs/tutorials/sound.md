@@ -125,8 +125,3 @@ const bgSound = bgSoundObj.addComponent(
 
 If the browser restricts the need for interaction to start playing audio, the plug-in will automatically try to enable audio after the page interacts.
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>

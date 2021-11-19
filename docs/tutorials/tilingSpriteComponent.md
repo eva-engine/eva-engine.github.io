@@ -77,8 +77,3 @@ Zoom
 
 Displacement
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>

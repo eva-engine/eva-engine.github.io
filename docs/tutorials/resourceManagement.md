@@ -174,8 +174,3 @@ resource.registerDestroy(RESOURCE_TYPE.SPRITE, async ({ instance }) => {
 resource.timeout = 30000
 ```
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>

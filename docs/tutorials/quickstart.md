@@ -32,7 +32,7 @@ Eva.js relies on canvas in HTML for drawing. If the width and height in the desi
 
 ## Add resource
 
-Before creating the game, we need to add resource files to the resource manager, here we add two image resources. Of course, you can add keel animation and spine animation resources. For more information, please see [Resource Management](/tutorials/resourceManagement).
+Before creating the game, we need to add resource files to the resource manager, here we add two image resources. Of course, you can add keel animation and spine animation resources. For more information, please see [Resource Management](resourceManagement).
 
 ```js
 import {resource, RESOURCE_TYPE} from '@eva/eva.js'
@@ -109,7 +109,7 @@ Of course, this only allows Eva.js to have basic rendering capabilities, but no 
 
 ## Add GameObject
 
-After creating the game, we need to add a [GameObject](/tutorials/gameObject) to the game, and add [component](/tutorials/customComponent) to the GameObject. The GameObject is the most basic operable unit in the game, and the component gives the GameObject various abilities. For example, the Img component allows a gameObject to display a picture.
+After creating the game, we need to add a [GameObject](gameObject) to the game, and add [component](customComponent) to the GameObject. The GameObject is the most basic operable unit in the game, and the component gives the GameObject various abilities. For example, the Img component allows a gameObject to display a picture.
 
 ```bash
 npm i @eva/plugin-renderer @eva/plugin-renderer-img
@@ -171,10 +171,5 @@ img.resource ='image2' // Switch the resource name, make sure the resource has b
 
 ## Are you ready?
 
-Just introduced the simplest demo of Eva.js, let’s look at some 2D interactive games [Common Ability](/tutorials/resourceManagement).
+Just introduced the simplest demo of Eva.js, let’s look at some 2D interactive games [Common Ability](resourceManagement).
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>

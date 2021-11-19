@@ -52,8 +52,3 @@ const inner = new GameObject('inner', {
 })
 ```
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>

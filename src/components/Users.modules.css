@@ -1,0 +1,30 @@
+.users {
+    background-image: url(/static/img/map.png);
+    width: 100%;
+    background-color: #D8D8D8;
+    color: #000;
+    padding-bottom: 50px;
+    padding-top: 30px;
+    background-position: center left;
+}
+.title {
+    font-size: 40px;
+    text-align: center;
+}
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.img {
+    /* width: 120px;
+    height: 50px */
+}
+.imgBox {
+    width: 160px;
+    height: 50px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

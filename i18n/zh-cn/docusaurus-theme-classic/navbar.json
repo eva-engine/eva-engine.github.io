@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "Eva.js",
+    "description": "The title in the navbar"
+  },
+  "item.label.Tutorial": {
+    "message": "教程",
+    "description": "Navbar item with label Tutorial"
+  },
+  "item.label.Blog": {
+    "message": "博客",
+    "description": "Navbar item with label Blog"
+  },
+  "item.label.Q&A": {
+    "message": "常见问题",
+    "description": "Navbar item with label Q&A"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  },
+  "item.label.Demos": {
+    "message": "Demos",
+    "description": "Navbar item with label Demos"
+  }
+}

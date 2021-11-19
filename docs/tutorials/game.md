@@ -137,8 +137,3 @@ game.ticker.add((e: UpdateParams)=>{
 game.ticker.setPlaybackRate(1.5) // 1.5倍速播放
 ```
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>

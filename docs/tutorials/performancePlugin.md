@@ -38,8 +38,3 @@ game.addSystem(new StatsSystem({
 }))
 ```
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>

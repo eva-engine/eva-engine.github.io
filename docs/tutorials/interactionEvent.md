@@ -107,8 +107,3 @@ Prevent events from bubbling up
 event.stopPropagation()
 ```
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>

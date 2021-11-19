@@ -127,8 +127,3 @@ Corresponding to the figure D below
 
 ![image.png](https://gw.alicdn.com/imgextra/i1/O1CN01IXEUZN1yYGjgwuahU_!!6000000006590-2-tps-932-612.png)
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>

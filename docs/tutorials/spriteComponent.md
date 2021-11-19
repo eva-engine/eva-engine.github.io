@@ -79,8 +79,3 @@ Resource Name
 
 Sprite id
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>

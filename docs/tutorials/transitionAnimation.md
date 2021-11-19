@@ -226,8 +226,3 @@ Triggered when the animation ends
 transition.on('finish', animationName => {})
 ```
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>

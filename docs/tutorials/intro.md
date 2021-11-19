@@ -59,11 +59,7 @@ A plugin is a combination of **component and system**, usually provided in the f
 
 This is the system's lifecycle.
 
-Let's [use Eva.js](/tutorials/quickstart) together.
+Let's [use Eva.js](quickstart) together.
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+
 <br/>

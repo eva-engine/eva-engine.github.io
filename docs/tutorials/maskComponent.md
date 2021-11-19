@@ -156,8 +156,3 @@ game.scene.addChild(image2)
 | Picture           | MASK_TYPE.Img         | {resource,style:{x,y,width,height}}                                       |
 | Sprite image      | MASK_TYPE.Sprite      | {resource,spriteName,style:{x,y,width,height}}                            |
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>

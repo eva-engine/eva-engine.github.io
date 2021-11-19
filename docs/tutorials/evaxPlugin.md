@@ -230,8 +230,3 @@ go.addComponent(
 )
 ```
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>

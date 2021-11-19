@@ -219,8 +219,3 @@ LottieComponent.on('complete', () => {
 })
 ```
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>

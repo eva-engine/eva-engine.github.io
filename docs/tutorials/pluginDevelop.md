@@ -14,7 +14,7 @@ We provide a [plugin template](https://github.com/eva-engine/plugin-template), y
 After reading this, I believe that everyone already knows about Eva.js and knows how to use it in the project. Here is a simple way to use a plug-in.
 
 ```js
-import {Demo, DemoSystem} from'./tutorials/lib'
+import {Demo, DemoSystem} from'.lib'
 const game = new Game({
   systems: [new DemoSystem()]
 })
@@ -43,7 +43,7 @@ Next, I will explain how to design a component and how the System monitors compo
 
 ## Development Practice
 
-Take [@eva/plugin-a11y](/tutorials/a11yPlugin) plug-in as an example to give a detailed introduction to Eva.js plug-in development.
+Take [@eva/plugin-a11y](a11yPlugin) plug-in as an example to give a detailed introduction to Eva.js plug-in development.
 
 > @eva/plugin-a11y is used to add accessibility to game objects. In DOM development, an accessible reader can read the content of HTML elements. Currently, drawing elements in Canvas cannot achieve accessibility. The @eva/plugin-a11y plug-in automatically adds by locating the position of the game object Auxiliary DOM allows game objects to be focused by an accessible reader, allowing the game to have accessibility features.
 
@@ -256,7 +256,7 @@ export interface ComponentChanged {
 
 Now we have created the DOM and placed it on the body. In terms of ability, we have completed the specific functions, because screen readers can already read the elements in the game, but it seems that some content is currently lacking, such as: unable By triggering DOM click events to trigger clicks in the game, the DOM has no width, height and positioning.
 
-If you want to implement these functions, you have to get other components under the current component to implement the functions. If you want to trigger a click event, you need to determine whether [Event component](/tutorials/interactionEvent) is installed. If it is installed, you can follow The event bound to Event triggers the corresponding event. If you want to get the width and height position, you can get the [Transform component](/tutorials/transformComponent) of the game object
+If you want to implement these functions, you have to get other components under the current component to implement the functions. If you want to trigger a click event, you need to determine whether [Event component](interactionEvent) is installed. If it is installed, you can follow The event bound to Event triggers the corresponding event. If you want to get the width and height position, you can get the [Transform component](transformComponent) of the game object
 
 
 To increase the monitoring of the Event component, do the corresponding operations in the above add and remove methods.
@@ -368,4 +368,4 @@ Take the picture component as an example:
 
 ## to sum up
 
-Through the combination of Component and System, we can implement a variety of common plug-ins. In daily development, we only need the capabilities provided by [CustomComponent](/tutorials/customComponent) to develop game logic.
+Through the combination of Component and System, we can implement a variety of common plug-ins. In daily development, we only need the capabilities provided by [CustomComponent](customComponent) to develop game logic.

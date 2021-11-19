@@ -2,7 +2,7 @@
 
 Sprite animation is an animation played by multiple consecutive pictures at a certain time interval. The pictures are usually merged into one picture, and then the position of the picture and the order of playback are described through JSON.
 
-The bottom layer of the sprite animation of Eva.js is realized by pixi.js spriteAnimation. Therefore, in Eva.js, you can use the materials exported by the sprite animation tool supported by spriteAnimation, such as [TexturePacker](https://www.codeandweb.com/texturepacker /tutorials/how-to-create-sprite-sheets-and-animations-with-pixijs5).
+The bottom layer of the sprite animation of Eva.js is realized by pixi.js spriteAnimation. Therefore, in Eva.js, you can use the materials exported by the sprite animation tool supported by spriteAnimation, such as [TexturePacker](https://www.codeandweb.com/texturepacker how-to-create-sprite-sheets-and-animations-with-pixijs5).
 
 - [https://eva.js.org/playground/#/spriteAnimation](https://eva.js.org/playground/#/spriteAnimation)
 
@@ -105,8 +105,3 @@ Stops the SpriteAnimation and goes to a specific frame.
 ### complete
 
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>

@@ -51,14 +51,9 @@ gameObject.removeComponent(Img)
 
 ### carry on
 
-The [Transform](/tutorials/transformComponent) component that the game object carries by default is used to control the size, position, scaling, bevel, rotation and other properties of the game object.
+The [Transform](transformComponent) component that the game object carries by default is used to control the size, position, scaling, bevel, rotation and other properties of the game object.
 
 ### Note:
 
 Img, Texture, Graphics, DragonBone, SpriteAnimation, NinePatch components with graphics rendering function should not be added to the same GameObject.
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>

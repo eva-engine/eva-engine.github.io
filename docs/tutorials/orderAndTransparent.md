@@ -1,9 +1,8 @@
-# 遮挡排序与透明度
+# Order and Alpha
 
-使用前需要安装渲染器
 
-- [透明度 Demo](https://eva.js.org/playground/#/render/alpha)
-- [排序 Demo](https://eva.js.org/playground/#/render/sort)
+- [alpha Demo](https://eva.js.org/playground/#/render/alpha)
+- [order Demo](https://eva.js.org/playground/#/render/sort)
 
 ## Install
 
@@ -112,18 +111,13 @@ game.scene.addChild(image)
 
 ### sortableChildren: `boolean` 
 
-如果需要使用 zIndex 排序，需要在父级的 Render 组件上设置 sortableChildren
+If you need to use zIndex for sorting, you need to set sortableChildren on the parent's Render component
+
 
 ### zIndex: `number` 
 
-渲染顺序，zIndex 越大在上面
+Rendering order, the larger the zIndex is on the top
 
 ### alpha: `number` 
 
-透明度
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>

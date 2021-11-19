@@ -1,0 +1,30 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Basic": {
+    "message": "Basic",
+    "description": "The label for category Basic in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Graphics": {
+    "message": "Graphics",
+    "description": "The label for category Graphics in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Animation": {
+    "message": "Animation",
+    "description": "The label for category Animation in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Plugin": {
+    "message": "Plugin",
+    "description": "The label for category Plugin in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.link.Q&A": {
+    "message": "Q&A",
+    "description": "The label for link Q&A in sidebar tutorialSidebar, linking to https://github.com/eva-engine/eva.js/issues/140"
+  },
+  "sidebar.apiSidebar.category.renderer": {
+    "message": "renderer",
+    "description": "The label for category renderer in sidebar apiSidebar"
+  }
+}

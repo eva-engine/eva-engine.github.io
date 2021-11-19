@@ -116,9 +116,5 @@ In Eva.js, a compressed texture with premultiplied alpha is needed.
 
 *Alibaba intranet users can use EVAStore to generate directly. *
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+
 <br/>
