@@ -8,7 +8,7 @@ export default function About() {
   return (
     <section className={styles.about}>
       <div className={styles.title}><Translate id="about">About Us</Translate></div>
-      <div className={styles.content}><Translate id="team">Alibaba FED</Translate><br/><Translate id="slash lab">（Slash Lab）</Translate></div>
+      <div className={styles.content}><Translate id="team">Taobao FED</Translate><br/><Translate id="slash lab">（Slash Lab）</Translate></div>
       <img src="https://gw.alicdn.com/imgextra/i2/O1CN01CXxaf81OR6Qa7TvFx_!!6000000001701-2-tps-156-156.png" />
       <div className={styles.content}>
       <Translate id="dingtalk">DingTalk Group：35686170</Translate><br/>
