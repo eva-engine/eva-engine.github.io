@@ -113,9 +113,11 @@ resource.addResource([{
 
 ## 压缩纹理生成
 
-可以使用[PVRTexTool](https://developer.imaginationtech.com/pvrtextool/)生成压缩纹理。
+可以使用 [Texture Compressor](https://www.npmjs.com/package/texture-compressor) 生成压缩纹理。
 
 在 Eva.js 中需要使用alpha预乘的压缩纹理。
+
+更方便Eva.js使用的压缩工具正在开发中。
 
 *阿里巴巴内网用户可以使用EVAStore直接生成。*
 
