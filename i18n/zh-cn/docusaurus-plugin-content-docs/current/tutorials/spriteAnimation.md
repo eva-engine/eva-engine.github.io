@@ -82,6 +82,15 @@ game.scene.addChild(cut)
 
 每张图片播放的间隔时间，单位 ms。
 
+
+### autoPlay `boolean`
+
+是否在组件被添加时自动播放
+
+### forwards `boolean`
+
+播放完毕后停在最后一帧
+
 ## 方法
 
 ### play(times)
@@ -96,6 +105,13 @@ game.scene.addChild(cut)
 
 ### gotoAndStop(frameNumber)
 定位到某一帧，并且停止播放
+
+## 属性
+### currentFrame `number`
+当前播放到第几帧
+
+### totalFrames `number`
+总帧数
 
 
 ## 事件

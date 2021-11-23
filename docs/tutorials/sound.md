@@ -105,14 +105,14 @@ const bgSound = bgSoundObj.addComponent(
 
 ### SoundSystem
 
-#### 初始化param
+#### Options
 
 | param             | type            | default | description                                            |
 | ----------------- | --------------- | ------- | ------------------------------------------------------ |
 | autoPauseAndStart | boolean         | true    | whether to pause and start synchronously with eva game |
 | onError           | (error) => void | -       | error handling event                                   |
 
-#### 属性
+#### Property
 | param     | type       | default | description |
 | --------- | ---------- | ------- | ----------- |
 | muted     | boolean    | false   |             |

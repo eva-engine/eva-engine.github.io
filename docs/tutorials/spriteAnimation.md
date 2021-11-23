@@ -82,6 +82,14 @@ Resource name, which needs to be preloaded by `resource.addResource`.
 
 The interval time for each picture to be played, in ms.
 
+### autoPlay `boolean`
+
+Playing at component be added.
+
+### forwards `boolean`
+
+Stop at last frame when animation over.
+
 ## Methods
 
 ### play(times)
@@ -98,6 +106,9 @@ Goes to a specific frame and begins playing the SpriteAnimation.
 ### gotoAndStop(frameNumber)
 Stops the SpriteAnimation and goes to a specific frame.
 
+## Property
+### currentFrame `number`
+### totalFrames `number`
 
 ## Events
 ### frameChange
