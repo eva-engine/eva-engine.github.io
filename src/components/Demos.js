@@ -27,7 +27,7 @@ const DemoList = [
     name: '斗地主',
     image: 'https://gw.alicdn.com/imgextra/i4/O1CN01dCwFDD1mi5ttcLreF_!!6000000004987-2-tps-1170-2532.png',
     qrcode: 'https://gw.alicdn.com/imgextra/i4/O1CN01Vsc7oo1l9SKawnRFn_!!6000000004776-2-tps-500-500.png',
-    desc: '淘宝也推出了适用Eva.js开发的斗地主游戏',
+    desc: '淘宝也推出了使用Eva.js开发的斗地主游戏',
     url: 'https://pages.tmall.com/wow/z/hdwk/doudizhu/sX78ziQH2ar7ax6DKZF2-doudizhu?disableNav=YES',
     github: ''
   },
