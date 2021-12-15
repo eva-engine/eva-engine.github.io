@@ -51,7 +51,8 @@ const config = {
         title: 'Eva.js',
         logo: {
           alt: 'Eva.js Logo',
-          src: 'https://gw.alicdn.com/imgextra/i1/O1CN01MQ8kjm1uYwvRaJUHQ_!!6000000006050-2-tps-525-284.png',
+          src: 'https://gw.alicdn.com/imgextra/i4/O1CN0103RrpF21uCc8IE2ko_!!6000000007044-55-tps-525-284.svg',
+          srcDark: 'https://gw.alicdn.com/imgextra/i1/O1CN01MQ8kjm1uYwvRaJUHQ_!!6000000006050-2-tps-525-284.png',
         },
         items: [
           {
