@@ -26,11 +26,11 @@ const userList = [{
 {
   image: require('../../static/img/users/hema.png').default
 },
+// {
+//   image: require('../../static/img/users/meituan.png').default
+// },
 {
-  image: require('../../static/img/users/meituan.png').default
-},
-{
-  image: require('../../static/img/users/ms.png').default
+  image: require('../../static/img/users/yintai.png').default
 },
 {
   image: require('../../static/img/users/fz.png').default
