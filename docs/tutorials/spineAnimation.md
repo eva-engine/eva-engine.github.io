@@ -1,17 +1,21 @@
 # Spine skeletal animation
 
-Spine is a 2D animation software tailored specifically for software and game developers. Animators, original artists, and engineers work together to give life to your game. Using Spine skeletal animation can achieve some richer effects, which can better reduce memory usage compared to sprite animation. Spine is a paid software, please use it after purchase, Spine official website: [http://zh.esotericsoftware.com/](http://zh.esotericsoftware.com/). The currently supported Spine version is: 3.6 and 3.8, you can click here [see how to set](http://esotericsoftware.com/spine-settings)
-
+Spine is a 2D animation software tailored specifically for software and game developers. Animators, original artists, and engineers work together to give life to your game. Using Spine skeletal animation can achieve some richer effects, which can better reduce memory usage compared to sprite animation. Spine is a paid software, please use it after purchase, Spine official website: [http://zh.esotericsoftware.com/](http://zh.esotericsoftware.com/). The currently supported Spine version is: 3.6 / 3.8 / 4.0, you can click here [see how to set](http://esotericsoftware.com/spine-settings)
 
 -[https://eva.js.org/playground/#/spine](https://eva.js.org/playground/#/spine)
 
 ## Install
 
-The currently supported Spine version is: 3.6 and 3.8, if you need 3.6, you can install `@eva/plugin-renderer-spine`, if you need 3.8, you should install `@eva/plugin-renderer-spine38`
+The currently supported Spine version is: 3.6 / 3.8 / 4.0, 
+You can select npm package by version.
+
+- 3.6 `@eva/plugin-renderer-spine`
+- 3.8 `@eva/plugin-renderer-spine38`
+- 4.0 `@eva/plugin-renderer-spine40`
 
 ### With NPM
 ```bash
-npm i @eva/plugin-renderer @eva/plugin-renderer-spine
+npm i @eva/plugin-renderer @eva/plugin-renderer-spine40
 ```
 
 ### In Browser
