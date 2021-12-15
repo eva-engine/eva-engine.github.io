@@ -50,8 +50,8 @@ const config = {
       navbar: {
         title: 'Eva.js',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.png',
+          alt: 'Eva.js Logo',
+          src: 'https://gw.alicdn.com/imgextra/i1/O1CN01MQ8kjm1uYwvRaJUHQ_!!6000000006050-2-tps-525-284.png',
         },
         items: [
           {
