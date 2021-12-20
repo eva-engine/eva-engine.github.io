@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
@@ -13,6 +13,13 @@ import Menu from '../components/Menu'
 import Demos from '../components/Demos'
 import About from '../components/About'
 
+
+if (ExecutionEnvironment.canUseDOM) {
+  console.log(123, 345)
+  if (location.hash.indexOf('/tutorials') === 1 || location.hash.indexOf('/api') === 1) {
+    location.replace(`/docs${location.hash.substring(1)}`)
+  }
+}
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -34,11 +41,6 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  if (ExecutionEnvironment.canUseDom) {
-    if (location.hash.indexOf('/tutorials') === 1 || location.hash.indexOf('/api') === 1) {
-      location.replace(`/docs${location.hash.substring(1)}`)
-    }
-  }
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
