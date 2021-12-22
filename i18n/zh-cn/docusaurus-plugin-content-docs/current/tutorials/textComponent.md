@@ -79,6 +79,8 @@ text.addComponent(
     }
   })
 )
+
+game.scene.addChild(text)
 ```
 
 ## 参数

@@ -15,7 +15,6 @@ import About from '../components/About'
 
 
 if (ExecutionEnvironment.canUseDOM) {
-  console.log(123, 345)
   if (location.hash.indexOf('/tutorials') === 1 || location.hash.indexOf('/api') === 1) {
     location.replace(`/docs${location.hash.substring(1)}`)
   }

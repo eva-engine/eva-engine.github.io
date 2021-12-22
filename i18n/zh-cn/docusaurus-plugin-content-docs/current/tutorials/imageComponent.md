@@ -70,6 +70,8 @@ image.addComponent(
     resource: 'imageName'
   })
 )
+
+game.scene.addChild(image)
 ```
 
 ## 参数
