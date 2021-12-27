@@ -12,7 +12,7 @@ npm install @eva/plugin-matterjs
 
 ### 在浏览器中
 ```html
-<script src="https://unpkg.com/@eva/plugin-matterjs@1.1.x/dist/EVA.plugin.renderer.matterjs.min.js"></script>
+<script src="https://unpkg.com/@eva/plugin-matterjs@1.2.x/dist/EVA.plugin.renderer.matterjs.min.js"></script>
 ```
 
 ### 使用

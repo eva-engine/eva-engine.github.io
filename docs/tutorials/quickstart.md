@@ -4,6 +4,10 @@
 
 Demo project created based on webpack: [https://github.com/eva-engine/start-demo](https://github.com/eva-engine/start-demo)
 
+Demo project created based on webpack with cdn: [https://github.com/eva-engine/start-demo-with-cdn](https://github.com/eva-engine/start-demo-width-cdn)
+
+Demo project build for multi platform(Web/Wechat minigame): [https://github.com/eva-engine/eva-multi-platform-demo](https://github.com/eva-engine/eva-multi-platform-demo)
+
 ## Install
 
 ### With NPM
@@ -13,7 +17,7 @@ npm install @eva/eva.js
 
 ### In Browser
 ```html
-<script src="https://unpkg.com/@eva/eva.js@1.1.x/dist/EVA.min.js"></script>
+<script src="https://unpkg.com/@eva/eva.js@1.2.x/dist/EVA.min.js"></script>
 ```
 
 ## Create a canvas
@@ -77,8 +81,8 @@ npm i @eva/plugin-renderer
 <!-- import PixiJS -->
 <script src="//unpkg.com/pixi.js@4.8.9/dist/pixi.min.js"></script>
 <!-- import RendererAdapter -->
-<script src="//unpkg.com/@eva/renderer-adapter@1.1.x/dist/EVA.rendererAdapter.min.js"></script>
-<script src="https://unpkg.com/@eva/plugin-renderer@1.1.x/dist/EVA.plugin.renderer.min.js"></script>
+<script src="//unpkg.com/@eva/renderer-adapter@1.2.x/dist/EVA.rendererAdapter.min.js"></script>
+<script src="https://unpkg.com/@eva/plugin-renderer@1.2.x/dist/EVA.plugin.renderer.min.js"></script>
 ```
 
 

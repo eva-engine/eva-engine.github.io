@@ -3,6 +3,9 @@
 ## Demo 项目
 
 基于 webpack 创建的 demo 项目：[https://github.com/eva-engine/start-demo](https://github.com/eva-engine/start-demo)
+使用CDN的方式开发互动游戏：[https://github.com/eva-engine/start-demo](https://github.com/eva-engine/start-demo)
+多平台发布的脚手架，支持Web/微信小游戏: [https://github.com/eva-engine/eva-multi-platform-demo](https://github.com/eva-engine/eva-multi-platform-demo)
+
 
 ## 安装
 
@@ -13,8 +16,9 @@ npm install @eva/eva.js
 
 ### 在浏览器中
 ```html
-<script src="https://unpkg.com/@eva/eva.js@1.1.x/dist/EVA.min.js"></script>
+<script src="https://unpkg.com/@eva/eva.js@1.2.x/dist/EVA.min.js"></script>
 ```
+在浏览器中以CDN的形式引入Eva.js，所有的对象将会绑定在 window.EVA 上，未来所用到的插件都会绑定在window.EVA.plugin上。详情参考：[基于CDN开发](cdnIntro)
 
 ## 创建画布
 
@@ -111,9 +115,9 @@ npm i @eva/plugin-renderer
 <!-- import PixiJS -->
 <script src="//unpkg.com/pixi.js@4.8.9/dist/pixi.min.js"></script>
 <!-- import RendererAdapter -->
-<script src="//unpkg.com/@eva/renderer-adapter@1.1.x/dist/EVA.rendererAdapter.min.js"></script>
-<script src="https://unpkg.com/@eva/plugin-renderer@1.1.x/dist/EVA.plugin.renderer.min.js"></script>
-<script src="//unpkg.com/@eva/plugin-renderer-img@1.1.x/dist/EVA.plugin.renderer.img.min.js"></script>
+<script src="//unpkg.com/@eva/renderer-adapter@1.2.x/dist/EVA.rendererAdapter.min.js"></script>
+<script src="https://unpkg.com/@eva/plugin-renderer@1.2.x/dist/EVA.plugin.renderer.min.js"></script>
+<script src="//unpkg.com/@eva/plugin-renderer-img@1.2.x/dist/EVA.plugin.renderer.img.min.js"></script>
 ```
 
 

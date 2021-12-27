@@ -13,7 +13,7 @@ npm i @eva/plugin-renderer @eva/plugin-renderer-render
 
 ### In Browser
 ```html
-<script src="https://unpkg.com/@eva/plugin-renderer-render@1.1.x/dist/EVA.plugin.renderer.render.min.js"></script>
+<script src="https://unpkg.com/@eva/plugin-renderer-render@1.2.x/dist/EVA.plugin.renderer.render.min.js"></script>
 ```
 
 ## Usage

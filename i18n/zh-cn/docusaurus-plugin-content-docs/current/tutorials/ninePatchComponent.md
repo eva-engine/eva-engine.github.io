@@ -14,7 +14,7 @@ npm i @eva/plugin-renderer @eva/plugin-renderer-nine-patch
 
 ### 在浏览器中
 ```html
-<script src="https://unpkg.com/@eva/plugin-renderer-nine-patch@1.1.x/dist/EVA.plugin.renderer.ninePatch.min.js"></script>
+<script src="https://unpkg.com/@eva/plugin-renderer-nine-patch@1.2.x/dist/EVA.plugin.renderer.ninePatch.min.js"></script>
 ```
 
 ## 使用

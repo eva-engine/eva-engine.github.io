@@ -15,7 +15,7 @@ npm i @eva/plugin-renderer @eva/plugin-renderer-dragonbone
 
 ### In Browser
 ```html
-<script src="https://unpkg.com/@eva/plugin-renderer-dragonbone@1.1.x/dist/EVA.plugin.renderer.dragonbone.min.js"></script>
+<script src="https://unpkg.com/@eva/plugin-renderer-dragonbone@1.2.x/dist/EVA.plugin.renderer.dragonbone.min.js"></script>
 ```
 
 ## Usage

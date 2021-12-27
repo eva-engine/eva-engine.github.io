@@ -20,7 +20,7 @@ npm i @eva/plugin-renderer @eva/plugin-renderer-spine40
 
 ### In Browser
 ```html
-<script src="https://unpkg.com/@eva/plugin-renderer-spine@1.1.x/dist/EVA.plugin.renderer.spine.min.js"></script>
+<script src="https://unpkg.com/@eva/plugin-renderer-spine@1.2.x/dist/EVA.plugin.renderer.spine.min.js"></script>
 ```
 
 ## Usage
