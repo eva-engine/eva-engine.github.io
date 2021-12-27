@@ -73,6 +73,13 @@ const sidebars = {
         'tutorials/evaxPlugin',
         'tutorials/performancePlugin',
         'tutorials/pluginDevelop']
+    },
+    {
+      type: 'category',
+      label: 'Others',
+      collapsible: true,
+      collapsed: false,
+      items: ['tutorials/cdnIntro']
     }
   ],
   apiSidebar: [
