@@ -1,7 +1,7 @@
 
 # MatterJS
 
-Eva.js 基于 [Matterjs](https://brm.io/matter-js) 的物理引擎，目前只接入了小部分内容，如需更多人容可持续接入。
+Eva.js 基于 [Matterjs](https://brm.io/matter-js) 的物理引擎，目前只接入了小部分内容，如需更多内容，可持续接入。
 
 ## Install
 
