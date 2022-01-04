@@ -19,6 +19,7 @@ npm install @eva/eva.js
 ```html
 <script src="https://unpkg.com/@eva/eva.js@1.2.x/dist/EVA.min.js"></script>
 ```
+在浏览器中以CDN的形式引入Eva.js，所有的对象将会绑定在 window.EVA 上，未来所用到的插件都会绑定在window.EVA.plugin上。详情参考：基于CDN开发
 
 ## Create a canvas
 
