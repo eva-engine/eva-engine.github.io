@@ -91,7 +91,7 @@ const physics = box.addComponent(
 );
 //目前支持的碰撞事件 collisionStart  collisionActive  collisionEnd
 //刚体事件 tick,beforeUpdate,afterUpdate,beforeRender,afterRender,afterTick 通常使用beforeUpdate和afterUpdate即可
-physics.on('collisionStart', (body, gameObject1, gameObject2) => {});
+physics.on('collisionStart', (gameObject1, gameObject2) => {});
 
 console.log("physics",physics);
 ```

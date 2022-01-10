@@ -98,7 +98,7 @@ const physics = box.addComponent(
 );
 //Currently supported collision events collisionStart collisionActive collisionEnd
 //Rigid body events tick, beforeUpdate, afterUpdate, beforeRender, afterRender, afterTick usually use beforeUpdate and afterUpdate
-physics.on('collisionStart', (body, gameObject1, gameObject2) => {});
+physics.on('collisionStart', (gameObject1, gameObject2) => {});
 
 console.log("physics",physics);
 ```
