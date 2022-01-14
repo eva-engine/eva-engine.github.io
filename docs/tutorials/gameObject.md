@@ -32,7 +32,7 @@ gameObject.removeChild(childGameObject)
 method 1:
 
 ```js
-import {Img} from '@eva/plugn-render'
+import {Img} from '@eva/plugn-renderer-img'
 // Method 2: Pass in the instance directly
 const img = new Img({
   // Here you can set the default parameters
@@ -45,7 +45,7 @@ gameObject.addComponent(img)
 ### Remove components
 
 ```js
-import {Img} from '@eva/plugn-render'
+import {Img} from '@eva/plugn-renderer-img'
 gameObject.removeComponent(Img)
 ```
 

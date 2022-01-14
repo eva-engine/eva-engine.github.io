@@ -32,7 +32,7 @@ gameObject.removeChild(childGameObject)
 方法 1:
 
 ```js
-import { Img } from '@eva/plugn-render'
+import { Img } from '@eva/plugn-renderer-img'
 // 方法2：直接传入实例
 const img = new Img({
   // 这里可以设置默认参数
@@ -45,7 +45,7 @@ gameObject.addComponent(img)
 ### 移除组件
 
 ```js
-import { Img } from '@eva/plugn-render'
+import { Img } from '@eva/plugn-renderer-img'
 gameObject.removeComponent(Img)
 ```
 
