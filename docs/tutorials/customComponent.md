@@ -151,7 +151,7 @@ The last execution of each frame will be executed after the update execution of 
 
 ### Disable
 
-#### Destory
+#### Destroy
 
 Called on destruction
 

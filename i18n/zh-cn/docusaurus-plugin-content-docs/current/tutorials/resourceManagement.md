@@ -157,14 +157,14 @@ resource.registerInstance(RESOURCE_TYPE.SPRITE, async ({ name, data }) => {
 资源可以主动销毁，需要要注意的是，在销毁资源前要确保游戏中没有使用该资源。
 
 ```js
-resource.destory('img1')
+resource.destroy('img1')
 ```
 
 如果为该类型资源注册了销毁方法，则会调用该方法销毁资源。
 
 ```js
 resource.registerDestroy(RESOURCE_TYPE.SPRITE, async ({ instance }) => {
-  await instance.destory()
+  await instance.destroy()
 })
 ```
 

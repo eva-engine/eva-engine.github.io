@@ -148,7 +148,7 @@ class Move extends Component {
 
 ### 停用
 
-#### Destory
+#### Destroy
 
 销毁时调用
 

@@ -157,14 +157,14 @@ resource.registerInstance(RESOURCE_TYPE.SPRITE, async ({ name, data }) => {
 Resources can be actively destroyed. It should be noted that before destroying resources, make sure that the resources are not used in the game.
 
 ```js
-resource.destory('img1')
+resource.destroy('img1')
 ```
 
 If a destruction method is registered for this type of resource, this method will be called to destroy the resource.
 
 ```js
 resource.registerDestroy(RESOURCE_TYPE.SPRITE, async ({ instance }) => {
-  await instance.destory()
+  await instance.destroy()
 })
 ```
 
