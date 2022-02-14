@@ -14,7 +14,7 @@ export default function About() {
       <Translate id="dingtalk">DingTalk Group：35686170</Translate><br/>
       <Translate id="mail">Email：mingfei.fmf@alibaba-inc.com</Translate>
       </div>
-      <a className={styles.learnMore} href=""><Translate id="learnmore">Learn More</Translate> &gt;</a>
+      <a className={styles.learnMore} target="_blank" href="https://www.yuque.com/eva/blog/dvxlpg"><Translate id="learnmore">Learn More</Translate> &gt;</a>
     </section>
   );
 }
