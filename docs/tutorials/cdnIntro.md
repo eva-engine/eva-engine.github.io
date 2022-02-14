@@ -63,10 +63,13 @@ The rendering of Eva.js v1.x requires a layer of adapter support, so it also nee
 So the cdn files needed to render a complete picture are:
 
 ```html
-<script src="https://unpkg.com/browse/@eva/eva.js@1.x/dist/EVA.js"></script>
-<script src="https:////unpkg.com/pixi.js@4.8.9/dist/pixi.min.js"></script>
-<script src="//unpkg.com/@eva/renderer-adapter@1.x/dist/EVA.rendererAdapter.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@eva/plugin-renderer-img@1.x/dist/EVA.plugin.renderer.img.js"></script>
+<canvas id="canvas" style="width: 100%;height: auto"></canvas>
+
+<script src="https://unpkg.com/@eva/eva.js@1.x/dist/EVA.min.js"></script>
+<script src="https://unpkg.com/pixi.js@4.8.9/dist/pixi.min.js"></script>
+<script src="https://unpkg.com/@eva/renderer-adapter@1.x/dist/EVA.rendererAdapter.min.js"></script>
+<script src="https://unpkg.com/@eva/plugin-renderer@1.x/dist/EVA.plugin.renderer.min.js"></script>
+<script src="https://unpkg.com/@eva/plugin-renderer-img@1.x/dist/EVA.plugin.renderer.img.min.js"></script></head>
 ```
 
 ## Encoding
