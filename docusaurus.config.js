@@ -19,7 +19,7 @@ const config = {
   deploymentBranch: 'gh-pages',
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'zh-cn'],
   },
   presets: [
     [
@@ -88,7 +88,7 @@ const config = {
               href: 'https://eva.js.org/'
             }, {
               label: '中文（中国）',
-              href: 'https://eva-engine.gitee.io/'
+              href: '/zh-cn/'
             }]
           }
         ],
