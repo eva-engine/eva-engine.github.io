@@ -107,7 +107,7 @@ const game = new Game({
 
 - 使用 NPM
 ```bash
-npm i @eva/plugin-renderer-img
+npm i @eva/plugin-renderer @eva/plugin-renderer-img
 ```
 
 - 在浏览器中
