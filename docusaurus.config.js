@@ -88,7 +88,7 @@ const config = {
               href: 'https://eva.js.org/'
             }, {
               label: '中文（中国）',
-              href: '/zh-cn/'
+              href: 'https://eva.js.org/zh-cn/'
             }]
           }
         ],
