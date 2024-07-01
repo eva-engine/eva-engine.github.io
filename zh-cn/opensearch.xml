@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>Eva.js</ShortName>
+  <Description>Search Eva.js</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image width="16" height="16" type="image/x-icon">https://eva.js.org/zh-cn/img/favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://eva.js.org/zh-cn/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://eva.js.org/zh-cn/opensearch.xml" />
+  <moz:SearchForm>https://eva.js.org/zh-cn/</moz:SearchForm>
+</OpenSearchDescription>
