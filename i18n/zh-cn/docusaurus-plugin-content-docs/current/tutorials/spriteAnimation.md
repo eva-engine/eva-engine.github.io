@@ -89,7 +89,7 @@ game.scene.addChild(cut)
 
 ### forwards `boolean`
 
-播放完毕后停在最后一帧
+播放完毕后停在最后一帧，需要在 `play` 方法设置 `times` 参数才会生效。
 
 ## 方法
 

@@ -88,7 +88,7 @@ Playing at component be added.
 
 ### forwards `boolean`
 
-Stop at last frame when animation over.
+To pause on the last frame after playback, you need to set the times parameter in the play method for it to take effect.
 
 ## Methods
 
