@@ -9,16 +9,17 @@ export default function About() {
   return (
     <section className={styles.about}>
       <div className={styles.title}>
-        <Translate id="about">About Us</Translate>
+        <Translate id="contact">Contact Us</Translate>
       </div>
-      <div className={styles.content}>
+      {/* <div className={styles.content}>
         <Translate id="team">Taobao FED</Translate>
         <br />
         <Translate id="slash lab">（Slash Lab）</Translate>
-      </div>
+      </div> */}
       <img src={qrcode} style={{ width: 300 }} />
       <div className={styles.content}>
-        <Translate id="dingtalk">DingTalk Group：35686170</Translate>
+        {/* <Translate id="dingtalk">DingTalk Group：35686170</Translate> */}
+        <Translate id="qrcode">If you have any questions or need our help with development, please scan the code to contact us.</Translate>
         <br />
       </div>
       <a className={styles.learnMore} target="_blank" href="https://www.yuque.com/eva/blog/dvxlpg">

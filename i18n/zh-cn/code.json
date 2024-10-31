@@ -198,6 +198,9 @@
   "about": {
     "message": "关于我们"
   },
+  "contact": {
+    "message": "联系我们"
+  },
   "team": {
     "message": "阿里巴巴淘系前端互动团队"
   },
@@ -206,6 +209,9 @@
   },
   "dingtalk": {
     "message": "钉钉交流群：35686170"
+  },
+  "qrcode": {
+    "message": "你有任何问题，或者需要我们帮你开发，请扫码联系"
   },
   "mail": {
     "message": "邮箱：mingfei.fmf@alibaba-inc.com"
