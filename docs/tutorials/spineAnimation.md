@@ -86,6 +86,10 @@ spine.on('complete', e => {
   console.log('Animation playback ended', e.name)
 })
 
+spine.on('event', (track, e) => {
+  console.log('Animation event', track ,e)
+})
+
 spine.play('idle')
 game.scene.addChild(gameObject)
 ```
@@ -112,4 +116,7 @@ Play animation
 ### stop()
 
 Stop play
+
+### on(name: 'start' | 'complete' | 'interrupt' | 'end' | 'event', callback:(params: any) => void)
+Listening event
 
